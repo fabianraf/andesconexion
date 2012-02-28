@@ -1,0 +1,32 @@
+<%- @title = "Admin Login" -%>
+<div id="login-form">
+  <div id="header-wrapper">
+    <h2>Login</h2>
+  </div>
+
+  <%- if flash[:error] -%>
+    <li>Sorry, your username or password is incorrect. Please try again.</li>
+  <% end %>
+
+
+  <%= form_for @user_session, :url => {:action => "create"} do |f| %>
+    <div class="formfield">
+      <%= f.label :login, "Username", :class => "col two" %>
+      <%= f.text_field :login, :class => "textbox" %>
+    </div>
+
+    <div class="formfield">
+      <%= f.label :password, :class => "col two" %>
+      <%= f.password_field :password, :class => "textbox" %>
+    </div>
+
+    <div class="formfield checkbox-wrapper">
+      <%= f.check_box :remember_me, :class => "checkbox" %>
+      <%= f.label :remember_me, :class => "col two" %>
+    </div>
+
+    <div class="submit-container">
+      <%= f.submit "Submit", :class => "button" %>
+    </div>
+  <% end %>
+</div>

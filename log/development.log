@@ -1,0 +1,106 @@
+DEPRECATION WARNING: ActiveRecord::Associations::AssociationCollection is deprecated! Use ActiveRecord::Associations::CollectionProxy instead. (called from /home/faguirre/projects/git_projects/andesconexion/config/environment.rb:5)
+DEPRECATION WARNING: ActiveRecord::Associations::AssociationCollection is deprecated! Use ActiveRecord::Associations::CollectionProxy instead. (called from /home/faguirre/projects/git_projects/andesconexion/config/environment.rb:5)
+DEPRECATION WARNING: ActiveRecord::Associations::AssociationCollection is deprecated! Use ActiveRecord::Associations::CollectionProxy instead. (called from /home/faguirre/projects/git_projects/andesconexion/config/environment.rb:5)
+DEPRECATION WARNING: ActiveRecord::Associations::AssociationCollection is deprecated! Use ActiveRecord::Associations::CollectionProxy instead. (called from /home/faguirre/projects/git_projects/andesconexion/config/environment.rb:5)
+DEPRECATION WARNING: ActiveRecord::Associations::AssociationCollection is deprecated! Use ActiveRecord::Associations::CollectionProxy instead. (called from /home/faguirre/projects/git_projects/andesconexion/config/environment.rb:5)
+DEPRECATION WARNING: ActiveRecord::Associations::AssociationCollection is deprecated! Use ActiveRecord::Associations::CollectionProxy instead. (called from /home/faguirre/projects/git_projects/andesconexion/config/environment.rb:5)
+  [1m[36m (44.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (0.6ms)[0m  SHOW search_path
+  [1m[36m (11.2ms)[0m  [1m SELECT distinct i.relname, d.indisunique, d.indkey, t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'schema_migrations'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname IN ('"$user"','public') )
+ ORDER BY i.relname
+[0m
+  [1m[35m (63.9ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (1.6ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20120228051014)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (151.7ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "login" character varying(255) NOT NULL, "email" character varying(255) NOT NULL, "crypted_password" character varying(255) NOT NULL, "password_salt" character varying(255) NOT NULL, "persistence_token" character varying(255) NOT NULL, "single_access_token" character varying(255) NOT NULL, "perishable_token" character varying(255) NOT NULL, "login_count" integer DEFAULT 0 NOT NULL, "failed_login_count" integer DEFAULT 0 NOT NULL, "last_request_at" timestamp, "current_login_at" timestamp, "last_login_at" timestamp, "current_login_ip" character varying(255), "last_login_ip" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (1.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20120228051014')
+  [1m[36m (25.6ms)[0m  [1mCOMMIT[0m
+Migrating to CreateUserSessions (20120228051025)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (154.6ms)[0m  [1mCREATE TABLE "user_sessions" ("id" serial primary key, "login" character varying(255), "password" character varying(255), "remember_me" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (12.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20120228051025')
+  [1m[36m (12.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.4ms)[0m  [1mSHOW search_path[0m
+  [1m[35m (9.6ms)[0m   SELECT distinct i.relname, d.indisunique, d.indkey, t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'user_sessions'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname IN ('"$user"','public') )
+ ORDER BY i.relname
+  [1m[36m (2.0ms)[0m  [1m SELECT distinct i.relname, d.indisunique, d.indkey, t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'users'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname IN ('"$user"','public') )
+ ORDER BY i.relname
+[0m
+DEPRECATION WARNING: ActiveRecord::Associations::AssociationCollection is deprecated! Use ActiveRecord::Associations::CollectionProxy instead. (called from /home/faguirre/projects/git_projects/andesconexion/config/environment.rb:5)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at Tue Feb 28 00:17:10 -0500 2012
+Served asset /rails.png - 200 OK (7ms)
+
+
+Started GET "/admin" for 127.0.0.1 at Tue Feb 28 00:17:14 -0500 2012
+  Processing by Admin::SiteController#index as HTML
+Redirected to http://localhost:3000/user_session/new
+Completed 302 Found in 252ms
+
+
+Started GET "/user_session/new" for 127.0.0.1 at Tue Feb 28 00:17:14 -0500 2012
+
+ActionController::RoutingError (uninitialized constant UserSessionsController):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (7.0ms)
+
+
+Started GET "/user_session/new" for 127.0.0.1 at Tue Feb 28 00:17:39 -0500 2012
+  Processing by UserSessionsController#new as HTML
+Rendered user_sessions/new.html.erb within layouts/application (26.5ms)
+Compiled application.css  (29ms)  (pid 12853)
+Compiled admin/site.css  (9ms)  (pid 12853)
+Compiled application.js  (33ms)  (pid 12853)
+Compiled jquery.js  (192ms)  (pid 12853)
+Compiled jquery_ujs.js  (5ms)  (pid 12853)
+Compiled admin/site.js  (237ms)  (pid 12853)
+Completed 200 OK in 668ms (Views: 630.5ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Tue Feb 28 00:17:40 -0500 2012
+Served asset /application.css - 200 OK (7ms)
+
+
+Started GET "/assets/admin/site.css?body=1" for 127.0.0.1 at Tue Feb 28 00:17:40 -0500 2012
+Served asset /admin/site.css - 200 OK (15ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Tue Feb 28 00:17:40 -0500 2012
+Served asset /jquery.js - 200 OK (17ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Tue Feb 28 00:17:40 -0500 2012
+Served asset /jquery_ujs.js - 200 OK (13ms)
+
+
+Started GET "/assets/admin/site.js?body=1" for 127.0.0.1 at Tue Feb 28 00:17:40 -0500 2012
+Served asset /admin/site.js - 200 OK (11ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Tue Feb 28 00:17:40 -0500 2012
+Served asset /application.js - 200 OK (9ms)

@@ -1,4 +1,10 @@
 Andesconexion::Application.routes.draw do
+  
+  resource :user_session
+
+  match '/logout', :controller => 'user_sessions', :action => 'destroy'
+    
+  match "/admin", :controller => "admin/site", :action => "index"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
