@@ -10,7 +10,48 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120228051025) do
+ActiveRecord::Schema.define(:version => 20120228052824) do
+
+  create_table "clients", :force => true do |t|
+    t.string   "firstname"
+    t.string   "lastname"
+    t.string   "preferred_name"
+    t.integer  "country_id"
+    t.string   "city"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "countries", :force => true do |t|
+    t.integer  "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "hotels", :force => true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.integer  "country_id"
+    t.string   "city"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "travel_package_images", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "travel_packages", :force => true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.integer  "country_id"
+    t.string   "city"
+    t.decimal  "price",       :precision => 2, :scale => 0
+    t.decimal  "sale_price",  :precision => 2, :scale => 0
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "user_sessions", :force => true do |t|
     t.string   "login"

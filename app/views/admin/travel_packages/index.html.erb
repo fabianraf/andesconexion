@@ -4,23 +4,11 @@
 		<div class="small-nav">
 			<a href="#">Dashboard</a>
 			<span>&gt;</span>
-			Current Articles
+			Travel Packages
 		</div>
 		<!-- End Small Nav -->
 		
-		<!-- Message OK -->		
-		<div class="msg msg-ok">
-			<p><strong>Your file was uploaded succesifully!</strong></p>
-			<a href="#" class="close">close</a>
-		</div>
-		<!-- End Message OK -->		
 		
-		<!-- Message Error -->
-		<div class="msg msg-error">
-			<p><strong>You must select a file to upload first!</strong></p>
-			<a href="#" class="close">close</a>
-		</div>
-		<!-- End Message Error -->
 		<br />
 		<!-- Main -->
 		<div id="main">
@@ -33,9 +21,9 @@
 				<div class="box">
 					<!-- Box Head -->
 					<div class="box-head">
-						<h2 class="left">Current Articles</h2>
+						<h2 class="left">Travel Packages</h2>
 						<div class="right">
-							<label>search articles</label>
+							<label>search travel package</label>
 							<input type="text" class="field small-field" />
 							<input type="submit" class="button" value="search" />
 						</div>
@@ -52,62 +40,20 @@
 								<th>Added by</th>
 								<th width="110" class="ac">Content Control</th>
 							</tr>
-							<tr>
-								<td><input type="checkbox" class="checkbox" /></td>
-								<td><h3><a href="#">Lorem ipsum dolor sit amet, consectetur.</a></h3></td>
-								<td>12.05.09</td>
-								<td><a href="#">Administrator</a></td>
-								<td><a href="#" class="ico del">Delete</a><a href="#" class="ico edit">Edit</a></td>
-							</tr>
-							<tr class="odd">
-								<td><input type="checkbox" class="checkbox" /></td>
-								<td><h3><a href="#">Lorem ipsum dolor sit amet, consectetur.</a></h3></td>
-								<td>12.05.09</td>
-								<td><a href="#">Administrator</a></td>
-								<td><a href="#" class="ico del">Delete</a><a href="#" class="ico edit">Edit</a></td>
-							</tr>
-							<tr>
-								<td><input type="checkbox" class="checkbox" /></td>
-								<td><h3><a href="#">Lorem ipsum dolor sit amet, consectetur.</a></h3></td>
-								<td>12.05.09</td>
-								<td><a href="#">Administrator</a></td>
-								<td><a href="#" class="ico del">Delete</a><a href="#" class="ico edit">Edit</a></td>
-							</tr>
-							<tr class="odd">
-								<td><input type="checkbox" class="checkbox" /></td>
-								<td><h3><a href="#">Lorem ipsum dolor sit amet, consectetur.</a></h3></td>
-								<td>12.05.09</td>
-								<td><a href="#">Administrator</a></td>
-								<td><a href="#" class="ico del">Delete</a><a href="#" class="ico edit">Edit</a></td>
-							</tr>
-							<tr>
-								<td><input type="checkbox" class="checkbox" /></td>
-								<td><h3><a href="#">Lorem ipsum dolor sit amet, consectetur.</a></h3></td>
-								<td>12.05.09</td>
-								<td><a href="#">Administrator</a></td>
-								<td><a href="#" class="ico del">Delete</a><a href="#" class="ico edit">Edit</a></td>
-							</tr>
-							<tr class="odd">
-								<td><input type="checkbox" class="checkbox" /></td>
-								<td><h3><a href="#">Lorem ipsum dolor sit amet, consectetur.</a></h3></td>
-								<td>12.05.09</td>
-								<td><a href="#">Administrator</a></td>
-								<td><a href="#" class="ico del">Delete</a><a href="#" class="ico edit">Edit</a></td>
-							</tr>
-							<tr>
-								<td><input type="checkbox" class="checkbox" /></td>
-								<td><h3><a href="#">Lorem ipsum dolor sit amet, consectetur.</a></h3></td>
-								<td>12.05.09</td>
-								<td><a href="#">Administrator</a></td>
-								<td><a href="#" class="ico del">Delete</a><a href="#" class="ico edit">Edit</a></td>
-							</tr>
-							<tr class="odd">
-								<td><input type="checkbox" class="checkbox" /></td>
-								<td><h3><a href="#">Lorem ipsum dolor sit amet, consectetur.</a></h3></td>
-								<td>12.05.09</td>
-								<td><a href="#">Administrator</a></td>
-								<td><a href="#" class="ico del">Delete</a><a href="#" class="ico edit">Edit</a></td>
-							</tr>
+              <% @travel_packages.each do |travel_package| %>
+                <%= content_tag_for(:tr, travel_package, :class=> "#{cycle("", "odd")}") do %>
+
+                  <td><input type="checkbox" class="checkbox" /></td>
+
+                  <td><input type="checkbox" class="checkbox" /></td>
+                  <td><h3><a href="#">Lorem ipsum dolor sit" /></td>
+                  <td><h3><a href="#">Lorem ipsum dolor sit amet, consectetur.</a></h3></td>
+                  <td>12.05.09</td>
+                  <td><a href="#">Administrator</a></td>
+                  <td><a href="#" class="ico del">Delete</a><a href="#" class="ico edit">Edit</a></td>
+
+                <% end %>
+							<% end %>
 						</table>
 						
 						

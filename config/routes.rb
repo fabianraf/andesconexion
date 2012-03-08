@@ -5,6 +5,12 @@ Andesconexion::Application.routes.draw do
   match '/logout', :controller => 'user_sessions', :action => 'destroy'
     
   match "/admin", :controller => "admin/site", :action => "index"
+  namespace "admin" do
+    resources :travel_packages
+    resources :countries
+    resources :hotels
+    resources :clients
+  end
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

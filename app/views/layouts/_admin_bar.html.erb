@@ -1,0 +1,32 @@
+<!-- Header -->
+<div id="header">
+	<div class="shell">
+		<!-- Logo + Top Nav -->
+		<div id="top">
+			<h1><a href="#">AndesConexion</a></h1>
+			<div id="top-navigation">
+				Welcome <strong><%= current_user.login %></strong>
+				<span>|</span>
+				<a href="#">Help</a>
+				<span>|</span>
+				<a href="#">Profile Settings</a>
+				<span>|</span>
+				<a href="/logout">Log out</a>
+			</div>
+		</div>
+		<!-- End Logo + Top Nav -->
+		
+		<!-- Main Nav -->
+		<div id="navigation">
+			<ul>
+			    <li><%= link_to(content_tag(:span, "Dashboard"), "/admin", :class => are_you_here?("admin") ? "active" : "") %></li>
+			    <li><%= link_to(content_tag(:span, "Travel Packages"), admin_travel_packages_path, :class => are_you_here?("travel_packages") ? "active" : "") %></li>
+			    <li><%= link_to(content_tag(:span, "Hotels"), admin_hotels_path) %></li>
+			    <li><%= link_to(content_tag(:span, "Clients"), admin_clients_path) %></li>
+			    <li><%= link_to(content_tag(:span, "Users"), "") %></li>
+			</ul>
+		</div>
+		<!-- End Main Nav -->
+	</div>
+</div>
+<!-- End Header -->
