@@ -6688,3 +6688,3191 @@ Served asset /admin/travel_packages.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at Mon Mar 05 21:26:01 -0500 2012
 Served asset /application.js - 304 Not Modified (1ms)
+DEPRECATION WARNING: ActiveRecord::Associations::AssociationCollection is deprecated! Use ActiveRecord::Associations::CollectionProxy instead. (called from /home/faguirre/projects/git_projects/andesconexion/config/environment.rb:5)
+
+
+Started GET "/admin" for 127.0.0.1 at Thu Mar 08 09:30:37 -0500 2012
+  Processing by Admin::SiteController#index as HTML
+Redirected to http://localhost:3000/user_session/new
+Completed 302 Found in 162ms
+
+
+Started GET "/user_session/new" for 127.0.0.1 at Thu Mar 08 09:30:37 -0500 2012
+  Processing by UserSessionsController#new as HTML
+Rendered user_sessions/new.html.erb within layouts/application (10.5ms)
+Compiled application.css  (33ms)  (pid 2762)
+Compiled admin/clients.css  (5ms)  (pid 2762)
+Compiled admin/hotels.css  (4ms)  (pid 2762)
+Compiled admin/site.css  (4ms)  (pid 2762)
+Compiled admin/style.css  (1ms)  (pid 2762)
+Compiled admin/travel_packages.css  (4ms)  (pid 2762)
+Compiled application.js  (55ms)  (pid 2762)
+Compiled jquery.js  (30ms)  (pid 2762)
+Compiled jquery_ujs.js  (7ms)  (pid 2762)
+Compiled admin/clients.js  (199ms)  (pid 2762)
+Compiled admin/hotels.js  (2ms)  (pid 2762)
+Compiled admin/site.js  (11ms)  (pid 2762)
+Compiled admin/travel_packages.js  (1ms)  (pid 2762)
+Completed 200 OK in 739ms (Views: 702.5ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Thu Mar 08 09:30:38 -0500 2012
+Served asset /application.css - 200 OK (7ms)
+
+
+Started GET "/assets/admin/clients.css?body=1" for 127.0.0.1 at Thu Mar 08 09:30:38 -0500 2012
+Served asset /admin/clients.css - 200 OK (161ms)
+
+
+Started GET "/assets/admin/hotels.css?body=1" for 127.0.0.1 at Thu Mar 08 09:30:38 -0500 2012
+Served asset /admin/hotels.css - 200 OK (10ms)
+
+
+Started GET "/assets/admin/site.css?body=1" for 127.0.0.1 at Thu Mar 08 09:30:38 -0500 2012
+Served asset /admin/site.css - 200 OK (11ms)
+
+
+Started GET "/assets/admin/style.css?body=1" for 127.0.0.1 at Thu Mar 08 09:30:38 -0500 2012
+Served asset /admin/style.css - 200 OK (13ms)
+
+
+Started GET "/assets/admin/travel_packages.css?body=1" for 127.0.0.1 at Thu Mar 08 09:30:38 -0500 2012
+Served asset /admin/travel_packages.css - 200 OK (12ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Thu Mar 08 09:30:38 -0500 2012
+Served asset /jquery.js - 200 OK (32ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Thu Mar 08 09:30:38 -0500 2012
+Served asset /jquery_ujs.js - 200 OK (17ms)
+
+
+Started GET "/assets/admin/clients.js?body=1" for 127.0.0.1 at Thu Mar 08 09:30:38 -0500 2012
+Served asset /admin/clients.js - 200 OK (10ms)
+
+
+Started GET "/assets/admin/hotels.js?body=1" for 127.0.0.1 at Thu Mar 08 09:30:38 -0500 2012
+Served asset /admin/hotels.js - 200 OK (11ms)
+
+
+Started GET "/assets/admin/site.js?body=1" for 127.0.0.1 at Thu Mar 08 09:30:38 -0500 2012
+Served asset /admin/site.js - 200 OK (11ms)
+
+
+Started GET "/assets/admin/travel_packages.js?body=1" for 127.0.0.1 at Thu Mar 08 09:30:38 -0500 2012
+Served asset /admin/travel_packages.js - 200 OK (11ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Thu Mar 08 09:30:39 -0500 2012
+Served asset /application.js - 200 OK (11ms)
+
+
+Started GET "/assets/admin/images/button.gif" for 127.0.0.1 at Thu Mar 08 09:30:39 -0500 2012
+Served asset /admin/images/button.gif - 200 OK (8ms)
+
+
+Started POST "/user_session" for 127.0.0.1 at Thu Mar 08 09:30:45 -0500 2012
+  Processing by UserSessionsController#create as HTML
+  Parameters: {"user_session"=>{"password"=>"[FILTERED]", "remember_me"=>"0", "login"=>"admin"}, "commit"=>"Submit", "utf8"=>"✓", "authenticity_token"=>"UUCdCy8yupib8uT4x9m5bm7dKArD0TzLofXJd8UIqDY="}
+  [1m[36mUser Load (22.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users".login ILIKE 'admin') LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (13.6ms)[0m  [1mUPDATE "users" SET "perishable_token" = 'jsYjw34bnGB7T0TbIJUf', "current_login_at" = '2012-03-08 14:30:45.635288', "last_login_at" = '2012-03-06 01:31:22.294366', "updated_at" = '2012-03-08 14:30:45.639814', "last_request_at" = '2012-03-08 14:30:45.636758', "login_count" = 5 WHERE "users"."id" = 1[0m
+  [1m[35m (19.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 321ms
+
+
+Started GET "/admin" for 127.0.0.1 at Thu Mar 08 09:30:45 -0500 2012
+  Processing by Admin::SiteController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.7ms)[0m  [1mUPDATE "users" SET "perishable_token" = 'ts5QJ6eIVTgLzTlkhCjo', "updated_at" = '2012-03-08 14:30:45.845698', "last_request_at" = '2012-03-08 14:30:45.843563' WHERE "users"."id" = 1[0m
+  [1m[35m (16.5ms)[0m  COMMIT
+Rendered admin/site/index.html.erb within layouts/admin (0.8ms)
+Rendered layouts/_admin_bar.html.erb (2.3ms)
+Completed 200 OK in 179ms (Views: 63.7ms | ActiveRecord: 26.1ms)
+
+
+Started GET "/assets/admin.css" for 127.0.0.1 at Thu Mar 08 09:30:46 -0500 2012
+Served asset /admin.css - 404 Not Found (8ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/assets/textile-editor.css" for 127.0.0.1 at Thu Mar 08 09:30:46 -0500 2012
+Served asset /textile-editor.css - 404 Not Found (5ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/textile-editor.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/admin-grid.css" for 127.0.0.1 at Thu Mar 08 09:30:46 -0500 2012
+Served asset /admin-grid.css - 404 Not Found (7ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin-grid.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Thu Mar 08 09:30:46 -0500 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/style.css?body=1" for 127.0.0.1 at Thu Mar 08 09:30:46 -0500 2012
+Served asset /admin/style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Thu Mar 08 09:30:46 -0500 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/clients.js?body=1" for 127.0.0.1 at Thu Mar 08 09:30:46 -0500 2012
+Served asset /admin/clients.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/hotels.js?body=1" for 127.0.0.1 at Thu Mar 08 09:30:46 -0500 2012
+Served asset /admin/hotels.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/site.js?body=1" for 127.0.0.1 at Thu Mar 08 09:30:46 -0500 2012
+Served asset /admin/site.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/travel_packages.js?body=1" for 127.0.0.1 at Thu Mar 08 09:30:46 -0500 2012
+Served asset /admin/travel_packages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Thu Mar 08 09:30:46 -0500 2012
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admin/images/header.gif" for 127.0.0.1 at Thu Mar 08 09:30:46 -0500 2012
+Served asset /admin/images/header.gif - 200 OK (16ms)
+
+
+Started GET "/assets/admin/images/msg-ok.gif" for 127.0.0.1 at Thu Mar 08 09:30:46 -0500 2012
+Served asset /admin/images/msg-ok.gif - 200 OK (14ms)
+
+
+Started GET "/assets/admin/images/tab.gif" for 127.0.0.1 at Thu Mar 08 09:30:46 -0500 2012
+Served asset /admin/images/tab.gif - 200 OK (11ms)
+
+
+Started GET "/assets/admin/images/msg-error.gif" for 127.0.0.1 at Thu Mar 08 09:30:46 -0500 2012
+Served asset /admin/images/msg-error.gif - 200 OK (13ms)
+
+
+Started GET "/assets/admin/images/close.gif" for 127.0.0.1 at Thu Mar 08 09:30:46 -0500 2012
+Served asset /admin/images/close.gif - 200 OK (13ms)
+
+
+Started GET "/assets/admin/images/th.gif" for 127.0.0.1 at Thu Mar 08 09:30:46 -0500 2012
+Served asset /admin/images/th.gif - 200 OK (13ms)
+
+
+Started GET "/assets/admin/images/del.gif" for 127.0.0.1 at Thu Mar 08 09:30:46 -0500 2012
+Served asset /admin/images/del.gif - 200 OK (13ms)
+
+
+Started GET "/assets/admin/images/edit.gif" for 127.0.0.1 at Thu Mar 08 09:30:46 -0500 2012
+Served asset /admin/images/edit.gif - 200 OK (11ms)
+
+
+Started GET "/assets/admin/images/pagging.gif" for 127.0.0.1 at Thu Mar 08 09:30:47 -0500 2012
+Served asset /admin/images/pagging.gif - 200 OK (10ms)
+
+
+Started GET "/assets/admin/images/add-button.gif" for 127.0.0.1 at Thu Mar 08 09:30:47 -0500 2012
+Served asset /admin/images/add-button.gif - 200 OK (11ms)
+
+
+Started GET "/assets/admin/images/footer.gif" for 127.0.0.1 at Thu Mar 08 09:30:47 -0500 2012
+Served asset /admin/images/footer.gif - 200 OK (12ms)
+
+
+Started GET "/admin/travel_packages" for 127.0.0.1 at Thu Mar 08 09:30:55 -0500 2012
+  Processing by Admin::TravelPackagesController#index as HTML
+  [1m[36mUser Load (29.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.7ms)[0m  [1mUPDATE "users" SET "updated_at" = '2012-03-08 14:30:56.144362', "last_request_at" = '2012-03-08 14:30:56.141938', "perishable_token" = 'DwFDvkMCfrL2AHdisosL' WHERE "users"."id" = 1[0m
+  [1m[35m (29.3ms)[0m  COMMIT
+  [1m[36mTravelPackage Load (1.2ms)[0m  [1mSELECT "travel_packages".* FROM "travel_packages" [0m
+Rendered admin/travel_packages/index.html.erb within layouts/admin (1.3ms)
+Rendered layouts/_admin_bar.html.erb (1.9ms)
+Completed 200 OK in 327ms (Views: 44.0ms | ActiveRecord: 65.5ms)
+
+
+Started GET "/assets/admin.css" for 127.0.0.1 at Thu Mar 08 09:30:56 -0500 2012
+Served asset /admin.css - 404 Not Found (9ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/assets/textile-editor.css" for 127.0.0.1 at Thu Mar 08 09:30:56 -0500 2012
+Served asset /textile-editor.css - 404 Not Found (7ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/textile-editor.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/assets/admin-grid.css" for 127.0.0.1 at Thu Mar 08 09:30:56 -0500 2012
+Served asset /admin-grid.css - 404 Not Found (5ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin-grid.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Thu Mar 08 09:30:56 -0500 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Thu Mar 08 09:30:56 -0500 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/style.css?body=1" for 127.0.0.1 at Thu Mar 08 09:30:56 -0500 2012
+Served asset /admin/style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/clients.js?body=1" for 127.0.0.1 at Thu Mar 08 09:30:56 -0500 2012
+Served asset /admin/clients.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/hotels.js?body=1" for 127.0.0.1 at Thu Mar 08 09:30:56 -0500 2012
+Served asset /admin/hotels.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/site.js?body=1" for 127.0.0.1 at Thu Mar 08 09:30:56 -0500 2012
+Served asset /admin/site.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/travel_packages.js?body=1" for 127.0.0.1 at Thu Mar 08 09:30:56 -0500 2012
+Served asset /admin/travel_packages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Thu Mar 08 09:30:56 -0500 2012
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/admin/travel_packages" for 127.0.0.1 at Thu Mar 08 09:32:42 -0500 2012
+  Processing by Admin::TravelPackagesController#index as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.7ms)[0m  UPDATE "users" SET "perishable_token" = 'Y0D1wKpIldBXHXNqpO', "updated_at" = '2012-03-08 14:32:42.900779', "last_request_at" = '2012-03-08 14:32:42.898703' WHERE "users"."id" = 1
+  [1m[36m (24.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mTravelPackage Load (0.8ms)[0m  SELECT "travel_packages".* FROM "travel_packages" 
+Rendered admin/travel_packages/index.html.erb within layouts/admin (28.2ms)
+Completed 500 Internal Server Error in 145ms
+
+ActionView::Template::Error (Missing template /new with {:handlers=>[:erb, :coffee, :builder], :formats=>[:html], :locale=>[:en, :en]}. Searched in:
+  * "/home/faguirre/projects/git_projects/andesconexion/app/views"
+):
+    176: 		</div>
+    177: 		<!-- Main -->
+    178: 	</div>
+    179: <%= render :template => "new" %>
+  app/views/admin/travel_packages/index.html.erb:179:in `_app_views_admin_travel_packages_index_html_erb___22375074__636747378'
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.7ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.9ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.8ms)
+
+
+Started GET "/admin/travel_packages" for 127.0.0.1 at Thu Mar 08 09:33:01 -0500 2012
+  Processing by Admin::TravelPackagesController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.9ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2012-03-08 14:33:01.591971', "updated_at" = '2012-03-08 14:33:01.594137', "perishable_token" = 'grEBrG58jSRnyHXQV' WHERE "users"."id" = 1[0m
+  [1m[35m (21.1ms)[0m  COMMIT
+  [1m[36mTravelPackage Load (0.8ms)[0m  [1mSELECT "travel_packages".* FROM "travel_packages" [0m
+Rendered admin/travel_packages/index.html.erb within layouts/admin (3.9ms)
+Completed 500 Internal Server Error in 121ms
+
+ActionView::Template::Error (Missing partial admin/travel_packages/new, admin/base/new, application/new with {:handlers=>[:erb, :coffee, :builder], :formats=>[:html], :locale=>[:en, :en]}. Searched in:
+  * "/home/faguirre/projects/git_projects/andesconexion/app/views"
+):
+    176: 		</div>
+    177: 		<!-- Main -->
+    178: 	</div>
+    179: <%= render "new" %>
+  app/views/admin/travel_packages/index.html.erb:179:in `_app_views_admin_travel_packages_index_html_erb___22375074__635783538'
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.4ms)
+
+
+Started GET "/admin/travel_packages" for 127.0.0.1 at Thu Mar 08 09:33:14 -0500 2012
+  Processing by Admin::TravelPackagesController#index as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.8ms)[0m  UPDATE "users" SET "updated_at" = '2012-03-08 14:33:14.446672', "last_request_at" = '2012-03-08 14:33:14.444290', "perishable_token" = 'HoB81ABG3itVzWO6bxiG' WHERE "users"."id" = 1
+  [1m[36m (12.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mTravelPackage Load (0.7ms)[0m  SELECT "travel_packages".* FROM "travel_packages" 
+Rendered admin/travel_packages/index.html.erb within layouts/admin (2.6ms)
+Completed 500 Internal Server Error in 246ms
+
+ActionView::Template::Error (undefined method `formats' for nil:NilClass):
+    176: 		</div>
+    177: 		<!-- Main -->
+    178: 	</div>
+    179: <%= render :action => "new" %>
+  app/views/admin/travel_packages/index.html.erb:179:in `_app_views_admin_travel_packages_index_html_erb___22375074__634614518'
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.5ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.3ms)
+
+
+Started GET "/admin/travel_packages" for 127.0.0.1 at Thu Mar 08 09:33:42 -0500 2012
+  Processing by Admin::TravelPackagesController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.7ms)[0m  [1mUPDATE "users" SET "updated_at" = '2012-03-08 14:33:42.246701', "last_request_at" = '2012-03-08 14:33:42.244692', "perishable_token" = 'mvrJVCupLmEpZs7HDC7o' WHERE "users"."id" = 1[0m
+  [1m[35m (26.5ms)[0m  COMMIT
+  [1m[36mTravelPackage Load (0.8ms)[0m  [1mSELECT "travel_packages".* FROM "travel_packages" [0m
+Rendered admin/travel_packages/index.html.erb within layouts/admin (1.7ms)
+Rendered layouts/_admin_bar.html.erb (2.1ms)
+Completed 200 OK in 148ms (Views: 43.7ms | ActiveRecord: 36.1ms)
+
+
+Started GET "/assets/admin.css" for 127.0.0.1 at Thu Mar 08 09:33:42 -0500 2012
+Served asset /admin.css - 404 Not Found (153ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/admin-grid.css" for 127.0.0.1 at Thu Mar 08 09:33:42 -0500 2012
+Served asset /admin-grid.css - 404 Not Found (6ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin-grid.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/assets/textile-editor.css" for 127.0.0.1 at Thu Mar 08 09:33:42 -0500 2012
+Served asset /textile-editor.css - 404 Not Found (7ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/textile-editor.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/assets/admin/style.css?body=1" for 127.0.0.1 at Thu Mar 08 09:33:42 -0500 2012
+Served asset /admin/style.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Thu Mar 08 09:33:42 -0500 2012
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Thu Mar 08 09:33:42 -0500 2012
+Served asset /jquery_ujs.js - 200 OK (1ms)
+
+
+Started GET "/assets/admin/clients.js?body=1" for 127.0.0.1 at Thu Mar 08 09:33:42 -0500 2012
+Served asset /admin/clients.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/hotels.js?body=1" for 127.0.0.1 at Thu Mar 08 09:33:42 -0500 2012
+Served asset /admin/hotels.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/site.js?body=1" for 127.0.0.1 at Thu Mar 08 09:33:42 -0500 2012
+Served asset /admin/site.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/travel_packages.js?body=1" for 127.0.0.1 at Thu Mar 08 09:33:42 -0500 2012
+Served asset /admin/travel_packages.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Thu Mar 08 09:33:42 -0500 2012
+Served asset /application.js - 200 OK (1ms)
+
+
+Started GET "/assets/admin/images/header.gif" for 127.0.0.1 at Thu Mar 08 09:33:42 -0500 2012
+Served asset /admin/images/header.gif - 200 OK (0ms)
+
+
+Started GET "/assets/admin/images/tab.gif" for 127.0.0.1 at Thu Mar 08 09:33:42 -0500 2012
+Served asset /admin/images/tab.gif - 200 OK (0ms)
+
+
+Started GET "/assets/admin/images/add-button.gif" for 127.0.0.1 at Thu Mar 08 09:33:42 -0500 2012
+Served asset /admin/images/add-button.gif - 200 OK (0ms)
+
+
+Started GET "/assets/admin/images/footer.gif" for 127.0.0.1 at Thu Mar 08 09:33:42 -0500 2012
+Served asset /admin/images/footer.gif - 200 OK (0ms)
+
+
+Started GET "/assets/admin/images/th.gif" for 127.0.0.1 at Thu Mar 08 09:33:42 -0500 2012
+Served asset /admin/images/th.gif - 200 OK (0ms)
+
+
+Started GET "/assets/admin/images/pagging.gif" for 127.0.0.1 at Thu Mar 08 09:33:42 -0500 2012
+Served asset /admin/images/pagging.gif - 200 OK (0ms)
+
+
+Started GET "/assets/admin/images/button.gif" for 127.0.0.1 at Thu Mar 08 09:33:42 -0500 2012
+Served asset /admin/images/button.gif - 200 OK (0ms)
+
+
+Started GET "/admin/travel_packages" for 127.0.0.1 at Thu Mar 08 09:35:56 -0500 2012
+  Processing by Admin::TravelPackagesController#index as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.8ms)[0m  UPDATE "users" SET "perishable_token" = 'zwduOcNLbvua3Wr3TIFj', "last_request_at" = '2012-03-08 14:35:56.904032', "updated_at" = '2012-03-08 14:35:56.906238' WHERE "users"."id" = 1
+  [1m[36m (18.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mTravelPackage Load (0.8ms)[0m  SELECT "travel_packages".* FROM "travel_packages" 
+Rendered admin/travel_packages/index.html.erb within layouts/admin (386.8ms)
+Completed 500 Internal Server Error in 728ms
+
+ActionView::Template::Error (undefined local variable or method `admin_new_travel_package_path' for #<#<Class:0xb418de40>:0xb418a5b0>):
+    145: 					<!-- End Box Head-->
+    146: 					
+    147: 					<div class="box-content">
+    148:             <%= link_to(content_tag(:span, "Add new Travel Package"), admin_new_travel_package_path, :class => 'add-button') %>
+    149: 						<a href="#" class="add-button"><span>Add new Article</span></a>
+    150: 						<div class="cl">&nbsp;</div>
+    151: 						
+  app/views/admin/travel_packages/index.html.erb:148:in `_app_views_admin_travel_packages_index_html_erb___22375074__636730758'
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.5ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.9ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (243.0ms)
+DEPRECATION WARNING: ActiveRecord::Associations::AssociationCollection is deprecated! Use ActiveRecord::Associations::CollectionProxy instead. (called from /home/faguirre/projects/git_projects/andesconexion/config/environment.rb:5)
+
+
+Started GET "/admin/travel_packages" for 127.0.0.1 at Thu Mar 08 09:36:43 -0500 2012
+  Processing by Admin::TravelPackagesController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (31.8ms)[0m  [1mUPDATE "users" SET "updated_at" = '2012-03-08 14:36:43.868299', "last_request_at" = '2012-03-08 14:36:43.866180', "perishable_token" = 'gcAMGh1Jr4Y0jeOMKTfq' WHERE "users"."id" = 1[0m
+  [1m[35m (17.7ms)[0m  COMMIT
+  [1m[36mTravelPackage Load (0.8ms)[0m  [1mSELECT "travel_packages".* FROM "travel_packages" [0m
+Rendered admin/travel_packages/index.html.erb within layouts/admin (2.8ms)
+Rendered layouts/_admin_bar.html.erb (1.7ms)
+Completed 200 OK in 293ms (Views: 47.9ms | ActiveRecord: 57.4ms)
+
+
+Started GET "/assets/admin.css" for 127.0.0.1 at Thu Mar 08 09:36:44 -0500 2012
+Served asset /admin.css - 404 Not Found (7ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.7ms)
+
+
+Started GET "/assets/admin-grid.css" for 127.0.0.1 at Thu Mar 08 09:36:44 -0500 2012
+Served asset /admin-grid.css - 404 Not Found (5ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin-grid.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/assets/textile-editor.css" for 127.0.0.1 at Thu Mar 08 09:36:44 -0500 2012
+Served asset /textile-editor.css - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/textile-editor.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/assets/admin/style.css?body=1" for 127.0.0.1 at Thu Mar 08 09:36:44 -0500 2012
+Served asset /admin/style.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Thu Mar 08 09:36:44 -0500 2012
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Thu Mar 08 09:36:44 -0500 2012
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/clients.js?body=1" for 127.0.0.1 at Thu Mar 08 09:36:44 -0500 2012
+Served asset /admin/clients.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/hotels.js?body=1" for 127.0.0.1 at Thu Mar 08 09:36:44 -0500 2012
+Served asset /admin/hotels.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/site.js?body=1" for 127.0.0.1 at Thu Mar 08 09:36:44 -0500 2012
+Served asset /admin/site.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/travel_packages.js?body=1" for 127.0.0.1 at Thu Mar 08 09:36:44 -0500 2012
+Served asset /admin/travel_packages.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Thu Mar 08 09:36:44 -0500 2012
+Served asset /application.js - 200 OK (1ms)
+
+
+Started GET "/assets/admin/images/header.gif" for 127.0.0.1 at Thu Mar 08 09:36:44 -0500 2012
+Served asset /admin/images/header.gif - 200 OK (0ms)
+
+
+Started GET "/assets/admin/images/tab.gif" for 127.0.0.1 at Thu Mar 08 09:36:44 -0500 2012
+Served asset /admin/images/tab.gif - 200 OK (0ms)
+
+
+Started GET "/assets/admin/images/pagging.gif" for 127.0.0.1 at Thu Mar 08 09:36:44 -0500 2012
+Served asset /admin/images/pagging.gif - 200 OK (0ms)
+
+
+Started GET "/assets/admin/images/th.gif" for 127.0.0.1 at Thu Mar 08 09:36:44 -0500 2012
+Served asset /admin/images/th.gif - 200 OK (0ms)
+
+
+Started GET "/assets/admin/images/button.gif" for 127.0.0.1 at Thu Mar 08 09:36:44 -0500 2012
+Served asset /admin/images/button.gif - 200 OK (0ms)
+
+
+Started GET "/assets/admin/images/add-button.gif" for 127.0.0.1 at Thu Mar 08 09:36:44 -0500 2012
+Served asset /admin/images/add-button.gif - 200 OK (0ms)
+
+
+Started GET "/assets/admin/images/footer.gif" for 127.0.0.1 at Thu Mar 08 09:36:44 -0500 2012
+Served asset /admin/images/footer.gif - 200 OK (0ms)
+
+
+Started GET "/admin/travel_packages/new" for 127.0.0.1 at Thu Mar 08 09:36:47 -0500 2012
+  Processing by Admin::TravelPackagesController#new as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.9ms)[0m  UPDATE "users" SET "perishable_token" = '8xl37SuLfi3ElnRvbVUN', "last_request_at" = '2012-03-08 14:36:47.870228', "updated_at" = '2012-03-08 14:36:47.872758' WHERE "users"."id" = 1
+  [1m[36m (22.1ms)[0m  [1mCOMMIT[0m
+Rendered admin/travel_packages/_form.html.erb (4.6ms)
+Rendered admin/travel_packages/new.html.erb within layouts/admin (394.6ms)
+Completed 500 Internal Server Error in 1083ms
+
+ActionView::Template::Error (undefined local variable or method `admin_companies_path' for #<#<Class:0xb45779c0>:0xb4574eb4>):
+    18: <%= render :partial => "form", :object => f %>
+    19:   <div class="submit-container">
+    20:     <%= f.submit "Save" %>
+    21:     <%= link_to "Cancel", admin_companies_path %>
+    22:   </div>
+    23: <% end %>
+    24: </div>
+  app/views/admin/travel_packages/new.html.erb:21:in `_app_views_admin_travel_packages_new_html_erb___72271468__634677878'
+  app/views/admin/travel_packages/new.html.erb:16:in `_app_views_admin_travel_packages_new_html_erb___72271468__634677878'
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.1ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.8ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (439.0ms)
+
+
+Started GET "/admin/travel_packages/new" for 127.0.0.1 at Thu Mar 08 09:37:13 -0500 2012
+  Processing by Admin::TravelPackagesController#new as HTML
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.8ms)[0m  UPDATE "users" SET "last_request_at" = '2012-03-08 14:37:13.724060', "updated_at" = '2012-03-08 14:37:13.726152', "perishable_token" = 'w8xuUzUY7df4yVOiqiM' WHERE "users"."id" = 1
+  [1m[36m (26.8ms)[0m  [1mCOMMIT[0m
+Rendered admin/travel_packages/_form.html.erb (2.0ms)
+Rendered admin/travel_packages/new.html.erb within layouts/admin (22.2ms)
+Rendered layouts/_admin_bar.html.erb (1.5ms)
+Completed 200 OK in 161ms (Views: 56.4ms | ActiveRecord: 38.0ms)
+
+
+Started GET "/assets/textile-editor.css" for 127.0.0.1 at Thu Mar 08 09:37:13 -0500 2012
+Served asset /textile-editor.css - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/textile-editor.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/assets/admin-grid.css" for 127.0.0.1 at Thu Mar 08 09:37:14 -0500 2012
+Served asset /admin-grid.css - 404 Not Found (148ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin-grid.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/assets/admin.css" for 127.0.0.1 at Thu Mar 08 09:37:14 -0500 2012
+Served asset /admin.css - 404 Not Found (6ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/admin/style.css?body=1" for 127.0.0.1 at Thu Mar 08 09:37:14 -0500 2012
+Served asset /admin/style.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Thu Mar 08 09:37:14 -0500 2012
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Thu Mar 08 09:37:14 -0500 2012
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/clients.js?body=1" for 127.0.0.1 at Thu Mar 08 09:37:14 -0500 2012
+Served asset /admin/clients.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/hotels.js?body=1" for 127.0.0.1 at Thu Mar 08 09:37:14 -0500 2012
+Served asset /admin/hotels.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/site.js?body=1" for 127.0.0.1 at Thu Mar 08 09:37:14 -0500 2012
+Served asset /admin/site.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/travel_packages.js?body=1" for 127.0.0.1 at Thu Mar 08 09:37:14 -0500 2012
+Served asset /admin/travel_packages.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Thu Mar 08 09:37:14 -0500 2012
+Served asset /application.js - 200 OK (1ms)
+
+
+Started GET "/assets/admin/images/header.gif" for 127.0.0.1 at Thu Mar 08 09:37:14 -0500 2012
+Served asset /admin/images/header.gif - 200 OK (0ms)
+
+
+Started GET "/assets/admin/images/tab.gif" for 127.0.0.1 at Thu Mar 08 09:37:14 -0500 2012
+Served asset /admin/images/tab.gif - 200 OK (0ms)
+
+
+Started GET "/assets/admin/images/footer.gif" for 127.0.0.1 at Thu Mar 08 09:37:14 -0500 2012
+Served asset /admin/images/footer.gif - 200 OK (0ms)
+
+
+Started POST "/admin/travel_packages" for 127.0.0.1 at Thu Mar 08 09:37:44 -0500 2012
+
+AbstractController::ActionNotFound (The action 'create' could not be found for Admin::TravelPackagesController):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.6ms)
+DEPRECATION WARNING: ActiveRecord::Associations::AssociationCollection is deprecated! Use ActiveRecord::Associations::CollectionProxy instead. (called from /home/faguirre/projects/git_projects/andesconexion/config/environment.rb:5)
+
+
+Started GET "/admin" for 127.0.0.1 at Thu Mar 08 10:31:52 -0500 2012
+  Processing by Admin::SiteController#index as HTML
+Redirected to http://localhost:3000/user_session/new
+Completed 302 Found in 508ms
+
+
+Started GET "/user_session/new" for 127.0.0.1 at Thu Mar 08 10:31:53 -0500 2012
+  Processing by UserSessionsController#new as HTML
+Rendered user_sessions/new.html.erb within layouts/application (35.3ms)
+Completed 200 OK in 422ms (Views: 385.2ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Thu Mar 08 10:31:54 -0500 2012
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admin/clients.css?body=1" for 127.0.0.1 at Thu Mar 08 10:31:54 -0500 2012
+Served asset /admin/clients.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/admin/style.css?body=1" for 127.0.0.1 at Thu Mar 08 10:31:54 -0500 2012
+Served asset /admin/style.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/admin/hotels.css?body=1" for 127.0.0.1 at Thu Mar 08 10:31:54 -0500 2012
+Served asset /admin/hotels.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/admin/site.css?body=1" for 127.0.0.1 at Thu Mar 08 10:31:54 -0500 2012
+Served asset /admin/site.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/admin/travel_packages.css?body=1" for 127.0.0.1 at Thu Mar 08 10:31:54 -0500 2012
+Served asset /admin/travel_packages.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Thu Mar 08 10:31:54 -0500 2012
+Served asset /jquery.js - 304 Not Modified (43ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Thu Mar 08 10:31:54 -0500 2012
+Served asset /jquery_ujs.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/admin/clients.js?body=1" for 127.0.0.1 at Thu Mar 08 10:31:54 -0500 2012
+Served asset /admin/clients.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/admin/hotels.js?body=1" for 127.0.0.1 at Thu Mar 08 10:31:54 -0500 2012
+Served asset /admin/hotels.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/admin/site.js?body=1" for 127.0.0.1 at Thu Mar 08 10:31:54 -0500 2012
+Served asset /admin/site.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/admin/travel_packages.js?body=1" for 127.0.0.1 at Thu Mar 08 10:31:54 -0500 2012
+Served asset /admin/travel_packages.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Thu Mar 08 10:31:54 -0500 2012
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admin/images/button.gif" for 127.0.0.1 at Thu Mar 08 10:31:54 -0500 2012
+Served asset /admin/images/button.gif - 304 Not Modified (28ms)
+
+
+Started POST "/user_session" for 127.0.0.1 at Thu Mar 08 10:32:26 -0500 2012
+  Processing by UserSessionsController#create as HTML
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"0CCZaZmtT9x+9q/kNm3z+QbEwaXkOal7xnSfvf3Pe3w=", "utf8"=>"✓", "user_session"=>{"login"=>"admin", "password"=>"[FILTERED]", "remember_me"=>"0"}}
+  [1m[36mUser Load (69.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users".login ILIKE 'admin') LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (1.1ms)[0m  [1mUPDATE "users" SET "last_login_at" = '2012-03-08 14:30:45.635288', "current_login_at" = '2012-03-08 15:32:26.711023', "login_count" = 6, "last_request_at" = '2012-03-08 15:32:26.711691', "updated_at" = '2012-03-08 15:32:26.714324', "perishable_token" = 'qs6d9FAZLh6bx7MtSH' WHERE "users"."id" = 1[0m
+  [1m[35m (14.9ms)[0m  COMMIT
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 186ms
+
+
+Started GET "/admin" for 127.0.0.1 at Thu Mar 08 10:32:26 -0500 2012
+  Processing by Admin::SiteController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.8ms)[0m  [1mUPDATE "users" SET "perishable_token" = 'yiUn3PcPw4zuAAKwkjTA', "updated_at" = '2012-03-08 15:32:27.031465', "last_request_at" = '2012-03-08 15:32:27.029397' WHERE "users"."id" = 1[0m
+  [1m[35m (11.1ms)[0m  COMMIT
+Rendered admin/site/index.html.erb within layouts/admin (1.4ms)
+Rendered layouts/_admin_bar.html.erb (2.6ms)
+Completed 200 OK in 346ms (Views: 95.1ms | ActiveRecord: 19.0ms)
+
+
+Started GET "/assets/admin.css" for 127.0.0.1 at Thu Mar 08 10:32:27 -0500 2012
+Served asset /admin.css - 404 Not Found (9ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/admin-grid.css" for 127.0.0.1 at Thu Mar 08 10:32:27 -0500 2012
+Served asset /admin-grid.css - 404 Not Found (6ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin-grid.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/assets/textile-editor.css" for 127.0.0.1 at Thu Mar 08 10:32:27 -0500 2012
+Served asset /textile-editor.css - 404 Not Found (6ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/textile-editor.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/assets/admin/style.css?body=1" for 127.0.0.1 at Thu Mar 08 10:32:27 -0500 2012
+Served asset /admin/style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Thu Mar 08 10:32:27 -0500 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Thu Mar 08 10:32:27 -0500 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/clients.js?body=1" for 127.0.0.1 at Thu Mar 08 10:32:27 -0500 2012
+Served asset /admin/clients.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/hotels.js?body=1" for 127.0.0.1 at Thu Mar 08 10:32:27 -0500 2012
+Served asset /admin/hotels.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/site.js?body=1" for 127.0.0.1 at Thu Mar 08 10:32:27 -0500 2012
+Served asset /admin/site.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/travel_packages.js?body=1" for 127.0.0.1 at Thu Mar 08 10:32:27 -0500 2012
+Served asset /admin/travel_packages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Thu Mar 08 10:32:27 -0500 2012
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admin/images/header.gif" for 127.0.0.1 at Thu Mar 08 10:32:27 -0500 2012
+Served asset /admin/images/header.gif - 304 Not Modified (65ms)
+
+
+Started GET "/assets/admin/images/tab.gif" for 127.0.0.1 at Thu Mar 08 10:32:27 -0500 2012
+Served asset /admin/images/tab.gif - 304 Not Modified (63ms)
+
+
+Started GET "/assets/admin/images/msg-ok.gif" for 127.0.0.1 at Thu Mar 08 10:32:27 -0500 2012
+Served asset /admin/images/msg-ok.gif - 304 Not Modified (21ms)
+
+
+Started GET "/assets/admin/images/close.gif" for 127.0.0.1 at Thu Mar 08 10:32:28 -0500 2012
+Served asset /admin/images/close.gif - 304 Not Modified (10ms)
+
+
+Started GET "/assets/admin/images/button.gif" for 127.0.0.1 at Thu Mar 08 10:32:28 -0500 2012
+Served asset /admin/images/button.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/images/msg-error.gif" for 127.0.0.1 at Thu Mar 08 10:32:28 -0500 2012
+Served asset /admin/images/msg-error.gif - 304 Not Modified (7ms)
+
+
+Started GET "/assets/admin/images/th.gif" for 127.0.0.1 at Thu Mar 08 10:32:28 -0500 2012
+Served asset /admin/images/th.gif - 304 Not Modified (6ms)
+
+
+Started GET "/assets/admin/images/del.gif" for 127.0.0.1 at Thu Mar 08 10:32:28 -0500 2012
+Served asset /admin/images/del.gif - 304 Not Modified (18ms)
+
+
+Started GET "/assets/admin/images/edit.gif" for 127.0.0.1 at Thu Mar 08 10:32:28 -0500 2012
+Served asset /admin/images/edit.gif - 304 Not Modified (18ms)
+
+
+Started GET "/assets/admin/images/pagging.gif" for 127.0.0.1 at Thu Mar 08 10:32:28 -0500 2012
+Served asset /admin/images/pagging.gif - 304 Not Modified (8ms)
+
+
+Started GET "/assets/admin/images/add-button.gif" for 127.0.0.1 at Thu Mar 08 10:32:28 -0500 2012
+Served asset /admin/images/add-button.gif - 304 Not Modified (9ms)
+
+
+Started GET "/assets/admin/images/footer.gif" for 127.0.0.1 at Thu Mar 08 10:32:28 -0500 2012
+Served asset /admin/images/footer.gif - 304 Not Modified (186ms)
+
+
+Started GET "/admin/travel_packages" for 127.0.0.1 at Thu Mar 08 10:33:20 -0500 2012
+  Processing by Admin::TravelPackagesController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.8ms)[0m  [1mUPDATE "users" SET "updated_at" = '2012-03-08 15:33:20.997387', "last_request_at" = '2012-03-08 15:33:20.995265', "perishable_token" = 'Bg6D7Q8DPmanE6LtReMI' WHERE "users"."id" = 1[0m
+  [1m[35m (14.8ms)[0m  COMMIT
+  [1m[36mTravelPackage Load (1.1ms)[0m  [1mSELECT "travel_packages".* FROM "travel_packages" [0m
+Rendered admin/travel_packages/index.html.erb within layouts/admin (3.3ms)
+Rendered layouts/_admin_bar.html.erb (1.5ms)
+Completed 200 OK in 157ms (Views: 68.4ms | ActiveRecord: 22.9ms)
+
+
+Started GET "/assets/admin.css" for 127.0.0.1 at Thu Mar 08 10:33:21 -0500 2012
+Served asset /admin.css - 404 Not Found (7ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/assets/admin-grid.css" for 127.0.0.1 at Thu Mar 08 10:33:21 -0500 2012
+Served asset /admin-grid.css - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin-grid.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/assets/textile-editor.css" for 127.0.0.1 at Thu Mar 08 10:33:21 -0500 2012
+Served asset /textile-editor.css - 404 Not Found (6ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/textile-editor.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/admin/style.css?body=1" for 127.0.0.1 at Thu Mar 08 10:33:21 -0500 2012
+Served asset /admin/style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Thu Mar 08 10:33:21 -0500 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Thu Mar 08 10:33:21 -0500 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/clients.js?body=1" for 127.0.0.1 at Thu Mar 08 10:33:21 -0500 2012
+Served asset /admin/clients.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/hotels.js?body=1" for 127.0.0.1 at Thu Mar 08 10:33:21 -0500 2012
+Served asset /admin/hotels.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/site.js?body=1" for 127.0.0.1 at Thu Mar 08 10:33:21 -0500 2012
+Served asset /admin/site.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/travel_packages.js?body=1" for 127.0.0.1 at Thu Mar 08 10:33:21 -0500 2012
+Served asset /admin/travel_packages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Thu Mar 08 10:33:21 -0500 2012
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admin/images/header.gif" for 127.0.0.1 at Thu Mar 08 10:33:21 -0500 2012
+Served asset /admin/images/header.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/images/tab.gif" for 127.0.0.1 at Thu Mar 08 10:33:21 -0500 2012
+Served asset /admin/images/tab.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/images/button.gif" for 127.0.0.1 at Thu Mar 08 10:33:21 -0500 2012
+Served asset /admin/images/button.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/images/th.gif" for 127.0.0.1 at Thu Mar 08 10:33:21 -0500 2012
+Served asset /admin/images/th.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/images/add-button.gif" for 127.0.0.1 at Thu Mar 08 10:33:21 -0500 2012
+Served asset /admin/images/add-button.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/images/pagging.gif" for 127.0.0.1 at Thu Mar 08 10:33:21 -0500 2012
+Served asset /admin/images/pagging.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/images/footer.gif" for 127.0.0.1 at Thu Mar 08 10:33:21 -0500 2012
+Served asset /admin/images/footer.gif - 304 Not Modified (0ms)
+
+
+Started GET "/admin/travel_packages/new" for 127.0.0.1 at Thu Mar 08 10:33:46 -0500 2012
+  Processing by Admin::TravelPackagesController#new as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.8ms)[0m  UPDATE "users" SET "updated_at" = '2012-03-08 15:33:46.419625', "last_request_at" = '2012-03-08 15:33:46.417492', "perishable_token" = 'jEPevDmfMGVakRkyaPZ' WHERE "users"."id" = 1
+  [1m[36m (27.5ms)[0m  [1mCOMMIT[0m
+Rendered admin/travel_packages/_form.html.erb (4.4ms)
+Rendered admin/travel_packages/new.html.erb within layouts/admin (70.9ms)
+Rendered layouts/_admin_bar.html.erb (1.6ms)
+Completed 200 OK in 229ms (Views: 120.0ms | ActiveRecord: 39.8ms)
+
+
+Started GET "/assets/textile-editor.css" for 127.0.0.1 at Thu Mar 08 10:33:46 -0500 2012
+Served asset /textile-editor.css - 404 Not Found (5ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/textile-editor.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/assets/admin-grid.css" for 127.0.0.1 at Thu Mar 08 10:33:46 -0500 2012
+Served asset /admin-grid.css - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin-grid.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/assets/admin.css" for 127.0.0.1 at Thu Mar 08 10:33:46 -0500 2012
+Served asset /admin.css - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/assets/admin/style.css?body=1" for 127.0.0.1 at Thu Mar 08 10:33:46 -0500 2012
+Served asset /admin/style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Thu Mar 08 10:33:46 -0500 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Thu Mar 08 10:33:46 -0500 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/clients.js?body=1" for 127.0.0.1 at Thu Mar 08 10:33:46 -0500 2012
+Served asset /admin/clients.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/hotels.js?body=1" for 127.0.0.1 at Thu Mar 08 10:33:46 -0500 2012
+Served asset /admin/hotels.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/site.js?body=1" for 127.0.0.1 at Thu Mar 08 10:33:46 -0500 2012
+Served asset /admin/site.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/travel_packages.js?body=1" for 127.0.0.1 at Thu Mar 08 10:33:46 -0500 2012
+Served asset /admin/travel_packages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Thu Mar 08 10:33:46 -0500 2012
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admin/images/tab.gif" for 127.0.0.1 at Thu Mar 08 10:33:46 -0500 2012
+Served asset /admin/images/tab.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/images/header.gif" for 127.0.0.1 at Thu Mar 08 10:33:46 -0500 2012
+Served asset /admin/images/header.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/images/footer.gif" for 127.0.0.1 at Thu Mar 08 10:33:46 -0500 2012
+Served asset /admin/images/footer.gif - 304 Not Modified (0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at Thu Mar 08 11:01:07 -0500 2012
+  Processing by Admin::SiteController#index as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.8ms)[0m  UPDATE "users" SET "last_request_at" = '2012-03-08 16:01:07.994485', "updated_at" = '2012-03-08 16:01:07.996468', "perishable_token" = 'NF59ymFT5dcVx2XN1XT0' WHERE "users"."id" = 1
+  [1m[36m (26.7ms)[0m  [1mCOMMIT[0m
+Rendered admin/site/index.html.erb within layouts/admin (0.1ms)
+Rendered layouts/_admin_bar.html.erb (1.7ms)
+Completed 200 OK in 141ms (Views: 37.8ms | ActiveRecord: 34.6ms)
+
+
+Started GET "/assets/admin.css" for 127.0.0.1 at Thu Mar 08 11:01:08 -0500 2012
+Served asset /admin.css - 404 Not Found (5ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/assets/admin-grid.css" for 127.0.0.1 at Thu Mar 08 11:01:08 -0500 2012
+Served asset /admin-grid.css - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin-grid.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/textile-editor.css" for 127.0.0.1 at Thu Mar 08 11:01:08 -0500 2012
+Served asset /textile-editor.css - 404 Not Found (5ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/textile-editor.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/admin/style.css?body=1" for 127.0.0.1 at Thu Mar 08 11:01:08 -0500 2012
+Served asset /admin/style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Thu Mar 08 11:01:08 -0500 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Thu Mar 08 11:01:08 -0500 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/clients.js?body=1" for 127.0.0.1 at Thu Mar 08 11:01:08 -0500 2012
+Served asset /admin/clients.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/hotels.js?body=1" for 127.0.0.1 at Thu Mar 08 11:01:08 -0500 2012
+Served asset /admin/hotels.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/site.js?body=1" for 127.0.0.1 at Thu Mar 08 11:01:08 -0500 2012
+Served asset /admin/site.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/travel_packages.js?body=1" for 127.0.0.1 at Thu Mar 08 11:01:08 -0500 2012
+Served asset /admin/travel_packages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Thu Mar 08 11:01:08 -0500 2012
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admin/images/header.gif" for 127.0.0.1 at Thu Mar 08 11:01:08 -0500 2012
+Served asset /admin/images/header.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/images/tab.gif" for 127.0.0.1 at Thu Mar 08 11:01:08 -0500 2012
+Served asset /admin/images/tab.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/images/close.gif" for 127.0.0.1 at Thu Mar 08 11:01:08 -0500 2012
+Served asset /admin/images/close.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/images/msg-ok.gif" for 127.0.0.1 at Thu Mar 08 11:01:08 -0500 2012
+Served asset /admin/images/msg-ok.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/images/msg-error.gif" for 127.0.0.1 at Thu Mar 08 11:01:08 -0500 2012
+Served asset /admin/images/msg-error.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/images/button.gif" for 127.0.0.1 at Thu Mar 08 11:01:08 -0500 2012
+Served asset /admin/images/button.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/images/th.gif" for 127.0.0.1 at Thu Mar 08 11:01:08 -0500 2012
+Served asset /admin/images/th.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/images/del.gif" for 127.0.0.1 at Thu Mar 08 11:01:08 -0500 2012
+Served asset /admin/images/del.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/images/edit.gif" for 127.0.0.1 at Thu Mar 08 11:01:08 -0500 2012
+Served asset /admin/images/edit.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/images/pagging.gif" for 127.0.0.1 at Thu Mar 08 11:01:08 -0500 2012
+Served asset /admin/images/pagging.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/images/add-button.gif" for 127.0.0.1 at Thu Mar 08 11:01:08 -0500 2012
+Served asset /admin/images/add-button.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/images/footer.gif" for 127.0.0.1 at Thu Mar 08 11:01:08 -0500 2012
+Served asset /admin/images/footer.gif - 304 Not Modified (0ms)
+
+
+Started GET "/admin/travel_packages" for 127.0.0.1 at Thu Mar 08 11:01:10 -0500 2012
+  Processing by Admin::TravelPackagesController#index as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.8ms)[0m  UPDATE "users" SET "perishable_token" = 'LMqlACBEfqhM3h9N5Hwt', "updated_at" = '2012-03-08 16:01:11.034396', "last_request_at" = '2012-03-08 16:01:11.032290' WHERE "users"."id" = 1
+  [1m[36m (22.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mTravelPackage Load (0.6ms)[0m  SELECT "travel_packages".* FROM "travel_packages" 
+Rendered admin/travel_packages/index.html.erb within layouts/admin (0.8ms)
+Rendered layouts/_admin_bar.html.erb (1.5ms)
+Completed 200 OK in 137ms (Views: 36.6ms | ActiveRecord: 31.1ms)
+
+
+Started GET "/assets/admin-grid.css" for 127.0.0.1 at Thu Mar 08 11:01:11 -0500 2012
+Served asset /admin-grid.css - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin-grid.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/assets/textile-editor.css" for 127.0.0.1 at Thu Mar 08 11:01:11 -0500 2012
+Served asset /textile-editor.css - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/textile-editor.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/assets/admin.css" for 127.0.0.1 at Thu Mar 08 11:01:11 -0500 2012
+Served asset /admin.css - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Thu Mar 08 11:01:11 -0500 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/style.css?body=1" for 127.0.0.1 at Thu Mar 08 11:01:11 -0500 2012
+Served asset /admin/style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Thu Mar 08 11:01:11 -0500 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/clients.js?body=1" for 127.0.0.1 at Thu Mar 08 11:01:11 -0500 2012
+Served asset /admin/clients.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/hotels.js?body=1" for 127.0.0.1 at Thu Mar 08 11:01:11 -0500 2012
+Served asset /admin/hotels.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/site.js?body=1" for 127.0.0.1 at Thu Mar 08 11:01:11 -0500 2012
+Served asset /admin/site.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/travel_packages.js?body=1" for 127.0.0.1 at Thu Mar 08 11:01:11 -0500 2012
+Served asset /admin/travel_packages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Thu Mar 08 11:01:11 -0500 2012
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admin/images/header.gif" for 127.0.0.1 at Thu Mar 08 11:01:11 -0500 2012
+Served asset /admin/images/header.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/images/th.gif" for 127.0.0.1 at Thu Mar 08 11:01:11 -0500 2012
+Served asset /admin/images/th.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/images/pagging.gif" for 127.0.0.1 at Thu Mar 08 11:01:11 -0500 2012
+Served asset /admin/images/pagging.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/images/tab.gif" for 127.0.0.1 at Thu Mar 08 11:01:11 -0500 2012
+Served asset /admin/images/tab.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/images/add-button.gif" for 127.0.0.1 at Thu Mar 08 11:01:11 -0500 2012
+Served asset /admin/images/add-button.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/images/button.gif" for 127.0.0.1 at Thu Mar 08 11:01:11 -0500 2012
+Served asset /admin/images/button.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/images/footer.gif" for 127.0.0.1 at Thu Mar 08 11:01:11 -0500 2012
+Served asset /admin/images/footer.gif - 304 Not Modified (0ms)
+DEPRECATION WARNING: ActiveRecord::Associations::AssociationCollection is deprecated! Use ActiveRecord::Associations::CollectionProxy instead. (called from /home/faguirre/projects/git_projects/andesconexion/config/environment.rb:5)
+
+
+Started GET "/admin" for 127.0.0.1 at Thu Mar 08 23:38:22 -0500 2012
+  Processing by Admin::SiteController#index as HTML
+Redirected to http://localhost:3000/user_session/new
+Completed 302 Found in 493ms
+
+
+Started GET "/user_session/new" for 127.0.0.1 at Thu Mar 08 23:38:22 -0500 2012
+  Processing by UserSessionsController#new as HTML
+Rendered user_sessions/new.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 328ms (Views: 292.9ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Thu Mar 08 23:38:23 -0500 2012
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admin/clients.css?body=1" for 127.0.0.1 at Thu Mar 08 23:38:23 -0500 2012
+Served asset /admin/clients.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/admin/hotels.css?body=1" for 127.0.0.1 at Thu Mar 08 23:38:23 -0500 2012
+Served asset /admin/hotels.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/admin/site.css?body=1" for 127.0.0.1 at Thu Mar 08 23:38:23 -0500 2012
+Served asset /admin/site.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/admin/style.css?body=1" for 127.0.0.1 at Thu Mar 08 23:38:23 -0500 2012
+Served asset /admin/style.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/admin/travel_packages.css?body=1" for 127.0.0.1 at Thu Mar 08 23:38:23 -0500 2012
+Served asset /admin/travel_packages.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Thu Mar 08 23:38:23 -0500 2012
+Served asset /jquery.js - 304 Not Modified (54ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Thu Mar 08 23:38:23 -0500 2012
+Served asset /jquery_ujs.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/admin/clients.js?body=1" for 127.0.0.1 at Thu Mar 08 23:38:23 -0500 2012
+Served asset /admin/clients.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/admin/hotels.js?body=1" for 127.0.0.1 at Thu Mar 08 23:38:23 -0500 2012
+Served asset /admin/hotels.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/admin/site.js?body=1" for 127.0.0.1 at Thu Mar 08 23:38:23 -0500 2012
+Served asset /admin/site.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/admin/travel_packages.js?body=1" for 127.0.0.1 at Thu Mar 08 23:38:23 -0500 2012
+Served asset /admin/travel_packages.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Thu Mar 08 23:38:23 -0500 2012
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admin/images/button.gif" for 127.0.0.1 at Thu Mar 08 23:38:24 -0500 2012
+Served asset /admin/images/button.gif - 304 Not Modified (31ms)
+
+
+Started POST "/user_session" for 127.0.0.1 at Thu Mar 08 23:38:31 -0500 2012
+  Processing by UserSessionsController#create as HTML
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"Y0rnDy7s+xG9FSLWAuHYVmrvHtD87Y1BlCk0CQhdrLo=", "utf8"=>"✓", "user_session"=>{"password"=>"[FILTERED]", "login"=>"admin", "remember_me"=>"0"}}
+  [1m[36mUser Load (49.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users".login ILIKE 'admin') LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (1.1ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2012-03-09 04:38:31.274126', "login_count" = 7, "perishable_token" = 'zliHAkAaqiVsTXaQ9O', "last_login_at" = '2012-03-08 15:32:26.711023', "updated_at" = '2012-03-09 04:38:31.278975', "current_login_at" = '2012-03-09 04:38:31.272936' WHERE "users"."id" = 1[0m
+  [1m[35m (21.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 170ms
+
+
+Started GET "/admin" for 127.0.0.1 at Thu Mar 08 23:38:31 -0500 2012
+  Processing by Admin::SiteController#index as HTML
+  [1m[36mUser Load (18.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.8ms)[0m  [1mUPDATE "users" SET "perishable_token" = 'oJtuVQCJrX3Xlw2RkJKd', "updated_at" = '2012-03-09 04:38:31.660284', "last_request_at" = '2012-03-09 04:38:31.657868' WHERE "users"."id" = 1[0m
+  [1m[35m (9.1ms)[0m  COMMIT
+Rendered admin/site/index.html.erb within layouts/admin (1.0ms)
+Rendered layouts/_admin_bar.html.erb (3.0ms)
+Completed 200 OK in 377ms (Views: 72.6ms | ActiveRecord: 34.9ms)
+
+
+Started GET "/assets/admin.css" for 127.0.0.1 at Thu Mar 08 23:38:31 -0500 2012
+Served asset /admin.css - 404 Not Found (6ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/textile-editor.css" for 127.0.0.1 at Thu Mar 08 23:38:32 -0500 2012
+Served asset /textile-editor.css - 404 Not Found (6ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/textile-editor.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/assets/admin-grid.css" for 127.0.0.1 at Thu Mar 08 23:38:32 -0500 2012
+Served asset /admin-grid.css - 404 Not Found (5ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin-grid.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Thu Mar 08 23:38:32 -0500 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/style.css?body=1" for 127.0.0.1 at Thu Mar 08 23:38:32 -0500 2012
+Served asset /admin/style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Thu Mar 08 23:38:32 -0500 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/clients.js?body=1" for 127.0.0.1 at Thu Mar 08 23:38:32 -0500 2012
+Served asset /admin/clients.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/hotels.js?body=1" for 127.0.0.1 at Thu Mar 08 23:38:32 -0500 2012
+Served asset /admin/hotels.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/site.js?body=1" for 127.0.0.1 at Thu Mar 08 23:38:32 -0500 2012
+Served asset /admin/site.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/travel_packages.js?body=1" for 127.0.0.1 at Thu Mar 08 23:38:32 -0500 2012
+Served asset /admin/travel_packages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Thu Mar 08 23:38:32 -0500 2012
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admin/images/header.gif" for 127.0.0.1 at Thu Mar 08 23:38:32 -0500 2012
+Served asset /admin/images/header.gif - 304 Not Modified (83ms)
+
+
+Started GET "/assets/admin/images/tab.gif" for 127.0.0.1 at Thu Mar 08 23:38:32 -0500 2012
+Served asset /admin/images/tab.gif - 304 Not Modified (26ms)
+
+
+Started GET "/assets/admin/images/msg-error.gif" for 127.0.0.1 at Thu Mar 08 23:38:32 -0500 2012
+Served asset /admin/images/msg-error.gif - 304 Not Modified (20ms)
+
+
+Started GET "/assets/admin/images/button.gif" for 127.0.0.1 at Thu Mar 08 23:38:32 -0500 2012
+Served asset /admin/images/button.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/images/close.gif" for 127.0.0.1 at Thu Mar 08 23:38:32 -0500 2012
+Served asset /admin/images/close.gif - 304 Not Modified (7ms)
+
+
+Started GET "/assets/admin/images/msg-ok.gif" for 127.0.0.1 at Thu Mar 08 23:38:32 -0500 2012
+Served asset /admin/images/msg-ok.gif - 304 Not Modified (7ms)
+
+
+Started GET "/assets/admin/images/th.gif" for 127.0.0.1 at Thu Mar 08 23:38:32 -0500 2012
+Served asset /admin/images/th.gif - 304 Not Modified (11ms)
+
+
+Started GET "/assets/admin/images/del.gif" for 127.0.0.1 at Thu Mar 08 23:38:32 -0500 2012
+Served asset /admin/images/del.gif - 304 Not Modified (22ms)
+
+
+Started GET "/assets/admin/images/edit.gif" for 127.0.0.1 at Thu Mar 08 23:38:32 -0500 2012
+Served asset /admin/images/edit.gif - 304 Not Modified (16ms)
+
+
+Started GET "/assets/admin/images/pagging.gif" for 127.0.0.1 at Thu Mar 08 23:38:32 -0500 2012
+Served asset /admin/images/pagging.gif - 304 Not Modified (9ms)
+
+
+Started GET "/assets/admin/images/add-button.gif" for 127.0.0.1 at Thu Mar 08 23:38:32 -0500 2012
+Served asset /admin/images/add-button.gif - 304 Not Modified (5ms)
+
+
+Started GET "/assets/admin/images/footer.gif" for 127.0.0.1 at Thu Mar 08 23:38:32 -0500 2012
+Served asset /admin/images/footer.gif - 304 Not Modified (188ms)
+
+
+Started GET "/admin/travel_packages" for 127.0.0.1 at Thu Mar 08 23:38:36 -0500 2012
+  Processing by Admin::TravelPackagesController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.7ms)[0m  [1mUPDATE "users" SET "perishable_token" = 'o7BqOlm40j7IM3pWDNbE', "updated_at" = '2012-03-09 04:38:36.412837', "last_request_at" = '2012-03-09 04:38:36.410772' WHERE "users"."id" = 1[0m
+  [1m[35m (12.9ms)[0m  COMMIT
+  [1m[36mTravelPackage Load (1.2ms)[0m  [1mSELECT "travel_packages".* FROM "travel_packages" [0m
+Rendered admin/travel_packages/index.html.erb within layouts/admin (3.3ms)
+Rendered layouts/_admin_bar.html.erb (1.7ms)
+Completed 200 OK in 145ms (Views: 55.3ms | ActiveRecord: 20.6ms)
+
+
+Started GET "/assets/admin.css" for 127.0.0.1 at Thu Mar 08 23:38:36 -0500 2012
+Served asset /admin.css - 404 Not Found (7ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/assets/admin-grid.css" for 127.0.0.1 at Thu Mar 08 23:38:36 -0500 2012
+Served asset /admin-grid.css - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin-grid.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/assets/textile-editor.css" for 127.0.0.1 at Thu Mar 08 23:38:36 -0500 2012
+Served asset /textile-editor.css - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/textile-editor.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/admin/style.css?body=1" for 127.0.0.1 at Thu Mar 08 23:38:36 -0500 2012
+Served asset /admin/style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Thu Mar 08 23:38:36 -0500 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Thu Mar 08 23:38:36 -0500 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/clients.js?body=1" for 127.0.0.1 at Thu Mar 08 23:38:36 -0500 2012
+Served asset /admin/clients.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/hotels.js?body=1" for 127.0.0.1 at Thu Mar 08 23:38:36 -0500 2012
+Served asset /admin/hotels.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/site.js?body=1" for 127.0.0.1 at Thu Mar 08 23:38:36 -0500 2012
+Served asset /admin/site.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/travel_packages.js?body=1" for 127.0.0.1 at Thu Mar 08 23:38:36 -0500 2012
+Served asset /admin/travel_packages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Thu Mar 08 23:38:36 -0500 2012
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admin/images/header.gif" for 127.0.0.1 at Thu Mar 08 23:38:36 -0500 2012
+Served asset /admin/images/header.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/images/tab.gif" for 127.0.0.1 at Thu Mar 08 23:38:36 -0500 2012
+Served asset /admin/images/tab.gif - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admin/images/button.gif" for 127.0.0.1 at Thu Mar 08 23:38:36 -0500 2012
+Served asset /admin/images/button.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/images/th.gif" for 127.0.0.1 at Thu Mar 08 23:38:36 -0500 2012
+Served asset /admin/images/th.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/images/pagging.gif" for 127.0.0.1 at Thu Mar 08 23:38:36 -0500 2012
+Served asset /admin/images/pagging.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/images/add-button.gif" for 127.0.0.1 at Thu Mar 08 23:38:36 -0500 2012
+Served asset /admin/images/add-button.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/images/footer.gif" for 127.0.0.1 at Thu Mar 08 23:38:36 -0500 2012
+Served asset /admin/images/footer.gif - 304 Not Modified (0ms)
+
+
+Started GET "/admin/travel_packages/new" for 127.0.0.1 at Thu Mar 08 23:39:17 -0500 2012
+  Processing by Admin::TravelPackagesController#new as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.8ms)[0m  UPDATE "users" SET "perishable_token" = 'B9CBWvi6caojBAHXWFb', "last_request_at" = '2012-03-09 04:39:17.524951', "updated_at" = '2012-03-09 04:39:17.527276' WHERE "users"."id" = 1
+  [1m[36m (78.6ms)[0m  [1mCOMMIT[0m
+Rendered admin/travel_packages/_form.html.erb (4.3ms)
+Rendered admin/travel_packages/new.html.erb within layouts/admin (37.2ms)
+Rendered layouts/_admin_bar.html.erb (1.6ms)
+Completed 200 OK in 232ms (Views: 72.8ms | ActiveRecord: 89.7ms)
+
+
+Started GET "/assets/admin.css" for 127.0.0.1 at Thu Mar 08 23:39:17 -0500 2012
+Served asset /admin.css - 404 Not Found (5ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/admin-grid.css" for 127.0.0.1 at Thu Mar 08 23:39:17 -0500 2012
+Served asset /admin-grid.css - 404 Not Found (7ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin-grid.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/assets/textile-editor.css" for 127.0.0.1 at Thu Mar 08 23:39:17 -0500 2012
+Served asset /textile-editor.css - 404 Not Found (6ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/textile-editor.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/assets/admin/style.css?body=1" for 127.0.0.1 at Thu Mar 08 23:39:17 -0500 2012
+Served asset /admin/style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Thu Mar 08 23:39:17 -0500 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Thu Mar 08 23:39:17 -0500 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/clients.js?body=1" for 127.0.0.1 at Thu Mar 08 23:39:18 -0500 2012
+Served asset /admin/clients.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/hotels.js?body=1" for 127.0.0.1 at Thu Mar 08 23:39:18 -0500 2012
+Served asset /admin/hotels.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/site.js?body=1" for 127.0.0.1 at Thu Mar 08 23:39:18 -0500 2012
+Served asset /admin/site.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/travel_packages.js?body=1" for 127.0.0.1 at Thu Mar 08 23:39:18 -0500 2012
+Served asset /admin/travel_packages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Thu Mar 08 23:39:18 -0500 2012
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admin/images/header.gif" for 127.0.0.1 at Thu Mar 08 23:39:18 -0500 2012
+Served asset /admin/images/header.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/images/tab.gif" for 127.0.0.1 at Thu Mar 08 23:39:18 -0500 2012
+Served asset /admin/images/tab.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/images/footer.gif" for 127.0.0.1 at Thu Mar 08 23:39:18 -0500 2012
+Served asset /admin/images/footer.gif - 304 Not Modified (0ms)
+
+
+Started GET "/admin/travel_packages/new" for 127.0.0.1 at Thu Mar 08 23:41:26 -0500 2012
+  Processing by Admin::TravelPackagesController#new as HTML
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.7ms)[0m  UPDATE "users" SET "last_request_at" = '2012-03-09 04:41:26.592456', "updated_at" = '2012-03-09 04:41:26.594520', "perishable_token" = 'XMpPv9qW5TWgqdjx8B7q' WHERE "users"."id" = 1
+  [1m[36m (20.0ms)[0m  [1mCOMMIT[0m
+Rendered admin/travel_packages/_form.html.erb (1.9ms)
+Rendered admin/travel_packages/new.html.erb within layouts/admin (22.8ms)
+Compiled admin/style.css  (1ms)  (pid 2734)
+Rendered layouts/_admin_bar.html.erb (3.2ms)
+Completed 200 OK in 188ms (Views: 77.7ms | ActiveRecord: 31.3ms)
+
+
+Started GET "/assets/admin.css" for 127.0.0.1 at Thu Mar 08 23:41:26 -0500 2012
+Served asset /admin.css - 404 Not Found (7ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/assets/admin-grid.css" for 127.0.0.1 at Thu Mar 08 23:41:26 -0500 2012
+Served asset /admin-grid.css - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin-grid.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/textile-editor.css" for 127.0.0.1 at Thu Mar 08 23:41:26 -0500 2012
+Served asset /textile-editor.css - 404 Not Found (5ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/textile-editor.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/assets/admin/style.css?body=1" for 127.0.0.1 at Thu Mar 08 23:41:26 -0500 2012
+Served asset /admin/style.css - 200 OK (47ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Thu Mar 08 23:41:26 -0500 2012
+Served asset /jquery.js - 200 OK (56ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Thu Mar 08 23:41:27 -0500 2012
+Served asset /jquery_ujs.js - 200 OK (15ms)
+
+
+Started GET "/assets/admin/clients.js?body=1" for 127.0.0.1 at Thu Mar 08 23:41:27 -0500 2012
+Served asset /admin/clients.js - 200 OK (2ms)
+
+
+Started GET "/assets/admin/hotels.js?body=1" for 127.0.0.1 at Thu Mar 08 23:41:27 -0500 2012
+Served asset /admin/hotels.js - 200 OK (3ms)
+
+
+Started GET "/assets/admin/site.js?body=1" for 127.0.0.1 at Thu Mar 08 23:41:27 -0500 2012
+Served asset /admin/site.js - 200 OK (4ms)
+
+
+Started GET "/assets/admin/travel_packages.js?body=1" for 127.0.0.1 at Thu Mar 08 23:41:27 -0500 2012
+Served asset /admin/travel_packages.js - 200 OK (8ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Thu Mar 08 23:41:27 -0500 2012
+Served asset /application.js - 200 OK (59ms)
+
+
+Started GET "/assets/admin/images/header.gif" for 127.0.0.1 at Thu Mar 08 23:41:27 -0500 2012
+Served asset /admin/images/header.gif - 200 OK (0ms)
+
+
+Started GET "/assets/admin/images/tab.gif" for 127.0.0.1 at Thu Mar 08 23:41:27 -0500 2012
+Served asset /admin/images/tab.gif - 200 OK (0ms)
+
+
+Started GET "/assets/admin/images/footer.gif" for 127.0.0.1 at Thu Mar 08 23:41:27 -0500 2012
+Served asset /admin/images/footer.gif - 200 OK (0ms)
+
+
+Started GET "/admin/travel_packages/new" for 127.0.0.1 at Thu Mar 08 23:42:06 -0500 2012
+  Processing by Admin::TravelPackagesController#new as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.8ms)[0m  UPDATE "users" SET "perishable_token" = 'iMX3V8UTQX7MGjNfQL', "updated_at" = '2012-03-09 04:42:06.646246', "last_request_at" = '2012-03-09 04:42:06.644138' WHERE "users"."id" = 1
+  [1m[36m (25.9ms)[0m  [1mCOMMIT[0m
+Rendered admin/travel_packages/_form.html.erb (1.6ms)
+Rendered admin/travel_packages/new.html.erb within layouts/admin (21.2ms)
+Compiled admin/style.css  (1ms)  (pid 2734)
+Rendered layouts/_admin_bar.html.erb (1.6ms)
+Completed 200 OK in 176ms (Views: 66.7ms | ActiveRecord: 37.1ms)
+
+
+Started GET "/assets/admin.css" for 127.0.0.1 at Thu Mar 08 23:42:06 -0500 2012
+Served asset /admin.css - 404 Not Found (5ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/assets/admin-grid.css" for 127.0.0.1 at Thu Mar 08 23:42:06 -0500 2012
+Served asset /admin-grid.css - 404 Not Found (7ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin-grid.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/textile-editor.css" for 127.0.0.1 at Thu Mar 08 23:42:06 -0500 2012
+Served asset /textile-editor.css - 404 Not Found (5ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/textile-editor.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/assets/admin/style.css?body=1" for 127.0.0.1 at Thu Mar 08 23:42:06 -0500 2012
+Served asset /admin/style.css - 200 OK (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Thu Mar 08 23:42:07 -0500 2012
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Thu Mar 08 23:42:07 -0500 2012
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/clients.js?body=1" for 127.0.0.1 at Thu Mar 08 23:42:07 -0500 2012
+Served asset /admin/clients.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/hotels.js?body=1" for 127.0.0.1 at Thu Mar 08 23:42:07 -0500 2012
+Served asset /admin/hotels.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/site.js?body=1" for 127.0.0.1 at Thu Mar 08 23:42:07 -0500 2012
+Served asset /admin/site.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/travel_packages.js?body=1" for 127.0.0.1 at Thu Mar 08 23:42:07 -0500 2012
+Served asset /admin/travel_packages.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Thu Mar 08 23:42:07 -0500 2012
+Served asset /application.js - 200 OK (1ms)
+
+
+Started GET "/assets/admin/images/header.gif" for 127.0.0.1 at Thu Mar 08 23:42:07 -0500 2012
+Served asset /admin/images/header.gif - 200 OK (0ms)
+
+
+Started GET "/assets/admin/images/tab.gif" for 127.0.0.1 at Thu Mar 08 23:42:07 -0500 2012
+Served asset /admin/images/tab.gif - 200 OK (0ms)
+
+
+Started GET "/assets/admin/images/footer.gif" for 127.0.0.1 at Thu Mar 08 23:42:07 -0500 2012
+Served asset /admin/images/footer.gif - 200 OK (0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at Thu Mar 08 23:42:17 -0500 2012
+  Processing by Admin::SiteController#index as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.7ms)[0m  UPDATE "users" SET "last_request_at" = '2012-03-09 04:42:17.947760', "perishable_token" = 'xlEp8B2TxYVLxZpQqf', "updated_at" = '2012-03-09 04:42:17.949828' WHERE "users"."id" = 1
+  [1m[36m (23.1ms)[0m  [1mCOMMIT[0m
+Rendered admin/site/index.html.erb within layouts/admin (0.1ms)
+Rendered layouts/_admin_bar.html.erb (1.8ms)
+Completed 200 OK in 137ms (Views: 37.6ms | ActiveRecord: 31.6ms)
+
+
+Started GET "/assets/admin.css" for 127.0.0.1 at Thu Mar 08 23:42:18 -0500 2012
+Served asset /admin.css - 404 Not Found (5ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/admin-grid.css" for 127.0.0.1 at Thu Mar 08 23:42:18 -0500 2012
+Served asset /admin-grid.css - 404 Not Found (8ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin-grid.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/assets/textile-editor.css" for 127.0.0.1 at Thu Mar 08 23:42:18 -0500 2012
+Served asset /textile-editor.css - 404 Not Found (5ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/textile-editor.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Thu Mar 08 23:42:18 -0500 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/style.css?body=1" for 127.0.0.1 at Thu Mar 08 23:42:18 -0500 2012
+Served asset /admin/style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Thu Mar 08 23:42:18 -0500 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/clients.js?body=1" for 127.0.0.1 at Thu Mar 08 23:42:18 -0500 2012
+Served asset /admin/clients.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/hotels.js?body=1" for 127.0.0.1 at Thu Mar 08 23:42:18 -0500 2012
+Served asset /admin/hotels.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/site.js?body=1" for 127.0.0.1 at Thu Mar 08 23:42:18 -0500 2012
+Served asset /admin/site.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/travel_packages.js?body=1" for 127.0.0.1 at Thu Mar 08 23:42:18 -0500 2012
+Served asset /admin/travel_packages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Thu Mar 08 23:42:18 -0500 2012
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admin/images/close.gif" for 127.0.0.1 at Thu Mar 08 23:42:18 -0500 2012
+Served asset /admin/images/close.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/images/msg-ok.gif" for 127.0.0.1 at Thu Mar 08 23:42:18 -0500 2012
+Served asset /admin/images/msg-ok.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/images/msg-error.gif" for 127.0.0.1 at Thu Mar 08 23:42:18 -0500 2012
+Served asset /admin/images/msg-error.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/images/button.gif" for 127.0.0.1 at Thu Mar 08 23:42:18 -0500 2012
+Served asset /admin/images/button.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/images/th.gif" for 127.0.0.1 at Thu Mar 08 23:42:18 -0500 2012
+Served asset /admin/images/th.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/images/del.gif" for 127.0.0.1 at Thu Mar 08 23:42:18 -0500 2012
+Served asset /admin/images/del.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/images/edit.gif" for 127.0.0.1 at Thu Mar 08 23:42:18 -0500 2012
+Served asset /admin/images/edit.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/images/pagging.gif" for 127.0.0.1 at Thu Mar 08 23:42:18 -0500 2012
+Served asset /admin/images/pagging.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/images/add-button.gif" for 127.0.0.1 at Thu Mar 08 23:42:18 -0500 2012
+Served asset /admin/images/add-button.gif - 304 Not Modified (0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at Thu Mar 08 23:42:40 -0500 2012
+  Processing by Admin::SiteController#index as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.8ms)[0m  UPDATE "users" SET "updated_at" = '2012-03-09 04:42:40.631395', "perishable_token" = 't3AkwMQK21I9NBy2bef', "last_request_at" = '2012-03-09 04:42:40.629271' WHERE "users"."id" = 1
+  [1m[36m (21.2ms)[0m  [1mCOMMIT[0m
+Rendered admin/site/index.html.erb within layouts/admin (0.1ms)
+Compiled admin/style.css  (2ms)  (pid 2734)
+Rendered layouts/_admin_bar.html.erb (1.6ms)
+Completed 200 OK in 145ms (Views: 49.8ms | ActiveRecord: 29.5ms)
+
+
+Started GET "/assets/admin-grid.css" for 127.0.0.1 at Thu Mar 08 23:42:40 -0500 2012
+Served asset /admin-grid.css - 404 Not Found (6ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin-grid.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/assets/admin/style.css?body=1" for 127.0.0.1 at Thu Mar 08 23:42:40 -0500 2012
+Served asset /admin/style.css - 200 OK (6ms)
+
+
+Started GET "/assets/admin.css" for 127.0.0.1 at Thu Mar 08 23:42:40 -0500 2012
+Served asset /admin.css - 404 Not Found (5ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Thu Mar 08 23:42:40 -0500 2012
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/textile-editor.css" for 127.0.0.1 at Thu Mar 08 23:42:41 -0500 2012
+Served asset /textile-editor.css - 404 Not Found (5ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/textile-editor.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Thu Mar 08 23:42:41 -0500 2012
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/clients.js?body=1" for 127.0.0.1 at Thu Mar 08 23:42:41 -0500 2012
+Served asset /admin/clients.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/hotels.js?body=1" for 127.0.0.1 at Thu Mar 08 23:42:41 -0500 2012
+Served asset /admin/hotels.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/site.js?body=1" for 127.0.0.1 at Thu Mar 08 23:42:41 -0500 2012
+Served asset /admin/site.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/travel_packages.js?body=1" for 127.0.0.1 at Thu Mar 08 23:42:41 -0500 2012
+Served asset /admin/travel_packages.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Thu Mar 08 23:42:41 -0500 2012
+Served asset /application.js - 200 OK (1ms)
+
+
+Started GET "/assets/admin/images/header.gif" for 127.0.0.1 at Thu Mar 08 23:42:41 -0500 2012
+Served asset /admin/images/header.gif - 200 OK (0ms)
+
+
+Started GET "/assets/admin/images/msg-ok.gif" for 127.0.0.1 at Thu Mar 08 23:42:41 -0500 2012
+Served asset /admin/images/msg-ok.gif - 200 OK (0ms)
+
+
+Started GET "/assets/admin/images/close.gif" for 127.0.0.1 at Thu Mar 08 23:42:41 -0500 2012
+Served asset /admin/images/close.gif - 200 OK (0ms)
+
+
+Started GET "/assets/admin/images/tab.gif" for 127.0.0.1 at Thu Mar 08 23:42:41 -0500 2012
+Served asset /admin/images/tab.gif - 200 OK (0ms)
+
+
+Started GET "/assets/admin/images/msg-error.gif" for 127.0.0.1 at Thu Mar 08 23:42:41 -0500 2012
+Served asset /admin/images/msg-error.gif - 200 OK (0ms)
+
+
+Started GET "/assets/admin/images/button.gif" for 127.0.0.1 at Thu Mar 08 23:42:41 -0500 2012
+Served asset /admin/images/button.gif - 200 OK (0ms)
+
+
+Started GET "/assets/admin/images/th.gif" for 127.0.0.1 at Thu Mar 08 23:42:41 -0500 2012
+Served asset /admin/images/th.gif - 200 OK (0ms)
+
+
+Started GET "/assets/admin/images/del.gif" for 127.0.0.1 at Thu Mar 08 23:42:41 -0500 2012
+Served asset /admin/images/del.gif - 200 OK (0ms)
+
+
+Started GET "/assets/admin/images/edit.gif" for 127.0.0.1 at Thu Mar 08 23:42:41 -0500 2012
+Served asset /admin/images/edit.gif - 200 OK (0ms)
+
+
+Started GET "/assets/admin/images/pagging.gif" for 127.0.0.1 at Thu Mar 08 23:42:41 -0500 2012
+Served asset /admin/images/pagging.gif - 200 OK (0ms)
+
+
+Started GET "/assets/admin/images/add-button.gif" for 127.0.0.1 at Thu Mar 08 23:42:41 -0500 2012
+Served asset /admin/images/add-button.gif - 200 OK (0ms)
+
+
+Started GET "/assets/admin/images/footer.gif" for 127.0.0.1 at Thu Mar 08 23:42:41 -0500 2012
+Served asset /admin/images/footer.gif - 200 OK (0ms)
+
+
+Started GET "/admin/travel_packages" for 127.0.0.1 at Thu Mar 08 23:42:45 -0500 2012
+  Processing by Admin::TravelPackagesController#index as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.7ms)[0m  UPDATE "users" SET "updated_at" = '2012-03-09 04:42:45.148577', "last_request_at" = '2012-03-09 04:42:45.145876', "perishable_token" = 'cG1yoraLPDqlLmgRzwwf' WHERE "users"."id" = 1
+  [1m[36m (26.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mTravelPackage Load (0.8ms)[0m  SELECT "travel_packages".* FROM "travel_packages" 
+Rendered admin/travel_packages/index.html.erb within layouts/admin (1.2ms)
+Rendered layouts/_admin_bar.html.erb (2.2ms)
+Completed 200 OK in 149ms (Views: 44.8ms | ActiveRecord: 35.2ms)
+
+
+Started GET "/assets/admin.css" for 127.0.0.1 at Thu Mar 08 23:42:45 -0500 2012
+Served asset /admin.css - 404 Not Found (7ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/assets/admin-grid.css" for 127.0.0.1 at Thu Mar 08 23:42:45 -0500 2012
+Served asset /admin-grid.css - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin-grid.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/assets/textile-editor.css" for 127.0.0.1 at Thu Mar 08 23:42:45 -0500 2012
+Served asset /textile-editor.css - 404 Not Found (6ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/textile-editor.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Thu Mar 08 23:42:45 -0500 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Thu Mar 08 23:42:45 -0500 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/style.css?body=1" for 127.0.0.1 at Thu Mar 08 23:42:45 -0500 2012
+Served asset /admin/style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/clients.js?body=1" for 127.0.0.1 at Thu Mar 08 23:42:45 -0500 2012
+Served asset /admin/clients.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/hotels.js?body=1" for 127.0.0.1 at Thu Mar 08 23:42:45 -0500 2012
+Served asset /admin/hotels.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/site.js?body=1" for 127.0.0.1 at Thu Mar 08 23:42:45 -0500 2012
+Served asset /admin/site.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/travel_packages.js?body=1" for 127.0.0.1 at Thu Mar 08 23:42:45 -0500 2012
+Served asset /admin/travel_packages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Thu Mar 08 23:42:45 -0500 2012
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/admin/travel_packages/new" for 127.0.0.1 at Thu Mar 08 23:46:22 -0500 2012
+  Processing by Admin::TravelPackagesController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.8ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2012-03-09 04:46:23.094675', "updated_at" = '2012-03-09 04:46:23.096606', "perishable_token" = '7I3pLav1pKDoGyUqmGnW' WHERE "users"."id" = 1[0m
+  [1m[35m (24.7ms)[0m  COMMIT
+Rendered admin/travel_packages/_form.html.erb (1.9ms)
+Rendered admin/travel_packages/new.html.erb within layouts/admin (24.2ms)
+Rendered layouts/_admin_bar.html.erb (1.8ms)
+Completed 200 OK in 164ms (Views: 63.3ms | ActiveRecord: 36.1ms)
+
+
+Started GET "/assets/admin.css" for 127.0.0.1 at Thu Mar 08 23:46:23 -0500 2012
+Served asset /admin.css - 404 Not Found (6ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/assets/admin-grid.css" for 127.0.0.1 at Thu Mar 08 23:46:23 -0500 2012
+Served asset /admin-grid.css - 404 Not Found (7ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin-grid.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/textile-editor.css" for 127.0.0.1 at Thu Mar 08 23:46:23 -0500 2012
+Served asset /textile-editor.css - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/textile-editor.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/assets/admin/style.css?body=1" for 127.0.0.1 at Thu Mar 08 23:46:23 -0500 2012
+Served asset /admin/style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Thu Mar 08 23:46:23 -0500 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Thu Mar 08 23:46:23 -0500 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/clients.js?body=1" for 127.0.0.1 at Thu Mar 08 23:46:23 -0500 2012
+Served asset /admin/clients.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/hotels.js?body=1" for 127.0.0.1 at Thu Mar 08 23:46:23 -0500 2012
+Served asset /admin/hotels.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/site.js?body=1" for 127.0.0.1 at Thu Mar 08 23:46:23 -0500 2012
+Served asset /admin/site.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/travel_packages.js?body=1" for 127.0.0.1 at Thu Mar 08 23:46:23 -0500 2012
+Served asset /admin/travel_packages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Thu Mar 08 23:46:23 -0500 2012
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/admin/travel_packages/new" for 127.0.0.1 at Thu Mar 08 23:47:32 -0500 2012
+  Processing by Admin::TravelPackagesController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.7ms)[0m  [1mUPDATE "users" SET "updated_at" = '2012-03-09 04:47:32.624034', "perishable_token" = 'vQsJKFay9BeZ1Wty', "last_request_at" = '2012-03-09 04:47:32.622072' WHERE "users"."id" = 1[0m
+  [1m[35m (24.3ms)[0m  COMMIT
+Rendered admin/travel_packages/_form.html.erb (2.0ms)
+Rendered admin/travel_packages/new.html.erb within layouts/admin (19.6ms)
+Compiled admin/style.css  (1ms)  (pid 2734)
+Rendered layouts/_admin_bar.html.erb (1.6ms)
+Completed 200 OK in 172ms (Views: 64.9ms | ActiveRecord: 35.0ms)
+
+
+Started GET "/assets/admin.css" for 127.0.0.1 at Thu Mar 08 23:47:32 -0500 2012
+Served asset /admin.css - 404 Not Found (5ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/assets/admin-grid.css" for 127.0.0.1 at Thu Mar 08 23:47:32 -0500 2012
+Served asset /admin-grid.css - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin-grid.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/assets/textile-editor.css" for 127.0.0.1 at Thu Mar 08 23:47:32 -0500 2012
+Served asset /textile-editor.css - 404 Not Found (5ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/textile-editor.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/admin/style.css?body=1" for 127.0.0.1 at Thu Mar 08 23:47:32 -0500 2012
+Served asset /admin/style.css - 200 OK (6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Thu Mar 08 23:47:32 -0500 2012
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Thu Mar 08 23:47:33 -0500 2012
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/clients.js?body=1" for 127.0.0.1 at Thu Mar 08 23:47:33 -0500 2012
+Served asset /admin/clients.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/hotels.js?body=1" for 127.0.0.1 at Thu Mar 08 23:47:33 -0500 2012
+Served asset /admin/hotels.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/site.js?body=1" for 127.0.0.1 at Thu Mar 08 23:47:33 -0500 2012
+Served asset /admin/site.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/travel_packages.js?body=1" for 127.0.0.1 at Thu Mar 08 23:47:33 -0500 2012
+Served asset /admin/travel_packages.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Thu Mar 08 23:47:33 -0500 2012
+Served asset /application.js - 200 OK (1ms)
+
+
+Started GET "/assets/admin/images/header.gif" for 127.0.0.1 at Thu Mar 08 23:47:33 -0500 2012
+Served asset /admin/images/header.gif - 200 OK (0ms)
+
+
+Started GET "/assets/admin/images/tab.gif" for 127.0.0.1 at Thu Mar 08 23:47:33 -0500 2012
+Served asset /admin/images/tab.gif - 200 OK (0ms)
+
+
+Started GET "/assets/admin/images/footer.gif" for 127.0.0.1 at Thu Mar 08 23:47:33 -0500 2012
+Served asset /admin/images/footer.gif - 200 OK (0ms)
+
+
+Started GET "/admin/travel_packages/new" for 127.0.0.1 at Thu Mar 08 23:47:59 -0500 2012
+  Processing by Admin::TravelPackagesController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.9ms)[0m  [1mUPDATE "users" SET "perishable_token" = 'ZumZDsQMUZdO54hPBEJ', "updated_at" = '2012-03-09 04:47:59.398908', "last_request_at" = '2012-03-09 04:47:59.396625' WHERE "users"."id" = 1[0m
+  [1m[35m (27.8ms)[0m  COMMIT
+Rendered admin/travel_packages/_form.html.erb (1.5ms)
+Rendered admin/travel_packages/new.html.erb within layouts/admin (20.9ms)
+Compiled admin/style.css  (0ms)  (pid 2734)
+Rendered layouts/_admin_bar.html.erb (2.2ms)
+Completed 200 OK in 171ms (Views: 64.4ms | ActiveRecord: 38.9ms)
+
+
+Started GET "/assets/admin.css" for 127.0.0.1 at Thu Mar 08 23:47:59 -0500 2012
+Served asset /admin.css - 404 Not Found (6ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Thu Mar 08 23:47:59 -0500 2012
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/style.css?body=1" for 127.0.0.1 at Thu Mar 08 23:47:59 -0500 2012
+Served asset /admin/style.css - 200 OK (4ms)
+
+
+Started GET "/assets/textile-editor.css" for 127.0.0.1 at Thu Mar 08 23:47:59 -0500 2012
+Served asset /textile-editor.css - 404 Not Found (5ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/textile-editor.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Thu Mar 08 23:47:59 -0500 2012
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin-grid.css" for 127.0.0.1 at Thu Mar 08 23:47:59 -0500 2012
+Served asset /admin-grid.css - 404 Not Found (163ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin-grid.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.5ms)
+
+
+Started GET "/assets/admin/clients.js?body=1" for 127.0.0.1 at Thu Mar 08 23:47:59 -0500 2012
+Served asset /admin/clients.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/hotels.js?body=1" for 127.0.0.1 at Thu Mar 08 23:47:59 -0500 2012
+Served asset /admin/hotels.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/site.js?body=1" for 127.0.0.1 at Thu Mar 08 23:47:59 -0500 2012
+Served asset /admin/site.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/travel_packages.js?body=1" for 127.0.0.1 at Thu Mar 08 23:47:59 -0500 2012
+Served asset /admin/travel_packages.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Thu Mar 08 23:47:59 -0500 2012
+Served asset /application.js - 200 OK (1ms)
+
+
+Started GET "/assets/admin/images/header.gif" for 127.0.0.1 at Thu Mar 08 23:48:00 -0500 2012
+Served asset /admin/images/header.gif - 200 OK (0ms)
+
+
+Started GET "/assets/admin/images/tab.gif" for 127.0.0.1 at Thu Mar 08 23:48:00 -0500 2012
+Served asset /admin/images/tab.gif - 200 OK (0ms)
+
+
+Started GET "/assets/admin/images/footer.gif" for 127.0.0.1 at Thu Mar 08 23:48:00 -0500 2012
+Served asset /admin/images/footer.gif - 200 OK (0ms)
+
+
+Started GET "/admin/travel_packages/new" for 127.0.0.1 at Thu Mar 08 23:51:50 -0500 2012
+  Processing by Admin::TravelPackagesController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.8ms)[0m  [1mUPDATE "users" SET "updated_at" = '2012-03-09 04:51:50.484805', "last_request_at" = '2012-03-09 04:51:50.482837', "perishable_token" = 'AtsDy63yp0479qQOjsxp' WHERE "users"."id" = 1[0m
+  [1m[35m (24.1ms)[0m  COMMIT
+Rendered admin/travel_packages/_form.html.erb (1.6ms)
+Rendered admin/travel_packages/new.html.erb within layouts/admin (21.9ms)
+Compiled admin/style.css  (0ms)  (pid 2734)
+Rendered layouts/_admin_bar.html.erb (1.6ms)
+Completed 200 OK in 166ms (Views: 66.3ms | ActiveRecord: 35.1ms)
+
+
+Started GET "/assets/admin.css" for 127.0.0.1 at Thu Mar 08 23:51:50 -0500 2012
+Served asset /admin.css - 404 Not Found (5ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/assets/admin-grid.css" for 127.0.0.1 at Thu Mar 08 23:51:50 -0500 2012
+Served asset /admin-grid.css - 404 Not Found (5ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin-grid.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/assets/textile-editor.css" for 127.0.0.1 at Thu Mar 08 23:51:50 -0500 2012
+Served asset /textile-editor.css - 404 Not Found (5ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/textile-editor.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/admin/style.css?body=1" for 127.0.0.1 at Thu Mar 08 23:51:50 -0500 2012
+Served asset /admin/style.css - 200 OK (6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Thu Mar 08 23:51:51 -0500 2012
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Thu Mar 08 23:51:51 -0500 2012
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/clients.js?body=1" for 127.0.0.1 at Thu Mar 08 23:51:51 -0500 2012
+Served asset /admin/clients.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/hotels.js?body=1" for 127.0.0.1 at Thu Mar 08 23:51:51 -0500 2012
+Served asset /admin/hotels.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/site.js?body=1" for 127.0.0.1 at Thu Mar 08 23:51:51 -0500 2012
+Served asset /admin/site.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/travel_packages.js?body=1" for 127.0.0.1 at Thu Mar 08 23:51:51 -0500 2012
+Served asset /admin/travel_packages.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Thu Mar 08 23:51:51 -0500 2012
+Served asset /application.js - 200 OK (1ms)
+
+
+Started GET "/assets/admin/images/header.gif" for 127.0.0.1 at Thu Mar 08 23:51:51 -0500 2012
+Served asset /admin/images/header.gif - 200 OK (0ms)
+
+
+Started GET "/assets/admin/images/tab.gif" for 127.0.0.1 at Thu Mar 08 23:51:51 -0500 2012
+Served asset /admin/images/tab.gif - 200 OK (0ms)
+
+
+Started GET "/assets/admin/images/footer.gif" for 127.0.0.1 at Thu Mar 08 23:51:51 -0500 2012
+Served asset /admin/images/footer.gif - 200 OK (0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at Thu Mar 08 23:52:49 -0500 2012
+  Processing by Admin::SiteController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.9ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2012-03-09 04:52:49.438775', "perishable_token" = 'Mn6F6a9pD3YW094zrWKm', "updated_at" = '2012-03-09 04:52:49.440697' WHERE "users"."id" = 1[0m
+  [1m[35m (26.9ms)[0m  COMMIT
+Rendered admin/site/index.html.erb within layouts/admin (0.1ms)
+Rendered layouts/_admin_bar.html.erb (2.7ms)
+Completed 200 OK in 151ms (Views: 46.6ms | ActiveRecord: 35.0ms)
+
+
+Started GET "/assets/admin.css" for 127.0.0.1 at Thu Mar 08 23:52:49 -0500 2012
+Served asset /admin.css - 404 Not Found (6ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/assets/admin-grid.css" for 127.0.0.1 at Thu Mar 08 23:52:49 -0500 2012
+Served asset /admin-grid.css - 404 Not Found (7ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin-grid.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/assets/textile-editor.css" for 127.0.0.1 at Thu Mar 08 23:52:49 -0500 2012
+Served asset /textile-editor.css - 404 Not Found (7ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/textile-editor.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.9ms)
+
+
+Started GET "/assets/admin/style.css?body=1" for 127.0.0.1 at Thu Mar 08 23:52:49 -0500 2012
+Served asset /admin/style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Thu Mar 08 23:52:49 -0500 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Thu Mar 08 23:52:49 -0500 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/clients.js?body=1" for 127.0.0.1 at Thu Mar 08 23:52:49 -0500 2012
+Served asset /admin/clients.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/hotels.js?body=1" for 127.0.0.1 at Thu Mar 08 23:52:50 -0500 2012
+Served asset /admin/hotels.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/site.js?body=1" for 127.0.0.1 at Thu Mar 08 23:52:50 -0500 2012
+Served asset /admin/site.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/travel_packages.js?body=1" for 127.0.0.1 at Thu Mar 08 23:52:50 -0500 2012
+Served asset /admin/travel_packages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Thu Mar 08 23:52:50 -0500 2012
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/admin/travel_packages" for 127.0.0.1 at Thu Mar 08 23:53:35 -0500 2012
+  Processing by Admin::TravelPackagesController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (1.0ms)[0m  [1mUPDATE "users" SET "updated_at" = '2012-03-09 04:53:36.074242', "perishable_token" = 'RE4hDJT7dYJGSRiOSFH', "last_request_at" = '2012-03-09 04:53:36.071460' WHERE "users"."id" = 1[0m
+  [1m[35m (28.1ms)[0m  COMMIT
+  [1m[36mTravelPackage Load (1.0ms)[0m  [1mSELECT "travel_packages".* FROM "travel_packages" [0m
+Rendered admin/travel_packages/index.html.erb within layouts/admin (1.4ms)
+Rendered layouts/_admin_bar.html.erb (2.7ms)
+Completed 200 OK in 215ms (Views: 62.8ms | ActiveRecord: 40.7ms)
+
+
+Started GET "/assets/admin.css" for 127.0.0.1 at Thu Mar 08 23:53:36 -0500 2012
+Served asset /admin.css - 404 Not Found (9ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.3ms)
+
+
+Started GET "/assets/admin-grid.css" for 127.0.0.1 at Thu Mar 08 23:53:36 -0500 2012
+Served asset /admin-grid.css - 404 Not Found (10ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin-grid.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.3ms)
+
+
+Started GET "/assets/textile-editor.css" for 127.0.0.1 at Thu Mar 08 23:53:36 -0500 2012
+Served asset /textile-editor.css - 404 Not Found (9ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/textile-editor.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/assets/admin/style.css?body=1" for 127.0.0.1 at Thu Mar 08 23:53:36 -0500 2012
+Served asset /admin/style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Thu Mar 08 23:53:36 -0500 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Thu Mar 08 23:53:36 -0500 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/clients.js?body=1" for 127.0.0.1 at Thu Mar 08 23:53:36 -0500 2012
+Served asset /admin/clients.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/hotels.js?body=1" for 127.0.0.1 at Thu Mar 08 23:53:36 -0500 2012
+Served asset /admin/hotels.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/site.js?body=1" for 127.0.0.1 at Thu Mar 08 23:53:36 -0500 2012
+Served asset /admin/site.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/travel_packages.js?body=1" for 127.0.0.1 at Thu Mar 08 23:53:36 -0500 2012
+Served asset /admin/travel_packages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Thu Mar 08 23:53:36 -0500 2012
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/admin/travel_packages/new" for 127.0.0.1 at Thu Mar 08 23:53:38 -0500 2012
+  Processing by Admin::TravelPackagesController#new as HTML
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.8ms)[0m  UPDATE "users" SET "perishable_token" = 'uL7JtAQJxTLnYtKxBGnS', "last_request_at" = '2012-03-09 04:53:39.334154', "updated_at" = '2012-03-09 04:53:39.336186' WHERE "users"."id" = 1
+  [1m[36m (24.1ms)[0m  [1mCOMMIT[0m
+Rendered admin/travel_packages/_form.html.erb (2.5ms)
+Rendered admin/travel_packages/new.html.erb within layouts/admin (29.1ms)
+Rendered layouts/_admin_bar.html.erb (1.9ms)
+Completed 200 OK in 215ms (Views: 74.4ms | ActiveRecord: 39.3ms)
+
+
+Started GET "/assets/admin.css" for 127.0.0.1 at Thu Mar 08 23:53:39 -0500 2012
+Served asset /admin.css - 404 Not Found (10ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/assets/admin-grid.css" for 127.0.0.1 at Thu Mar 08 23:53:39 -0500 2012
+Served asset /admin-grid.css - 404 Not Found (11ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin-grid.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/assets/textile-editor.css" for 127.0.0.1 at Thu Mar 08 23:53:39 -0500 2012
+Served asset /textile-editor.css - 404 Not Found (9ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/textile-editor.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Thu Mar 08 23:53:39 -0500 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Thu Mar 08 23:53:39 -0500 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/style.css?body=1" for 127.0.0.1 at Thu Mar 08 23:53:39 -0500 2012
+Served asset /admin/style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/clients.js?body=1" for 127.0.0.1 at Thu Mar 08 23:53:39 -0500 2012
+Served asset /admin/clients.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/hotels.js?body=1" for 127.0.0.1 at Thu Mar 08 23:53:39 -0500 2012
+Served asset /admin/hotels.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/site.js?body=1" for 127.0.0.1 at Thu Mar 08 23:53:39 -0500 2012
+Served asset /admin/site.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/travel_packages.js?body=1" for 127.0.0.1 at Thu Mar 08 23:53:39 -0500 2012
+Served asset /admin/travel_packages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Thu Mar 08 23:53:39 -0500 2012
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/admin/travel_packages/new" for 127.0.0.1 at Thu Mar 08 23:53:55 -0500 2012
+  Processing by Admin::TravelPackagesController#new as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.0ms)[0m  UPDATE "users" SET "perishable_token" = 'IPau19jB7cn6Jdm99Xk3', "last_request_at" = '2012-03-09 04:53:56.075453', "updated_at" = '2012-03-09 04:53:56.078888' WHERE "users"."id" = 1
+  [1m[36m (26.4ms)[0m  [1mCOMMIT[0m
+Rendered admin/travel_packages/_form.html.erb (2.7ms)
+Rendered admin/travel_packages/new.html.erb within layouts/admin (29.1ms)
+Rendered layouts/_admin_bar.html.erb (2.6ms)
+Completed 200 OK in 407ms (Views: 86.7ms | ActiveRecord: 40.2ms)
+
+
+Started GET "/assets/admin.css" for 127.0.0.1 at Thu Mar 08 23:53:56 -0500 2012
+Served asset /admin.css - 404 Not Found (6ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/assets/admin-grid.css" for 127.0.0.1 at Thu Mar 08 23:53:56 -0500 2012
+Served asset /admin-grid.css - 404 Not Found (14ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin-grid.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.6ms)
+
+
+Started GET "/assets/textile-editor.css" for 127.0.0.1 at Thu Mar 08 23:53:56 -0500 2012
+Served asset /textile-editor.css - 404 Not Found (8ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/textile-editor.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Thu Mar 08 23:53:56 -0500 2012
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/style.css?body=1" for 127.0.0.1 at Thu Mar 08 23:53:56 -0500 2012
+Served asset /admin/style.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Thu Mar 08 23:53:56 -0500 2012
+Served asset /jquery_ujs.js - 200 OK (1ms)
+
+
+Started GET "/assets/admin/clients.js?body=1" for 127.0.0.1 at Thu Mar 08 23:53:56 -0500 2012
+Served asset /admin/clients.js - 200 OK (1ms)
+
+
+Started GET "/assets/admin/hotels.js?body=1" for 127.0.0.1 at Thu Mar 08 23:53:56 -0500 2012
+Served asset /admin/hotels.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/site.js?body=1" for 127.0.0.1 at Thu Mar 08 23:53:56 -0500 2012
+Served asset /admin/site.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/travel_packages.js?body=1" for 127.0.0.1 at Thu Mar 08 23:53:56 -0500 2012
+Served asset /admin/travel_packages.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Thu Mar 08 23:53:56 -0500 2012
+Served asset /application.js - 200 OK (2ms)
+
+
+Started GET "/assets/admin/images/header.gif" for 127.0.0.1 at Thu Mar 08 23:53:56 -0500 2012
+Served asset /admin/images/header.gif - 200 OK (0ms)
+
+
+Started GET "/assets/admin/images/tab.gif" for 127.0.0.1 at Thu Mar 08 23:53:56 -0500 2012
+Served asset /admin/images/tab.gif - 200 OK (0ms)
+
+
+Started GET "/assets/admin/images/footer.gif" for 127.0.0.1 at Thu Mar 08 23:53:56 -0500 2012
+Served asset /admin/images/footer.gif - 200 OK (0ms)
+
+
+Started GET "/admin/travel_packages/new" for 127.0.0.1 at Thu Mar 08 23:54:27 -0500 2012
+  Processing by Admin::TravelPackagesController#new as HTML
+  [1m[35mUser Load (28.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.7ms)[0m  UPDATE "users" SET "updated_at" = '2012-03-09 04:54:27.962737', "perishable_token" = 'Uen0G2AxASFJ4UP2D7M', "last_request_at" = '2012-03-09 04:54:27.960588' WHERE "users"."id" = 1
+  [1m[36m (12.6ms)[0m  [1mCOMMIT[0m
+Rendered admin/travel_packages/new.html.erb within layouts/admin (33.9ms)
+Completed 500 Internal Server Error in 363ms
+
+ActionView::Template::Error (wrong number of arguments (3 for 2)):
+    13:    </div>
+    14:  <% end %>
+    15: <div class="content">
+    16: <%= form_for([:admin, @travel_package], {},:class => "form") do |f| %>
+    17: 
+    18: <%= render :partial => "form", :object => f %>
+    19: </div>
+  app/views/admin/travel_packages/new.html.erb:16:in `form_for'
+  app/views/admin/travel_packages/new.html.erb:16:in `_app_views_admin_travel_packages_new_html_erb__843483440__634518328'
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.9ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.6ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.2ms)
+
+
+Started GET "/admin/travel_packages/new" for 127.0.0.1 at Thu Mar 08 23:54:41 -0500 2012
+  Processing by Admin::TravelPackagesController#new as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.7ms)[0m  UPDATE "users" SET "perishable_token" = '1lITOJ96gI5Hp8fRQ8M', "last_request_at" = '2012-03-09 04:54:41.712198', "updated_at" = '2012-03-09 04:54:41.714213' WHERE "users"."id" = 1
+  [1m[36m (28.8ms)[0m  [1mCOMMIT[0m
+Rendered admin/travel_packages/_form.html.erb (1.9ms)
+Rendered admin/travel_packages/new.html.erb within layouts/admin (21.7ms)
+Rendered layouts/_admin_bar.html.erb (2.3ms)
+Completed 200 OK in 168ms (Views: 60.0ms | ActiveRecord: 39.5ms)
+
+
+Started GET "/assets/admin.css" for 127.0.0.1 at Thu Mar 08 23:54:42 -0500 2012
+Served asset /admin.css - 404 Not Found (7ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/assets/admin-grid.css" for 127.0.0.1 at Thu Mar 08 23:54:42 -0500 2012
+Served asset /admin-grid.css - 404 Not Found (13ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin-grid.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/assets/textile-editor.css" for 127.0.0.1 at Thu Mar 08 23:54:42 -0500 2012
+Served asset /textile-editor.css - 404 Not Found (14ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/textile-editor.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.8ms)
+
+
+Started GET "/assets/admin/style.css?body=1" for 127.0.0.1 at Thu Mar 08 23:54:42 -0500 2012
+Served asset /admin/style.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Thu Mar 08 23:54:42 -0500 2012
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Thu Mar 08 23:54:42 -0500 2012
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/clients.js?body=1" for 127.0.0.1 at Thu Mar 08 23:54:42 -0500 2012
+Served asset /admin/clients.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/hotels.js?body=1" for 127.0.0.1 at Thu Mar 08 23:54:42 -0500 2012
+Served asset /admin/hotels.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/site.js?body=1" for 127.0.0.1 at Thu Mar 08 23:54:42 -0500 2012
+Served asset /admin/site.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/travel_packages.js?body=1" for 127.0.0.1 at Thu Mar 08 23:54:42 -0500 2012
+Served asset /admin/travel_packages.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Thu Mar 08 23:54:42 -0500 2012
+Served asset /application.js - 200 OK (2ms)
+
+
+Started GET "/assets/admin/images/header.gif" for 127.0.0.1 at Thu Mar 08 23:54:42 -0500 2012
+Served asset /admin/images/header.gif - 200 OK (0ms)
+
+
+Started GET "/assets/admin/images/tab.gif" for 127.0.0.1 at Thu Mar 08 23:54:42 -0500 2012
+Served asset /admin/images/tab.gif - 200 OK (0ms)
+
+
+Started GET "/assets/admin/images/footer.gif" for 127.0.0.1 at Thu Mar 08 23:54:42 -0500 2012
+Served asset /admin/images/footer.gif - 200 OK (0ms)
+
+
+Started GET "/admin/travel_packages/new" for 127.0.0.1 at Thu Mar 08 23:54:55 -0500 2012
+  Processing by Admin::TravelPackagesController#new as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.9ms)[0m  UPDATE "users" SET "updated_at" = '2012-03-09 04:54:55.401683', "perishable_token" = 'kuAf3LOeF2wGSLEiu5', "last_request_at" = '2012-03-09 04:54:55.398692' WHERE "users"."id" = 1
+  [1m[36m (29.0ms)[0m  [1mCOMMIT[0m
+Rendered admin/travel_packages/_form.html.erb (1.8ms)
+Rendered admin/travel_packages/new.html.erb within layouts/admin (20.0ms)
+Rendered layouts/_admin_bar.html.erb (1.8ms)
+Completed 200 OK in 201ms (Views: 61.4ms | ActiveRecord: 42.7ms)
+
+
+Started GET "/assets/admin.css" for 127.0.0.1 at Thu Mar 08 23:54:55 -0500 2012
+Served asset /admin.css - 404 Not Found (10ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/assets/admin-grid.css" for 127.0.0.1 at Thu Mar 08 23:54:55 -0500 2012
+Served asset /admin-grid.css - 404 Not Found (8ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin-grid.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Thu Mar 08 23:54:55 -0500 2012
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/textile-editor.css" for 127.0.0.1 at Thu Mar 08 23:54:55 -0500 2012
+Served asset /textile-editor.css - 404 Not Found (10ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/textile-editor.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.6ms)
+
+
+Started GET "/assets/admin/style.css?body=1" for 127.0.0.1 at Thu Mar 08 23:54:55 -0500 2012
+Served asset /admin/style.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Thu Mar 08 23:54:56 -0500 2012
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/clients.js?body=1" for 127.0.0.1 at Thu Mar 08 23:54:56 -0500 2012
+Served asset /admin/clients.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/hotels.js?body=1" for 127.0.0.1 at Thu Mar 08 23:54:56 -0500 2012
+Served asset /admin/hotels.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/site.js?body=1" for 127.0.0.1 at Thu Mar 08 23:54:56 -0500 2012
+Served asset /admin/site.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/travel_packages.js?body=1" for 127.0.0.1 at Thu Mar 08 23:54:56 -0500 2012
+Served asset /admin/travel_packages.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Thu Mar 08 23:54:56 -0500 2012
+Served asset /application.js - 200 OK (1ms)
+
+
+Started GET "/assets/admin/images/header.gif" for 127.0.0.1 at Thu Mar 08 23:54:56 -0500 2012
+Served asset /admin/images/header.gif - 200 OK (0ms)
+
+
+Started GET "/assets/admin/images/tab.gif" for 127.0.0.1 at Thu Mar 08 23:54:56 -0500 2012
+Served asset /admin/images/tab.gif - 200 OK (0ms)
+
+
+Started GET "/assets/admin/images/footer.gif" for 127.0.0.1 at Thu Mar 08 23:54:56 -0500 2012
+Served asset /admin/images/footer.gif - 200 OK (0ms)
+
+
+Started GET "/admin/travel_packages/new" for 127.0.0.1 at Thu Mar 08 23:56:01 -0500 2012
+  Processing by Admin::TravelPackagesController#new as HTML
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.9ms)[0m  UPDATE "users" SET "last_request_at" = '2012-03-09 04:56:01.533349', "perishable_token" = 'U7RpJKoNblGi11LIGes3', "updated_at" = '2012-03-09 04:56:01.536681' WHERE "users"."id" = 1
+  [1m[36m (20.8ms)[0m  [1mCOMMIT[0m
+Rendered admin/travel_packages/_form.html.erb (3.7ms)
+Rendered admin/travel_packages/new.html.erb within layouts/admin (32.8ms)
+Rendered layouts/_admin_bar.html.erb (2.3ms)
+Completed 200 OK in 214ms (Views: 82.2ms | ActiveRecord: 36.1ms)
+
+
+Started GET "/assets/admin.css" for 127.0.0.1 at Thu Mar 08 23:56:02 -0500 2012
+Served asset /admin.css - 404 Not Found (11ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (4.6ms)
+
+
+Started GET "/assets/admin-grid.css" for 127.0.0.1 at Thu Mar 08 23:56:02 -0500 2012
+Served asset /admin-grid.css - 404 Not Found (8ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin-grid.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.6ms)
+
+
+Started GET "/assets/textile-editor.css" for 127.0.0.1 at Thu Mar 08 23:56:02 -0500 2012
+Served asset /textile-editor.css - 404 Not Found (10ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/textile-editor.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/assets/admin/style.css?body=1" for 127.0.0.1 at Thu Mar 08 23:56:02 -0500 2012
+Served asset /admin/style.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Thu Mar 08 23:56:02 -0500 2012
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Thu Mar 08 23:56:02 -0500 2012
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/clients.js?body=1" for 127.0.0.1 at Thu Mar 08 23:56:02 -0500 2012
+Served asset /admin/clients.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/hotels.js?body=1" for 127.0.0.1 at Thu Mar 08 23:56:02 -0500 2012
+Served asset /admin/hotels.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/site.js?body=1" for 127.0.0.1 at Thu Mar 08 23:56:02 -0500 2012
+Served asset /admin/site.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/travel_packages.js?body=1" for 127.0.0.1 at Thu Mar 08 23:56:02 -0500 2012
+Served asset /admin/travel_packages.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Thu Mar 08 23:56:02 -0500 2012
+Served asset /application.js - 200 OK (2ms)
+
+
+Started GET "/assets/admin/images/header.gif" for 127.0.0.1 at Thu Mar 08 23:56:02 -0500 2012
+Served asset /admin/images/header.gif - 200 OK (0ms)
+
+
+Started GET "/assets/admin/images/tab.gif" for 127.0.0.1 at Thu Mar 08 23:56:02 -0500 2012
+Served asset /admin/images/tab.gif - 200 OK (0ms)
+
+
+Started GET "/assets/admin/images/footer.gif" for 127.0.0.1 at Thu Mar 08 23:56:02 -0500 2012
+Served asset /admin/images/footer.gif - 200 OK (0ms)
+
+
+Started GET "/admin/travel_packages/new" for 127.0.0.1 at Thu Mar 08 23:56:43 -0500 2012
+  Processing by Admin::TravelPackagesController#new as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.1ms)[0m  UPDATE "users" SET "perishable_token" = 'p6v5o7Gb3ab00P0UQgy', "last_request_at" = '2012-03-09 04:56:43.419059', "updated_at" = '2012-03-09 04:56:43.422402' WHERE "users"."id" = 1
+  [1m[36m (27.1ms)[0m  [1mCOMMIT[0m
+Rendered admin/travel_packages/_form.html.erb (2.3ms)
+Rendered admin/travel_packages/new.html.erb within layouts/admin (33.5ms)
+Rendered layouts/_admin_bar.html.erb (3.0ms)
+Completed 200 OK in 211ms (Views: 80.9ms | ActiveRecord: 42.6ms)
+
+
+Started GET "/assets/admin.css" for 127.0.0.1 at Thu Mar 08 23:56:43 -0500 2012
+Served asset /admin.css - 404 Not Found (216ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.6ms)
+
+
+Started GET "/assets/admin-grid.css" for 127.0.0.1 at Thu Mar 08 23:56:43 -0500 2012
+Served asset /admin-grid.css - 404 Not Found (14ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin-grid.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.5ms)
+
+
+Started GET "/assets/textile-editor.css" for 127.0.0.1 at Thu Mar 08 23:56:44 -0500 2012
+Served asset /textile-editor.css - 404 Not Found (8ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/textile-editor.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/assets/admin/style.css?body=1" for 127.0.0.1 at Thu Mar 08 23:56:44 -0500 2012
+Served asset /admin/style.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Thu Mar 08 23:56:44 -0500 2012
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Thu Mar 08 23:56:44 -0500 2012
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/clients.js?body=1" for 127.0.0.1 at Thu Mar 08 23:56:44 -0500 2012
+Served asset /admin/clients.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/hotels.js?body=1" for 127.0.0.1 at Thu Mar 08 23:56:44 -0500 2012
+Served asset /admin/hotels.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/site.js?body=1" for 127.0.0.1 at Thu Mar 08 23:56:44 -0500 2012
+Served asset /admin/site.js - 200 OK (1ms)
+
+
+Started GET "/assets/admin/travel_packages.js?body=1" for 127.0.0.1 at Thu Mar 08 23:56:44 -0500 2012
+Served asset /admin/travel_packages.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Thu Mar 08 23:56:44 -0500 2012
+Served asset /application.js - 200 OK (2ms)
+
+
+Started GET "/assets/admin/images/header.gif" for 127.0.0.1 at Thu Mar 08 23:56:44 -0500 2012
+Served asset /admin/images/header.gif - 200 OK (0ms)
+
+
+Started GET "/assets/admin/images/tab.gif" for 127.0.0.1 at Thu Mar 08 23:56:44 -0500 2012
+Served asset /admin/images/tab.gif - 200 OK (0ms)
+
+
+Started GET "/assets/admin/images/footer.gif" for 127.0.0.1 at Thu Mar 08 23:56:44 -0500 2012
+Served asset /admin/images/footer.gif - 200 OK (0ms)
+
+
+Started GET "/admin/travel_packages/new" for 127.0.0.1 at Thu Mar 08 23:57:12 -0500 2012
+  Processing by Admin::TravelPackagesController#new as HTML
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.0ms)[0m  UPDATE "users" SET "updated_at" = '2012-03-09 04:57:12.433140', "perishable_token" = 'zdSnqGWVGlZ6xwdeF3BL', "last_request_at" = '2012-03-09 04:57:12.430039' WHERE "users"."id" = 1
+  [1m[36m (29.0ms)[0m  [1mCOMMIT[0m
+Rendered admin/travel_packages/_form.html.erb (2.2ms)
+Rendered admin/travel_packages/new.html.erb within layouts/admin (26.8ms)
+Rendered layouts/_admin_bar.html.erb (2.8ms)
+Completed 200 OK in 215ms (Views: 76.1ms | ActiveRecord: 43.6ms)
+
+
+Started GET "/assets/admin.css" for 127.0.0.1 at Thu Mar 08 23:57:12 -0500 2012
+Served asset /admin.css - 404 Not Found (6ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/assets/admin-grid.css" for 127.0.0.1 at Thu Mar 08 23:57:12 -0500 2012
+Served asset /admin-grid.css - 404 Not Found (17ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin-grid.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Thu Mar 08 23:57:13 -0500 2012
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Thu Mar 08 23:57:13 -0500 2012
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/textile-editor.css" for 127.0.0.1 at Thu Mar 08 23:57:13 -0500 2012
+Served asset /textile-editor.css - 404 Not Found (11ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/textile-editor.css"):
+  
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.6ms)
+
+
+Started GET "/assets/admin/style.css?body=1" for 127.0.0.1 at Thu Mar 08 23:57:13 -0500 2012
+Served asset /admin/style.css - 200 OK (0ms)
+
+
+Started GET "/assets/admin/clients.js?body=1" for 127.0.0.1 at Thu Mar 08 23:57:13 -0500 2012
+Served asset /admin/clients.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/hotels.js?body=1" for 127.0.0.1 at Thu Mar 08 23:57:13 -0500 2012
+Served asset /admin/hotels.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/site.js?body=1" for 127.0.0.1 at Thu Mar 08 23:57:13 -0500 2012
+Served asset /admin/site.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/travel_packages.js?body=1" for 127.0.0.1 at Thu Mar 08 23:57:13 -0500 2012
+Served asset /admin/travel_packages.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Thu Mar 08 23:57:13 -0500 2012
+Served asset /application.js - 200 OK (2ms)
+
+
+Started GET "/assets/admin/images/header.gif" for 127.0.0.1 at Thu Mar 08 23:57:13 -0500 2012
+Served asset /admin/images/header.gif - 200 OK (1ms)
+
+
+Started GET "/assets/admin/images/footer.gif" for 127.0.0.1 at Thu Mar 08 23:57:13 -0500 2012
+Served asset /admin/images/footer.gif - 200 OK (0ms)
+
+
+Started GET "/assets/admin/images/tab.gif" for 127.0.0.1 at Thu Mar 08 23:57:13 -0500 2012
+Served asset /admin/images/tab.gif - 200 OK (0ms)

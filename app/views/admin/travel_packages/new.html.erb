@@ -1,0 +1,27 @@
+<% @title = "Create New Travel Package" %>
+<div class="contentblock col border-eight">
+<h2>New Travel Package</h2>
+<% if @travel_package.errors.any? %>
+   <div id="errorExplanation">
+     <h2><%= pluralize(@travel_package.errors.count, "error") %> prohibited this company from being saved:</h2>
+     <ul>
+        <% @travel_package.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+
+     </ul>
+   </div>
+ <% end %>
+<div id="content">
+<div class="box">
+<%= form_for([:admin, @travel_package], :html => {:class => "form"}) do |f| %>
+
+<%= render :partial => "form", :object => f %>
+</div>
+</div>
+  <div class="submit-container">
+    <%= f.submit "Save" %>
+    <%= link_to "Cancel", admin_travel_packages_path %>
+  </div>
+<% end %>
+</div>
