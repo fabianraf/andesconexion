@@ -1,0 +1,65 @@
+<!-- Small Nav -->
+<div class="small-nav">
+        <a href="#">Dashboard</a>
+        <span>&gt;</span>
+        Travel Package
+</div>
+<!-- End Small Nav -->
+
+<!-- Message Error -->
+<% if @travel_package.errors.any? %>
+  <div class="msg msg-error">
+     <% @travel_package.errors.full_messages.each do |msg| %>
+       <p><strong><%= msg %></strong></p>
+     <% end %>
+  </div>
+<% end %>
+<!-- End Message Error -->
+<br />
+<!-- Main -->
+<div id="main">
+        <div class="cl">&nbsp;</div>
+
+        <!-- Content -->
+        <div id="content">
+          <!-- Box -->
+          <div class="box">
+            <!-- Box Head -->
+            <div class="box-head">
+              <h2 class="left">Edit Travel Package</h2>
+            </div>
+            <!-- End Box Head -->
+            <%= form_for([:admin, @travel_package]) do |f| %>
+              <%= render :partial => "form", :object => f %>
+              <div class="buttons">
+                  <%= f.submit "Save" %>
+                  <%= link_to "Cancel", admin_travel_packages_path %>
+              </div>
+            <% end %>
+          </div>
+          <!-- End Box -->
+        </div>
+        <!-- End Content -->
+        <!-- Sidebar -->
+        <div id="sidebar">
+          <!-- Box -->
+          <div class="box">
+            <!-- Box Head -->
+            <div class="box-head">
+              <h2>Management</h2>
+            </div>
+            <!-- End Box Head-->
+            <div class="box-content">
+              <%= link_to(content_tag(:span, "Add new Travel Package"), new_admin_travel_package_path, :class => 'add-button') %>
+              <%= link_to(content_tag(:span, "Delete Travel Package"), admin_travel_package_path(@travel_package), :confirm => 'Are you sure?', :method => :delete, :title => 'Delete travel package') %>
+              <div class="cl">&nbsp;</div>
+            </div>
+          </div>
+          <!-- End Box -->
+        </div>
+        <!-- End Sidebar -->
+
+        <div class="cl">&nbsp;</div>			
+</div>
+<!-- Main -->
+	

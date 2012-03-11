@@ -1,0 +1,74 @@
+<!-- Small Nav -->
+<div class="small-nav">
+        <a href="#">Dashboard</a>
+        <span>&gt;</span>
+        Travel Package
+</div>
+<!-- End Small Nav -->
+
+<br />
+<!-- Main -->
+<div id="main">
+        <div class="cl">&nbsp;</div>
+
+        <!-- Content -->
+        <div id="content">
+          <!-- Box -->
+          <div class="box">
+            <!-- Box Head -->
+            <div class="box-head">
+              <h2 class="left"><%= @travel_package.name %></h2>
+              <div class="right">
+                <%= link_to 'Delete', admin_travel_package_path(@travel_package), :confirm => 'Are you sure?', :method => :delete, :class => 'ico del', :title => 'Delete travel package'%>
+                <%= link_to 'Edit', edit_admin_travel_package_path(@travel_package), :class => 'ico edit', :title => 'Edit travel package' %>
+              </div>
+            </div>
+            <!-- End Box Head -->
+            
+            <dl class="show">
+		<dt>Description</dt>
+		<dd><%= @travel_package.description %></p></dd>
+		<dt>Country</dt>
+		<dd><%= @travel_package.country %></p></dd>
+		<dt>City</dt>
+		<dd><%= @travel_package.city %></p></dd>
+		<dt>Price</dt>
+		<dd><%= number_to_currency(@travel_package.price, :precision => 2) %></p></dd>
+		<dt>Sale Price</dt>
+                <dd>
+                  <% unless @travel_package.sale_price.blank? %>
+                    <%= number_to_currency(@travel_package.sale_price, :precision => 2) %>
+                  <% else %>
+                    No Sale Price available.
+                  <% end %>
+                </p></dd>
+		<dt>Image</dt>
+		<dd><%= image_tag(@travel_package.image.url, :width=>'250px') %></dd>
+            </dl>
+            
+          </div>
+          <!-- End Box -->
+        </div>
+        <!-- End Content -->
+        <!-- Sidebar -->
+        <div id="sidebar">
+          <!-- Box -->
+          <div class="box">
+            <!-- Box Head -->
+            <div class="box-head">
+              <h2>Management</h2>
+            </div>
+            <!-- End Box Head-->
+            <div class="box-content">
+              <%= link_to(content_tag(:span, "Add new Travel Package"), new_admin_travel_package_path, :class => 'add-button') %>
+              <div class="cl">&nbsp;</div>
+            </div>
+          </div>
+          <!-- End Box -->
+        </div>
+        <!-- End Sidebar -->
+
+        <div class="cl">&nbsp;</div>			
+</div>
+<!-- Main -->
+	
