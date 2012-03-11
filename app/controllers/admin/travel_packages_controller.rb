@@ -41,4 +41,13 @@ class Admin::TravelPackagesController < Admin::BaseController
       end
     end 
   end
+  
+  def destroy
+    @travel_package = TravelPackage.find(params[:id])
+    @travel_package.destroy
+    respond_to do |format|
+      format.html { redirect_to admin_travel_packages_path }
+      format.xml  { head :ok }
+    end
+  end
 end
