@@ -1,23 +1,48 @@
 <div class="form">
-<div class="formfield seven">
-	<label for="travel_package_name">Name <span>(required)</span></label>
-	<%= form.text_field :name %>
-<div class="formfield seven">
-	<label for="travel_package_description">Description <span>(required)</span></label>
-	<%= form.text_area :description %>
-</div>
-<div class="formfield seven">
-	<label for="travel_package_country">Country <span>(required)</span></label>
-	<%= form.text_field :country_id %>
-</div>
-<div class="formfield seven">
-	<label for="travel_package_city">City<span>(required)</span></label>
-	<%= form.text_field :city %>
-<div class="formfield seven">
-	<label for="travel_package_price">Price<span>(required)</span></label>
-	<%= form.text_field :city %>
-<div class="formfield seven">
-	<label for="travel_package_sprice">Sale Price<span>(required)</span></label>
-	<%= form.text_field :sale_price %>
-</div>
+<p>
+  <span class="req">max 100 symbols</span>
+  <label>Name <span>(Required Field)</span></label>
+  <%= form.text_field :name, :class => "field size1" %>
+</p>	
+<p>
+  <label>Description</label>
+  <%= form.text_area :description, :class => "field size4" %>
+</p>	
+<p>
+  <label>Country</label>
+  <%= form.country_select(:country, ["Ecuador"]) %>
+</p>	
+<p>
+  <span class="req">max 100 symbols</span>
+  <label>City</label>
+  <%= form.text_field :city, :class => "field size1" %>
+</p>	
+<p>
+  <label>Price <span>(Required Field)</span></label>
+  <%= form.text_field :price, :class => "field small-field" %>
+</p>	
+<p>
+  <label>Sale Price</label>
+  <%= form.text_field :sale_price, :class => "field small-field" %>
+</p>	
+<p>
+  <label>Image</label>
+  <%= form.file_field :image %>
+</p>
+
+
+<%#*<p class="inline-field">%>
+        <%#*<label>Date</label>%>
+        <%#*<select class="field size2">%>
+                <%#*<option value="">23</option>%>
+        <%#*</select>%>
+        <%#*<select class="field size3">%>
+                <%#*<option value="">July</option>%>
+        <%#*</select>%>
+        <%#*<select class="field size3">%>
+                <%#*<option value="">2009</option>%>
+        <%#*</select>%>
+<%#*</p>%>
+
+        
 </div>
