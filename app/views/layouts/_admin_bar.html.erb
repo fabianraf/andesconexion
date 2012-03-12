@@ -21,8 +21,8 @@
 			<ul>
 			    <li><%= link_to(content_tag(:span, "Dashboard"), "/admin", :class => are_you_here?("admin") ? "active" : "") %></li>
 			    <li><%= link_to(content_tag(:span, "Travel Packages"), admin_travel_packages_path, :class => are_you_here?("travel_packages") ? "active" : "") %></li>
-			    <li><%= link_to(content_tag(:span, "Hotels"), admin_hotels_path) %></li>
-			    <li><%= link_to(content_tag(:span, "Clients"), admin_clients_path) %></li>
+			    <li><%= link_to(content_tag(:span, "Hotels"), admin_hotels_path, :class => are_you_here?("hotels") ? "active" : "") %></li>
+			    <li><%= link_to(content_tag(:span, "Clients"), admin_clients_path, :class => are_you_here?("clients") ? "active" : "") %></li>
 			    <li><%= link_to(content_tag(:span, "Users"), "") %></li>
 			</ul>
 		</div>

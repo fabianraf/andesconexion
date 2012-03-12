@@ -1,0 +1,103 @@
+<div class="shell">
+  <!-- Small Nav -->
+  <div class="small-nav">
+          <a href="#">Dashboard</a>
+          <span>&gt;</span>
+          Hotels
+  </div>
+  <!-- End Small Nav -->
+  <br />
+  <!-- Main -->
+  <div id="main">
+    <div class="cl">&nbsp;</div>
+
+    <!-- Content -->
+    <div id="content">
+      <!-- Box -->
+      <div class="box">
+        <!-- Box Head -->
+        <div class="box-head">
+          <h2 class="left">Hotels</h2>
+          <div class="right">
+            <label>search hotel</label>
+            <input type="text" class="field small-field" />
+            <input type="submit" class="button" value="search" />
+          </div>
+        </div>
+        <!-- End Box Head -->	
+          <!-- Table -->
+          <div class="table">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <th width="13"><input type="checkbox" class="checkbox" /></th>
+                <th>Name</th>
+                <th>Country</th>
+                <th>City</th>
+                <th>algo</th>
+                <th width="110" class="ac">Content Control</th>
+              </tr>
+              <% @hotels.each do |hotel| %>
+                <%= content_tag_for(:tr, hotel, :class=> "#{cycle("", "odd")}") do %>
+                 <td><input type="checkbox" class="checkbox" /></td>
+                  <td><h3><%= link_to hotel.name, admin_hotel_path(hotel) %></td>
+                  <td><%= hotel.country %></td>
+                  <td><%= hotel.city %></td>
+                  <td><%= "algo" %></td>
+                  <td>
+                    <%= link_to 'Delete', admin_hotel_path(hotel), :confirm => 'Are you sure?', :method => :delete, :class => 'ico del', :title => 'Delete hotel'%>
+                    <%= link_to 'Edit', edit_admin_hotel_path(hotel), :class => 'ico edit', :title => 'Edit hotel' %>
+                  </td>
+                <% end %>
+              <% end %>
+            </table>
+
+            <!-- Pagging -->
+            <div class="pagging">
+              <%= will_paginate(@hotels, :class => "right", :prev_label => "Previous", :next_label => "Next") %>
+            </div>
+            <!-- End Pagging -->
+          </div>
+          <!-- Table -->
+      </div>
+      <!-- End Box -->
+    </div>
+    <!-- End Content -->
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+      <!-- Box -->
+      <div class="box">
+        <!-- Box Head -->
+        <div class="box-head">
+          <h2>Management</h2>
+        </div>
+        <!-- End Box Head-->
+        <div class="box-content">
+          <%= link_to(content_tag(:span, "Add new Hotel"), new_admin_hotel_path, :class => 'add-button') %>
+          <div class="cl">&nbsp;</div>
+          <p class="select-all"><input type="checkbox" class="checkbox" /><label>select all</label></p>
+          <p><a href="#">Delete Selected</a></p>
+          <!-- Sort -->
+          <div class="sort">
+            <label>Sort by</label>
+            <select class="field">
+                    <option value="">Title</option>
+            </select>
+            <select class="field">
+                    <option value="">Date</option>
+            </select>
+            <select class="field">
+                    <option value="">Author</option>
+            </select>
+          </div>
+          <!-- End Sort -->
+        </div>
+      </div>
+      <!-- End Box -->
+    </div>
+    <!-- End Sidebar -->
+
+    <div class="cl">&nbsp;</div>			
+  </div>
+  <!-- Main -->
+</div>

@@ -32,7 +32,7 @@ class Admin::TravelPackagesController < Admin::BaseController
     @travel_package = TravelPackage.find(params[:id])
     respond_to do |format|
       if @travel_package.update_attributes(params[:travel_package])
-        flash[:notice] = 'Company was successfully updated.'
+        flash[:notice] = 'Travel Package was successfully updated.'
           format.html { redirect_to admin_travel_packages_path }
           format.xml  { head :ok }
       else

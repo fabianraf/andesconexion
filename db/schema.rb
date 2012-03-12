@@ -10,7 +10,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120311060327) do
+ActiveRecord::Schema.define(:version => 20120311201107) do
+
+  create_table "ckeditor_assets", :force => true do |t|
+    t.string   "data_file_name",                  :null => false
+    t.string   "data_content_type"
+    t.integer  "data_file_size"
+    t.integer  "assetable_id"
+    t.string   "assetable_type",    :limit => 30
+    t.string   "type",              :limit => 30
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "ckeditor_assets", ["assetable_type", "assetable_id"], :name => "idx_ckeditor_assetable"
+  add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], :name => "idx_ckeditor_assetable_type"
 
   create_table "clients", :force => true do |t|
     t.string   "firstname"
@@ -30,11 +44,15 @@ ActiveRecord::Schema.define(:version => 20120311060327) do
 
   create_table "hotels", :force => true do |t|
     t.string   "name"
-    t.string   "description"
-    t.integer  "country_id"
+    t.text     "description"
+    t.string   "country"
     t.string   "city"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "travel_package_images", :force => true do |t|

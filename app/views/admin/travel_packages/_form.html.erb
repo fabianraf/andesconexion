@@ -1,3 +1,4 @@
+<%= javascript_include_tag 'ckeditor/ckeditor' %>
 <div class="form">
 <p>
   <span class="req">max 100 symbols</span>
@@ -6,7 +7,7 @@
 </p>	
 <p>
   <label>Description</label>
-  <%= form.text_area :description, :class => "field size4" %>
+  <%= form.cktext_area :description, :class => "field size4" %>
 </p>	
 <p>
   <label>Country</label>

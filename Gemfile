@@ -25,6 +25,10 @@ gem 'meta_search'
 #install will_paginate
 gem 'will_paginate', '3.0.pre'
 gem 'country-select'
+gem "ckeditor", "~> 3.6.0"
+gem "carrierwave"
+gem "mini_magick"
+gem "ckeditor-rails"
 # Use unicorn as the web server
 # gem 'unicorn'
 

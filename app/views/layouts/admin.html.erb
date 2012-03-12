@@ -3,41 +3,25 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<meta http-equiv="imagetoolbar" content="false" />
-	<meta name="MSSmartTagsPreventParsing" content="true" />
-	<meta name="author" content="Net Theory" />
-	<!-- Optional meta tags -->
-	<!-- <meta name="revisit-after" content="1 day" /> -->
-	<!-- <meta name="robots" content="index,follow" /> -->
-	<!-- <meta http-equiv="pragma" content="no-cache" /> -->
-  
-	<title>
-		<%- if @title -%>
-		<%= @title + " - AndesConexion Site Admin" %>
-		<%- else -%>
-		<%= "AndesConexion Site Admin" %>
-		<%- end -%>
-	</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta http-equiv="imagetoolbar" content="false" />
+  <meta name="MSSmartTagsPreventParsing" content="true" />
+  <meta name="author" content="Net Theory" />
+  <!-- Optional meta tags -->
+  <!-- <meta name="revisit-after" content="1 day" /> -->
+  <!-- <meta name="robots" content="index,follow" /> -->
+  <!-- <meta http-equiv="pragma" content="no-cache" /> -->
 
-	<!-- insert additional stylesheets here -->
-	<%#= stylesheet_link_tag 'style.css' -%>
-	<!-- Yes, the order of the stylesheets DOES matter! Please don't change it! -->
-	<%= stylesheet_link_tag 'admin.css' %>
-
-	<!-- insert additional stylesheets here -->
-	<%= stylesheet_link_tag 'admin-grid.css' -%>
-	<%= stylesheet_link_tag 'textile-editor.css' -%>
+  <title>
+    <%- if @title -%>
+    <%= @title + " - AndesConexion Site Admin" %>
+    <%- else -%>
+    <%= "AndesConexion Site Admin" %>
+    <%- end -%>
+  </title>
 
   <%= stylesheet_link_tag 'admin/style.css' -%>
-	<!--[if lt IE 7]>
-		<%# stylesheet_link_tag 'IElt7.css' %>
-
-		<%# stylesheet_link_tag 'basic_ie.css' %>
-  <![endif]-->
-	<!--[if (gte IE 7)&(lt IE 8)]>
-		<%# stylesheet_link_tag 'IEgte7lt8.css' %>
-  <![endif]-->
+      
 </head>
 
 <body>
@@ -52,14 +36,15 @@
 <!-- End Container -->
 
 <!-- Footer -->
-<div id="footer">
-	<div class="shell">
-		<span class="left">&copy; 2012 - AndesConexion</span>
-		<span class="right">
-			Design by <a href="http://chocotemplates.com" target="_blank" title="The Sweetest CSS Templates WorldWide">Chocotemplates.com</a>
-		</span>
-        </div>
+<div class="footer">
+  <div class="shell">
+    <span class="left">&copy; 2012 - AndesConexion</span>
+    <span class="right">
+      Design by <a href="#" target="_blank" title="">andesconexion.com</a>
+    </span>
+  </div>
   <%= javascript_include_tag "application" %>
+  <%#= javascript_include_tag "ckeditor/init" %>
 </div>
 <!-- End Footer -->
 	
