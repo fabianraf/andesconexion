@@ -3,9 +3,7 @@
   <div class="small-nav">
           <a href="#">Dashboard</a>
           <span>&gt;</span>
-          <%= link_to "Private Services", admin_private_services_path %>
-          <span>&gt;</span>
-          Travel Packages
+          Private Services
   </div>
   <!-- End Small Nav -->
   <br />
@@ -19,9 +17,9 @@
       <div class="box">
         <!-- Box Head -->
         <div class="box-head">
-          <h2 class="left">Travel Packages</h2>
+          <h2 class="left">Private Services</h2>
           <div class="right">
-            <label>search travel package</label>
+            <label>search Private Service</label>
             <input type="text" class="field small-field" />
             <input type="submit" class="button" value="search" />
           </div>
@@ -35,19 +33,17 @@
                 <th>Name</th>
                 <th>Country</th>
                 <th>City</th>
-                <th>Sale Price</th>
                 <th width="110" class="ac">Content Control</th>
               </tr>
-              <% @travel_packages.each do |travel_package| %>
-                <%= content_tag_for(:tr, travel_package, :class=> "#{cycle("", "odd")}") do %>
+              <% @private_services.each do |private_service| %>
+                <%= content_tag_for(:tr, private_service, :class=> "#{cycle("", "odd")}") do %>
                  <td><input type="checkbox" class="checkbox" /></td>
-                  <td><h3><%= link_to travel_package.name, admin_private_service_travel_package_path(@private_service, travel_package) %></td>
-                  <td><%= travel_package.country %></td>
-                  <td><%= travel_package.city %></td>
-                  <td><%= number_to_currency(travel_package.sale_price, :precision => 2) %></td>
+                  <td><h3><%= link_to private_service.name, admin_private_service_travel_packages_path(private_service) %></td>
+                  <td><%= private_service.country %></td>
+                  <td><%= private_service.city %></td>
                   <td>
-                    <%= link_to 'Delete', admin_private_service_travel_package_path(@private_service, travel_package), :confirm => 'Are you sure?', :method => :delete, :class => 'ico del', :title => 'Delete travel package'%>
-                    <%= link_to 'Edit', edit_admin_private_service_travel_package_path(@private_service, travel_package), :class => 'ico edit', :title => 'Edit travel package' %>
+                    <%= link_to 'Delete', admin_private_service_path(private_service), :confirm => 'Are you sure?', :method => :delete, :class => 'ico del', :title => 'Delete Private Service'%>
+                    <%= link_to 'Edit', edit_admin_private_service_path(private_service), :class => 'ico edit', :title => 'Edit Private Service' %>
                   </td>
                 <% end %>
               <% end %>
@@ -55,7 +51,7 @@
 
             <!-- Pagging -->
             <div class="pagging">
-              <%= will_paginate(@travel_packages, :class => "right", :prev_label => "Previous", :next_label => "Next") %>
+              <%= will_paginate(@private_services, :class => "right", :prev_label => "Previous", :next_label => "Next") %>
             </div>
             <!-- End Pagging -->
           </div>
@@ -75,7 +71,7 @@
         </div>
         <!-- End Box Head-->
         <div class="box-content">
-          <%= link_to(content_tag(:span, "Add new Travel Package"), new_admin_private_service_travel_package_path(@private_service), :class => 'add-button') %>
+          <%= link_to(content_tag(:span, "Add P. Service"), new_admin_private_service_path, :class => 'add-button') %>
           <div class="cl">&nbsp;</div>
           <p class="select-all"><input type="checkbox" class="checkbox" /><label>select all</label></p>
           <p><a href="#">Delete Selected</a></p>

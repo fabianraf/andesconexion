@@ -1,0 +1,2 @@
+class LastMinute < TravelPackage
+end

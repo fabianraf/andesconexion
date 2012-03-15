@@ -20,7 +20,8 @@
 		<div id="navigation">
 			<ul>
 			    <li><%= link_to(content_tag(:span, "Dashboard"), "/admin", :class => are_you_here?("admin") ? "active" : "") %></li>
-			    <li><%= link_to(content_tag(:span, "Travel Packages"), admin_travel_packages_path, :class => are_you_here?("travel_packages") ? "active" : "") %></li>
+			    <li><%= link_to(content_tag(:span, "Private Services"), admin_private_services_path, {:class => are_you_here?("private_services") ? "active" : "", :class => are_you_here?("travel_packages") ? "active" : ""})  %>
+                                <%#= link_to(content_tag(:span, "Travel Packages"), admin_travel_packages_path, :class => are_you_here?("travel_packages") ? "active" : "") %></li>
 			    <li><%= link_to(content_tag(:span, "Hotels"), admin_hotels_path, :class => are_you_here?("hotels") ? "active" : "") %></li>
 			    <li><%= link_to(content_tag(:span, "Clients"), admin_clients_path, :class => are_you_here?("clients") ? "active" : "") %></li>
 			    <li><%= link_to(content_tag(:span, "Users"), "") %></li>

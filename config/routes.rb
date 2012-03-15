@@ -6,10 +6,13 @@ Andesconexion::Application.routes.draw do
     
   match "/admin", :controller => "admin/site", :action => "index"
   namespace "admin" do
-    resources :travel_packages
+    #resources :travel_packages
     resources :countries
     resources :hotels
     resources :clients
+    resources :private_services do 
+      resources :travel_packages
+    end
   end
   # The priority is based upon order of creation:
   # first created -> highest priority.

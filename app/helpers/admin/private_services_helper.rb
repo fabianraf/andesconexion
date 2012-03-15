@@ -1,0 +1,2 @@
+module Admin::PrivateServicesHelper
+end

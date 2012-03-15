@@ -1,0 +1,60 @@
+<!-- Small Nav -->
+<div class="small-nav">
+        <a href="#">Dashboard</a>
+        <span>&gt;</span>
+        Private Service
+</div>
+<!-- End Small Nav -->
+
+<br />
+<!-- Main -->
+<div id="main">
+        <div class="cl">&nbsp;</div>
+
+        <!-- Content -->
+        <div id="content">
+          <!-- Box -->
+          <div class="box">
+            <!-- Box Head -->
+            <div class="box-head">
+              <h2 class="left"><%= @private_service.name %></h2>
+              <div class="right">
+                <%= link_to 'Delete', admin_private_service_path(@private_service), :confirm => 'Are you sure?', :method => :delete, :class => 'ico del', :title => 'Delete Private Service'%>
+                <%= link_to 'Edit', edit_admin_private_service_path(@private_service), :class => 'ico edit', :title => 'Edit Private Service' %>
+              </div>
+            </div>
+            <!-- End Box Head -->
+            
+            <dl class="show">
+		<dt>Country</dt>
+		<dd><%= @private_service.country %></p></dd>
+		<dt>City</dt>
+		<dd><%= @private_service.city %></p></dd>
+            </dl>
+            
+          </div>
+          <!-- End Box -->
+        </div>
+        <!-- End Content -->
+        <!-- Sidebar -->
+        <div id="sidebar">
+          <!-- Box -->
+          <div class="box">
+            <!-- Box Head -->
+            <div class="box-head">
+              <h2>Management</h2>
+            </div>
+            <!-- End Box Head-->
+            <div class="box-content">
+              <%= link_to(content_tag(:span, "Add P. Service"), new_admin_private_service_path, :class => 'add-button') %>
+              <div class="cl">&nbsp;</div>
+            </div>
+          </div>
+          <!-- End Box -->
+        </div>
+        <!-- End Sidebar -->
+
+        <div class="cl">&nbsp;</div>			
+</div>
+<!-- Main -->
+	

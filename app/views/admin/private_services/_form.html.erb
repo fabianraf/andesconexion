@@ -1,0 +1,19 @@
+<%= javascript_include_tag 'ckeditor/ckeditor' %>
+<div class="form">
+<p>
+  <span class="req">max 100 symbols</span>
+  <label>Name <span>(Required Field)</span></label>
+  <%= form.text_field :name, :class => "field size1" %>
+</p>	
+<p>
+  <label>Country</label>
+  <%= form.country_select(:country, ["Ecuador"]) %>
+</p>	
+<p>
+  <span class="req">max 100 symbols</span>
+  <label>City</label>
+  <%= form.text_field :city, :class => "field size1" %>
+</p>	
+<p>
+ 
+</div>

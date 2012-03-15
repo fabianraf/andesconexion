@@ -2,16 +2,14 @@
 <div class="small-nav">
         <a href="#">Dashboard</a>
         <span>&gt;</span>
-        <%= link_to "Private Services", admin_private_services_path %>
-        <span>&gt;</span>
-        Travel Packages
+        Private Service
 </div>
 <!-- End Small Nav -->
 
 <!-- Message Error -->
-<% if @travel_package.errors.any? %>
+<% if @private_service.errors.any? %>
   <div class="msg msg-error">
-     <% @travel_package.errors.full_messages.each do |msg| %>
+     <% @private_service.errors.full_messages.each do |msg| %>
        <p><strong><%= msg %></strong></p>
      <% end %>
   </div>
@@ -28,14 +26,14 @@
     <div class="box">
       <!-- Box Head -->
       <div class="box-head">
-              <h2>Add New Travel Package</h2>
+              <h2>Add New Private Service</h2>
       </div>
       <!-- End Box Head -->
-      <%= form_for([:admin, @private_service, @travel_package]) do |f| %>
+      <%= form_for([:admin, @private_service]) do |f| %>
         <%= render :partial => "form", :object => f %>
         <div class="buttons">
             <%= f.submit "Save" %>
-            <%= link_to "Cancel", admin_private_service_travel_packages_path %>
+            <%= link_to "Cancel", admin_private_services_path %>
         </div>
       <% end %>
     </div>

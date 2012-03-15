@@ -5,3 +5,4 @@ tmp/**/*
 log/
 vendor/**/*
 public/system/travel_packages/**
+test/**
