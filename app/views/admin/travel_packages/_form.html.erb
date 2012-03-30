@@ -5,6 +5,11 @@
   <label>Name <span>(Required Field)</span></label>
   <%= form.text_field :name, :class => "field size1" %>
 </p>	
+
+<p>
+  <label>Duration</label>
+  <%= form.text_field :duration, :class => "field size4" %>
+</p>	
 <p>
   <label>Description</label>
   <%= form.cktext_area :description, :class => "field size4" %>
@@ -30,6 +35,42 @@
   <label>Image</label>
   <%= form.file_field :image %>
 </p>
+<table class="pax">
+  <tr colspan =12> 
+    <th colspan=3 class="header-for-pax">Guide/Driver</th> 
+    <th colspan=9 class="header-for-pax">Guide &amp; Driver</th> 
+  </tr>
+  <tr colspan=12> 
+    <td>1 Pax</td>
+    <td>2 Pax</td>
+    <td>3 Pax</td>
+    <td>1 Pax</td>
+    <td>2 Pax</td>
+    <td>3 Pax</td>
+    <td>4 Pax</td>
+    <td>4-9 Pax</td>
+    <td>10-15 Pax</td>
+    <td>16-25 Pax</td>
+    <td>5-9 Pax</td>
+    <td>20-+ Pax</td>
+  </tr>
+  <tr colspan=12> 
+    <td><%= form.text_field :one_pax_g_or_d, :class => "small-text-box" %></td>
+    <td><%= form.text_field :two_pax_g_or_d, :class => "small-text-box" %></td>
+    <td><%= form.text_field :three_pax_g_or_d, :class => "small-text-box" %></td>
+    <td><%= form.text_field :one_pax_g_and_d, :class => "small-text-box" %></td>
+    <td><%= form.text_field :two_pax_g_and_d, :class => "small-text-box" %></td>
+    <td><%= form.text_field :three_pax_g_and_d, :class => "small-text-box" %></td>
+    <td><%= form.text_field :four_pax_g_and_d, :class => "small-text-box" %></td>
+    <td><%= form.text_field :four_to_nine_pax, :class => "small-text-box" %></td>
+    <td><%= form.text_field :ten_to_fifteen_pax, :class => "small-text-box" %></td>
+    <td><%= form.text_field :sixteen_to_twentyfive_pax, :class => "small-text-box" %></td>
+    <td><%= form.text_field :five_to_nine_pax, :class => "small-text-box" %></td>
+    <td><%= form.text_field :twenty_more_pax, :class => "small-text-box" %></td>
+  </tr>
+</table>
+
+
 
 
 <%#*<p class="inline-field">%>

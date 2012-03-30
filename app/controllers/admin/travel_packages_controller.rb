@@ -10,7 +10,8 @@ class Admin::TravelPackagesController < Admin::BaseController
   end
   
   def show
-    @travel_package = TravelPackage.find(params[:id])
+    @private_service = PrivateService.find(params[:private_service_id])
+    @travel_package = @private_service.travel_packages.find(params[:id])
   end
   def create
     travel_package = PrivateService.find(params[:private_service_id]).travel_packages.new(params[:travel_package])
@@ -36,7 +37,7 @@ class Admin::TravelPackagesController < Admin::BaseController
     respond_to do |format|
       if @travel_package.update_attributes(params[:travel_package])
         flash[:notice] = 'Travel Package was successfully updated.'
-          format.html { redirect_to admin_travel_packages_path }
+          format.html { redirect_to admin_private_service_travel_packages_path(@travel_package.private_service) }
           format.xml  { head :ok }
       else
         format.html { render :edit }

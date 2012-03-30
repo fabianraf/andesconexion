@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120315050834) do
+ActiveRecord::Schema.define(:version => 20120318195336) do
 
   create_table "ckeditor_assets", :force => true do |t|
     t.string   "data_file_name",                  :null => false
@@ -40,23 +40,6 @@ ActiveRecord::Schema.define(:version => 20120315050834) do
     t.integer  "name"
     t.datetime "created_at"
     t.datetime "updated_at"
-  end
-
-  create_table "guide_or_driver_tours", :force => true do |t|
-    t.integer  "travel_package_id"
-    t.decimal  "one_pax",                :precision => 12, :scale => 2
-    t.decimal  "two_pax",                :precision => 12, :scale => 2
-    t.decimal  "three_pax",              :precision => 12, :scale => 2
-    t.decimal  "four_nine_pax",          :precision => 12, :scale => 2
-    t.decimal  "ten_fifteen_pax",        :precision => 12, :scale => 2
-    t.decimal  "sixteen_twentyfive_pax", :precision => 12, :scale => 2
-    t.decimal  "four_pax",               :precision => 12, :scale => 2
-    t.decimal  "five_nine_pax",          :precision => 12, :scale => 2
-    t.decimal  "twenty_more_pax",        :precision => 12, :scale => 2
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.boolean  "tour_or_guide"
-    t.boolean  "tour_and_guide"
   end
 
   create_table "hotels", :force => true do |t|
@@ -105,8 +88,8 @@ ActiveRecord::Schema.define(:version => 20120315050834) do
     t.text     "description"
     t.string   "country"
     t.string   "city"
-    t.decimal  "price",              :precision => 12, :scale => 2
-    t.decimal  "sale_price",         :precision => 12, :scale => 2
+    t.decimal  "price",                     :precision => 12, :scale => 2
+    t.decimal  "sale_price",                :precision => 12, :scale => 2
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "image_file_name"
@@ -114,6 +97,19 @@ ActiveRecord::Schema.define(:version => 20120315050834) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.integer  "private_service_id"
+    t.decimal  "one_pax_g_or_d",            :precision => 12, :scale => 2
+    t.decimal  "two_pax_g_or_d",            :precision => 12, :scale => 2
+    t.decimal  "three_pax_g_or_d",          :precision => 12, :scale => 2
+    t.decimal  "one_pax_g_and_d",           :precision => 12, :scale => 2
+    t.decimal  "two_pax_g_and_d",           :precision => 12, :scale => 2
+    t.decimal  "three_pax_g_and_d",         :precision => 12, :scale => 2
+    t.decimal  "four_pax_g_and_d",          :precision => 12, :scale => 2
+    t.decimal  "four_to_nine_pax",          :precision => 12, :scale => 2
+    t.decimal  "ten_to_fifteen_pax",        :precision => 12, :scale => 2
+    t.decimal  "sixteen_to_twentyfive_pax", :precision => 12, :scale => 2
+    t.decimal  "five_to_nine_pax",          :precision => 12, :scale => 2
+    t.decimal  "twenty_more_pax",           :precision => 12, :scale => 2
+    t.string   "duration"
   end
 
   create_table "user_sessions", :force => true do |t|

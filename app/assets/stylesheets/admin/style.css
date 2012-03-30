@@ -206,3 +206,41 @@ textarea.size4 { height:80px; }
     
 }
 .footer a{ color:#fff; }
+
+.pax {
+    background: none repeat scroll 0 0 #fff3cb;
+}
+.pax td {
+    color: #666699;
+    padding: 3px 1px;
+    
+   
+}
+.pax .header-for-pax {
+    border-bottom: 1px dashed #6699CC;
+    color: #003399;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 12px 17px;
+    border-right: 1px solid;
+    border-left: 1px solid;
+    border-top: 1px solid;
+    
+}
+.small-text-box {
+	background-color : #99FFCC;
+	border: 1px solid #008000;
+	width: 50px;
+        height: 15px;
+        padding: 1px;
+}
+
+.cell-with-border{
+    border-right: 1px solid #000000;
+    
+}
+.pax-show td{
+    font-size: 10px;
+    color: #666688;
+    padding: 8px 2px;
+}
