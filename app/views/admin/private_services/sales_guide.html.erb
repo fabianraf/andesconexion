@@ -1,0 +1,98 @@
+<%- content_for +:page_specific_javascript do -%>
+  <script>
+    
+  </script>
+<%- end -%>
+<!-- Small Nav -->
+<div class="small-nav">
+        <a href="#">Dashboard</a>
+        <span>&gt;</span>
+        <%= link_to "Private Services", admin_private_services_path %>
+        <span>&gt;</span>
+        Sales Guide
+</div>
+<!-- End Small Nav -->
+
+<br />
+<!-- Main -->
+<div id="main">
+        <div class="cl">&nbsp;</div>
+
+        <!-- Content -->
+        <div id="content">
+          <!-- Box -->
+          <div class="box">
+            <!-- Box Head -->
+            <div class="box-head">
+              <h2 class="left">Sales Guide</h2>
+              <div class="right">
+                <%#= link_to 'Delete', admin_private_service_path(@private_service), :confirm => 'Are you sure?', :method => :delete, :class => 'ico del', :title => 'Delete Private Service'%>
+                <%#= link_to 'Edit', edit_admin_private_service_path(@private_service), :class => 'ico edit', :title => 'Edit Private Service' %>
+              </div>
+            </div>
+            <!-- End Box Head --> 
+            <% @private_services.each do |private_service| %>
+              <%= form_for([:admin, private_service, @travel_package], {:remote => true}) do |f| %>
+                <table class="table-2" id="private_service_<%= private_service.id %>">
+                  <tbody>
+                    <% if private_service.travel_packages.present? %>
+                      <tr colspan="13">
+                        <th colspan="13" class="name"><%= private_service.name %></th>
+                      </tr>
+                      <tr colspan =13>
+                        <th></th>
+                        <th colspan=3 class="header-for-pax">Guide/Driver</th> 
+                        <th colspan=9 class="header-for-pax">Guide &amp; Driver</th> 
+                      </tr>
+                      <tr colspan=13>
+                        <th> &nbsp;</th>
+                        <th>1 Pax</th>
+                        <th>2 Pax</th>
+                        <th>3 Pax</th>
+                        <th>1 Pax</th>
+                        <th>2 Pax</th>
+                        <th>3 Pax</th>
+                        <th>4 Pax</th>
+                        <th>4-9 Pax</th>
+                        <th>10-15 Pax</th>
+                        <th>16-25 Pax</th>
+                        <th>5-9 Pax</th>
+                        <th>20-+ Pax</th>
+                      </tr>
+                      <% private_service.travel_packages.each do |travel_package| %>
+                        <%= render :partial => "travel_package", :locals => {:travel_package => travel_package} %>
+                      <% end %>
+                      <tr colspan="13">
+                        <td class="add-travel-package" colspan="13">ADD</td>
+                      </tr>
+                    <% end %>
+                  </tbody>
+                </table>
+              <% end %>
+            <% end %>
+          </div>
+          <!-- End Box -->
+        </div>
+        <!-- End Content -->
+        <!-- Sidebar -->
+        <div id="sidebar">
+          <!-- Box -->
+          <div class="box">
+            <!-- Box Head -->
+            <div class="box-head">
+              <h2>Management</h2>
+            </div>
+            <!-- End Box Head-->
+            <div class="box-content">
+              <%= link_to(content_tag(:span, "Add P. Service"), new_admin_private_service_path, :class => 'add-button') %>
+              <div class="cl">&nbsp;</div>
+            </div>
+          </div>
+          <!-- End Box -->
+        </div>
+        <!-- End Sidebar -->
+
+        <div class="cl">&nbsp;</div>			
+</div>
+<!-- Main -->
+	

@@ -1,0 +1,5 @@
+$('#private_service_<%= @travel_package.private_service.id %> tbody tr:last').prev().prev().prev().after('<%= escape_javascript(render :partial => "/admin/private_services/travel_package", :locals => {:travel_package => @travel_package}) %>');
+$('#private_service_<%= @travel_package.private_service.id %> tbody tr:last').prev().remove();
+$('#private_service_<%= @travel_package.private_service.id %> tbody tr:last').prev().remove();
+$('#private_service_<%= @travel_package.private_service.id %> tbody tr:last').prev().css('background','#f5deb3');
+setTimeout(function(){ $('#private_service_<%= @travel_package.private_service.id %> tbody tr:last').prev().css('background',''); },2000)

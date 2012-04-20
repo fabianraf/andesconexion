@@ -1,2 +1,0 @@
-class LastMinute < TravelPackage
-end

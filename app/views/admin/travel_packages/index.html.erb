@@ -55,7 +55,7 @@
 
             <!-- Pagging -->
             <div class="pagging">
-              <%= will_paginate(@travel_packages, :class => "right", :prev_label => "Previous", :next_label => "Next") %>
+              <%= paginate @travel_packages, :method => :post %>
             </div>
             <!-- End Pagging -->
           </div>

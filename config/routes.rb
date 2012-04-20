@@ -1,7 +1,7 @@
 Andesconexion::Application.routes.draw do
   
   resource :user_session
-
+  
   match '/logout', :controller => 'user_sessions', :action => 'destroy'
     
   match "/admin", :controller => "admin/site", :action => "index"
@@ -10,9 +10,14 @@ Andesconexion::Application.routes.draw do
     resources :countries
     resources :hotels
     resources :clients
+    resources :last_minute_offers
     resources :private_services do 
-      resources :travel_packages
+      resources :travel_packages 
+      collection do
+        get 'sales_guide'
+      end
     end
+    resources :travel_packages
   end
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -64,6 +69,7 @@ Andesconexion::Application.routes.draw do
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   # root :to => 'welcome#index'
+  root :to => 'sites#index'
 
   # See how all your routes lay out with "rake routes"
 

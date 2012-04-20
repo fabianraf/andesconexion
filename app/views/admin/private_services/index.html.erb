@@ -51,7 +51,7 @@
 
             <!-- Pagging -->
             <div class="pagging">
-              <%= will_paginate(@private_services, :class => "right", :prev_label => "Previous", :next_label => "Next") %>
+              <%= paginate @private_services %>
             </div>
             <!-- End Pagging -->
           </div>
@@ -75,20 +75,12 @@
           <div class="cl">&nbsp;</div>
           <p class="select-all"><input type="checkbox" class="checkbox" /><label>select all</label></p>
           <p><a href="#">Delete Selected</a></p>
-          <!-- Sort -->
-          <div class="sort">
-            <label>Sort by</label>
-            <select class="field">
-                    <option value="">Title</option>
-            </select>
-            <select class="field">
-                    <option value="">Date</option>
-            </select>
-            <select class="field">
-                    <option value="">Author</option>
-            </select>
+          <!-- Links -->
+          <div class="important-links">
+            <label>Important Links</label>
+            <%= link_to "Sales Guide", sales_guide_admin_private_services_path %>
           </div>
-          <!-- End Sort -->
+          <!-- End Links -->
         </div>
       </div>
       <!-- End Box -->

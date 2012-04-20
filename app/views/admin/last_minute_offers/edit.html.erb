@@ -1,0 +1,65 @@
+<!-- Small Nav -->
+<div class="small-nav">
+        <a href="#">Dashboard</a>
+        <span>&gt;</span>
+        last_minute_offer
+</div>
+<!-- End Small Nav -->
+
+<!-- Message Error -->
+<% if @last_minute_offer.errors.any? %>
+  <div class="msg msg-error">
+     <% @last_minute_offer.errors.full_messages.each do |msg| %>
+       <p><strong><%= msg %></strong></p>
+     <% end %>
+  </div>
+<% end %>
+<!-- End Message Error -->
+<br />
+<!-- Main -->
+<div id="main">
+        <div class="cl">&nbsp;</div>
+
+        <!-- Content -->
+        <div id="content">
+          <!-- Box -->
+          <div class="box">
+            <!-- Box Head -->
+            <div class="box-head">
+              <h2 class="left">Edit last_minute_offer</h2>
+            </div>
+            <!-- End Box Head -->
+            <%= form_for([:admin, @last_minute_offer]) do |f| %>
+              <%= render :partial => "form", :object => f %>
+              <div class="buttons">
+                  <%= f.submit "Save" %>
+                  <%= link_to "Cancel", admin_last_minute_offers_path %>
+              </div>
+            <% end %>
+          </div>
+          <!-- End Box -->
+        </div>
+        <!-- End Content -->
+        <!-- Sidebar -->
+        <div id="sidebar">
+          <!-- Box -->
+          <div class="box">
+            <!-- Box Head -->
+            <div class="box-head">
+              <h2>Management</h2>
+            </div>
+            <!-- End Box Head-->
+            <div class="box-content">
+              <%= link_to(content_tag(:span, "Add new last_minute_offer"), new_admin_last_minute_offer_path, :class => 'add-button') %>
+              <%= link_to(content_tag(:span, "Delete last_minute_offer"), admin_last_minute_offer_path(@last_minute_offer), :confirm => 'Are you sure?', :method => :delete, :title => 'Delete last_minute_offer') %>
+              <div class="cl">&nbsp;</div>
+            </div>
+          </div>
+          <!-- End Box -->
+        </div>
+        <!-- End Sidebar -->
+
+        <div class="cl">&nbsp;</div>			
+</div>
+<!-- Main -->
+	

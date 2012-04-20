@@ -1,7 +1,9 @@
 class Admin::TravelPackagesController < Admin::BaseController
   def index
     @private_service = PrivateService.find(params[:private_service_id])
-    @travel_packages = @private_service.travel_packages.paginate(:all, :page => params[:page] || 1, :per_page => 5, :order => "name")
+    #@travel_packages = @private_service.travel_packages.paginate(:all, :page => params[:page] || 1, :per_page => 5, :order => "name")
+    @travel_packages = @private_service.travel_packages.page(params[:page]).per(10)
+    
   end
   def new
     @private_service = PrivateService.find(params[:private_service_id])
@@ -14,15 +16,19 @@ class Admin::TravelPackagesController < Admin::BaseController
     @travel_package = @private_service.travel_packages.find(params[:id])
   end
   def create
-    travel_package = PrivateService.find(params[:private_service_id]).travel_packages.new(params[:travel_package])
+    @travel_package = PrivateService.find(params[:private_service_id]).travel_packages.new(params[:travel_package])
     respond_to do |format|
-      if travel_package.save
+      if @travel_package.save
         flash[:notice] = 'Travel Package was successfully created.'
-        format.html { redirect_to admin_private_service_travel_packages_path(travel_package.private_service) }
-        format.xml  { head :ok }
+        if request.xhr?
+          format.js
+        else
+          format.html { redirect_to admin_private_service_travel_packages_path(@travel_package.private_service) }
+          format.xml  { head :ok }
+        end
       else
         format.html { render :new }
-        format.xml  { render :xml => travel_package.errors, :status => :unprocessable_entity }
+        format.xml  { render :xml => @travel_package.errors, :status => :unprocessable_entity }
       end
     end 
   end

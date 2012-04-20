@@ -1,6 +1,6 @@
 class Admin::PrivateServicesController < Admin::BaseController
   def index
-    @private_services = PrivateService.paginate(:all, :page => params[:page] || 1, :per_page => 5, :order => "name")
+    @private_services = PrivateService.page(params[:page]).per(10)
   end
   def new
     @private_service = PrivateService.new
@@ -48,5 +48,10 @@ class Admin::PrivateServicesController < Admin::BaseController
       format.html { redirect_to admin_private_services_path }
       format.xml  { head :ok }
     end
+  end
+  
+  def sales_guide
+    @private_services = PrivateService.find(:all)
+    @travel_package = TravelPackage.new
   end
 end

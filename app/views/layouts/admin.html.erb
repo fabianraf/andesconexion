@@ -25,29 +25,30 @@
 </head>
 
 <body>
-<%= render :partial => '/layouts/admin_bar' %>
 
-<!-- Container -->
-<div id="container">
-  <div class="shell">
-    <%= yield %>
-  </div>
-</div>
-<!-- End Container -->
+  <div id="container">
+    <%= render :partial => '/layouts/admin_bar' %>
+    <!-- Container -->
+    <div id="body">
+      <div class="shell">
+        <%= yield %>
+      </div>
+    </div>
+    <!-- End Container -->
 
-<!-- Footer -->
-<div class="footer">
-  <div class="shell">
-    <span class="left">&copy; 2012 - AndesConexion</span>
-    <span class="right">
-      Design by <a href="#" target="_blank" title="">andesconexion.com</a>
-    </span>
+    <!-- Footer -->
+    <div id="footer">
+      <div class="shell">
+        <span class="left">&copy; 2012 - AndesConexion</span>
+        <span class="right">
+          Design by <a href="#" target="_blank" title="">andesconexion.com</a>
+        </span>
+      </div>
+      <%= javascript_include_tag "application" %>
+      <%#= javascript_include_tag "ckeditor/init" %>
+    </div>
+    <!-- End Footer -->
   </div>
-  <%= javascript_include_tag "application" %>
-  <%#= javascript_include_tag "ckeditor/init" %>
-</div>
-<!-- End Footer -->
-	
 </body>
   
 

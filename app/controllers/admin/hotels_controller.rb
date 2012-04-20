@@ -1,6 +1,6 @@
 class Admin::HotelsController < Admin::BaseController
   def index
-    @hotels = Hotel.paginate(:all, :page => params[:page] || 1, :per_page => 5, :order => "name")
+    @hotels = Hotel.page(params[:page]).per(10)
   end
   def new
     @hotel = Hotel.new

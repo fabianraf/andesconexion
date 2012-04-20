@@ -1,0 +1,15 @@
+<tr colspan=13 class="travel_odd"> 
+  <td><%= travel_package.name %></td>
+  <td class="pax1"><%= number_to_currency(travel_package.one_pax_g_or_d, :precision => 2) %></td>
+  <td class="pax1"><%= number_to_currency(travel_package.two_pax_g_or_d, :precision => 2) %></td>
+  <td class="pax1"><%= number_to_currency(travel_package.three_pax_g_or_d, :precision => 2)  %></td>
+  <td><%= number_to_currency(travel_package.one_pax_g_and_d, :precision => 2) %></td>
+  <td><%= number_to_currency(travel_package.two_pax_g_and_d, :precision => 2) %></td>
+  <td><%= number_to_currency(travel_package.three_pax_g_and_d, :precision => 2) %></td>
+  <td><%= number_to_currency(travel_package.four_pax_g_and_d, :precision => 2) %></td>
+  <td><%= number_to_currency(travel_package.four_to_nine_pax, :precision => 2) %></td>
+  <td><%= number_to_currency(travel_package.ten_to_fifteen_pax, :precision => 2) %></td>
+  <td><%= number_to_currency(travel_package.sixteen_to_twentyfive_pax, :precision => 2) %></td>
+  <td><%= number_to_currency(travel_package.five_to_nine_pax, :precision => 2) %></td>
+  <td><%= number_to_currency(travel_package.twenty_more_pax, :precision => 2) %></td>
+</tr>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120318195336) do
+ActiveRecord::Schema.define(:version => 20120420015658) do
 
   create_table "ckeditor_assets", :force => true do |t|
     t.string   "data_file_name",                  :null => false
@@ -47,6 +47,26 @@ ActiveRecord::Schema.define(:version => 20120318195336) do
     t.text     "description"
     t.string   "country"
     t.string   "city"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+  end
+
+  create_table "last_minute_dates", :force => true do |t|
+    t.integer  "last_minute_offer_id"
+    t.date     "start_date"
+    t.date     "end_date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "last_minute_offers", :force => true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.decimal  "start_from_price",   :precision => 12, :scale => 2
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "image_file_name"
