@@ -21,7 +21,10 @@
   </title>
 
   <%= stylesheet_link_tag 'admin/style.css' -%>
-      
+  <%= javascript_include_tag "application" %>
+  <%= stylesheet_link_tag "css/jquery-ui-1.8.18.custom.css" %>
+  <%= content_for :page_specific_javascript %>
+  <%= csrf_meta_tags %>
 </head>
 
 <body>
@@ -44,8 +47,6 @@
           Design by <a href="#" target="_blank" title="">andesconexion.com</a>
         </span>
       </div>
-      <%= javascript_include_tag "application" %>
-      <%#= javascript_include_tag "ckeditor/init" %>
     </div>
     <!-- End Footer -->
   </div>

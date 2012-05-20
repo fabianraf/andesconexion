@@ -8,9 +8,25 @@ Andesconexion::Application.routes.draw do
   namespace "admin" do
     #resources :travel_packages
     resources :countries
+    resources :categories do
+      member do
+        get 'sub_categories'
+      end
+      resources :tours
+      collection do 
+        put 'update_order'
+        put 'update_status'
+      end
+    end
+    resources :tours
     resources :hotels
     resources :clients
-    resources :last_minute_offers
+    resources :last_minute_offers do
+      collection do 
+        put 'update_order'
+        put 'update_status'
+      end
+    end
     resources :private_services do 
       resources :travel_packages 
       collection do
@@ -19,6 +35,13 @@ Andesconexion::Application.routes.draw do
     end
     resources :travel_packages
   end
+  resources :last_minute_offers
+  
+  
+  match ":main_category/:sub_category", :controller => 'categories', :action => "show_info", :as => "nested_categories"
+  match ":main_category/:sub_category/:tour", :controller => 'tours', :action => "show", :as => "tours"
+  match ":main_category/", :controller => 'categories', :action => "show_info", :as => "first_level_category"
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -31,6 +31,8 @@ gem "carrierwave"
 gem "mini_magick"
 gem "ckeditor-rails"
 gem "rails3-generators"
+gem "awesome_nested_set"
+gem "impressionist"
 # Use unicorn as the web server
 # gem 'unicorn'
 

@@ -27,28 +27,46 @@
         <!-- End Box Head -->	
           <!-- Table -->
           <div class="table">
+            <%= form_tag(update_order_admin_last_minute_offers_path, :id => "sort-grouping-form", :method => :put) do %>
             <table width="100%" border="0" cellspacing="0" cellpadding="0">
               <tr>
+                <th width="13"></th>
                 <th width="13"><input type="checkbox" class="checkbox" /></th>
                 <th>Title</th>
-                <th>Country</th>
                 <th>Start Price</th>
-                <th>algo</th>
+                <th>Hits</th>
                 <th width="110" class="ac">Content Control</th>
               </tr>
+              <tbody id="grouping-sortables">
               <% @last_minute_offers.each do |last_minute_offer| %>
                 <%= content_tag_for(:tr, last_minute_offer, :class=> "#{cycle("", "odd")}") do %>
-                 <td><input type="checkbox" class="checkbox" /></td>
+                  <td class="handle">
+                    <img src="/images/admin/sort.png" alt="grab to sort" />
+                    <%= hidden_field_tag "order[]", last_minute_offer.id %>
+                  </td>
+                  <td class="status">
+                    <% if last_minute_offer.is_highlighted %>
+                      <%= link_to "de-activate", update_status_admin_last_minute_offers_path(last_minute_offer,
+                              :is_highlighted => false), :method => :put,
+                              :class => 'action-deactivate', :title => 'Status: Active. Click to deactivate.'
+                      %>
+                    <% else %>
+                      <%= link_to "activate", update_status_admin_last_minute_offers_path(last_minute_offer,
+                              :is_highlighted => true), :method => :put,
+                              :class => 'action-activate', :title => 'Status: Inactive. Click to activate.'
+                      %>
+                    <% end %>
+                  </td>
                   <td><h3><%= link_to last_minute_offer.title, admin_last_minute_offer_path(last_minute_offer) %></td>
                   <td><%= last_minute_offer.start_from_price %></td>
-                  <td><%#= last_minute_offer.city %></td>
-                  <td><%= "algo" %></td>
+                  <td>(<%= last_minute_offer.impressionist_count %>)</td>
                   <td>
                     <%= link_to 'Delete', admin_last_minute_offer_path(last_minute_offer), :confirm => 'Are you sure?', :method => :delete, :class => 'ico del', :title => 'Delete last_minute_offer'%>
                     <%= link_to 'Edit', edit_admin_last_minute_offer_path(last_minute_offer), :class => 'ico edit', :title => 'Edit last_minute_offer' %>
                   </td>
                 <% end %>
               <% end %>
+              </tbody>
             </table>
 
             <!-- Pagging -->
@@ -56,6 +74,7 @@
               <%= paginate @last_minute_offers %>
             </div>
             <!-- End Pagging -->
+            <% end %>
           </div>
           <!-- Table -->
       </div>

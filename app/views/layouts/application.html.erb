@@ -7,16 +7,170 @@
     Base template (without user's data) checked by http://validator.w3.org : "This page is valid XHTML 1.0 Transitional"
     -->
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <%= stylesheet_link_tag "style.css" %>
     <%= javascript_include_tag "application" %>
+    <%= stylesheet_link_tag "css/template.css" %>
+    <%= stylesheet_link_tag "css/pro_dropdown_2.css" %>
+    <%= stylesheet_link_tag "css/jquery-ui-1.8.18.custom.css" %>
+    <%= content_for :page_specific_javascript %>
     <%= csrf_meta_tags %>
     <!--[if IE 6]><link rel="stylesheet" href="style.ie6.css" type="text/css" media="screen" /><![endif]-->
     <!--[if IE 7]><link rel="stylesheet" href="style.ie7.css" type="text/css" media="screen" /><![endif]-->
 
-    <script type="text/javascript" src="jquery.js"></script>
-    <script type="text/javascript" src="script.js"></script>
+    <style type="text/css">
+.clearfix:after {
+	visibility: hidden;
+ 	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+.clearfix { display: inline-table; }
+/* Hides from IE-mac \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* End hide from IE-mac */
+</style>
 </head>
-<body>
-  <%= yield %>  
+<body class="<%= controller.class.to_s == "SitesController" ? "main_body" : "internal_body" %>">
+<div id="general_center">
+  <div id="wrapper01">
+  <div id="headerimgs">
+    <div id="headerimg1" class="headerimg"></div>
+    <div id="headerimg2" class="headerimg"></div>
+  </div>    
+  </div>     
+  <div id="pageWrapper">
+    <div class="<%= controller.class.to_s == "SitesController" ? "content" : "content_internal" %>">
+      <div class="header">
+        <div class="logo_search">
+          <div class="logo"><a href="/"><img src="/assets/images/logo_andes_conecxion.png" width="334" height="78" border="0" /></a></div>
+          <div class="search_top_links">
+            <div class="search">
+              <form action="" method="get">
+                <table width="265" border="0" align="left" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td width="192" align="left" valign="top">
+                      <input name="search" type="text" id="search" value="Enter keywords..." />
+                    </td>
+                    <td width="73" align="left" valign="top">
+                      <input type="submit" id="searchbutton" value="SEARCH" />
+                    </td>
+                  </tr>
+                </table>
+              </form>
+            </div>
+            <div class="top_links">
+              <ul>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#">FAQ's</a></li>
+                <li><a href="#">Site map</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      <div class="top_menu">
+        <ul id="nav">
+          <% @categories.each do |category| %>
+                <li class="top">
+                  <%= link_to content_tag(:span, category.name, {:class => "down"}), first_level_category_path(category), :class => "top_link", :id => "Ecuador_Tours" %>
+                  <ul class="sub">
+                    <% for sub_category in category.children %>
+                      <li><%= link_to sub_category.name, nested_categories_path(category, sub_category), :class => "fly" %>
+                        <ul>
+                          <% sub_category.tours.each do |tour| %>
+                            <li><%= link_to tour.name, tours_path(category, sub_category, tour) %></li>
+                          <% end %>
+                        </ul>
+                      </li>
+                    <% end %>
+                  </ul>
+                </li>
+              <% end %>
+          
+          
+          <li class="top"><a href="#" id="Photo_Gallery" class="top_link"><span>Photo Gallery</span></a></li>
+        </ul>
+      </div>
+    </div>
+      <%= yield %>           	
+    </div>
+  </div>      
+</div>               
+
+<div id="footer">
+  <div class="footer_information">
+    <div class="bottom_links">
+    <h1>Hotels</h1>
+      <ul>
+        <li><a href="#">Quito</a></li>
+        <li><a href="#">Guayaquil</a></li>
+        <li><a href="#">Galapagos</a></li>
+        <li><a href="#">Pacific Coast</a></li>
+        <li><a href="#">Highlands</a></li>
+      </ul>
+    </div>
+    <div class="bottom_links">
+      <h1>Useful Links</h1>
+      <ul>
+        <li><a href="#">Airlines</a></li>
+        <li><a href="#">Hotels</a></li>
+        <li><a href="#">Lorem ipsum</a></li>
+        <li><a href="#">Aenean suscipit</a></li>
+        <li><a href="#">Praesent</a></li>
+      </ul>
+    </div>
+    <div class="bottom_contact">
+      <div class="contact_information">
+        <h1>Contact Information</h1>
+        <ul>
+          <li>
+          <strong>Ecuador Phone:</strong> +(593 2) 2900-853 <strong>E-mail:</strong> <a href="#" target="_blank">info@andesconexion.com</a>
+          </li>
+          <li> <strong>Mobile Phone: </strong>+(593 9) 3525015 US </li>
+          <li><strong>Phone:</strong> +(1)3059385455</li>
+        </ul>
+      </div>
+      <div class="newsletter">
+      <h1>Newsletter</h1>
+        <form action="" method="get">
+          <table width="506" border="0" align="left" cellpadding="0" cellspacing="0">
+          <tr>
+            <th width="214" align="left" valign="middle">Full Name (*)</th>
+            <th width="214" align="left" valign="middle">Email (*)</th>
+            <td width="78" align="left" valign="middle">&nbsp;</td>
+          </tr>
+            <tr>
+              <td width="214" align="left" valign="middle">
+                <input type="text" name="name" id="name" />
+              </td>
+              <td width="214" align="left" valign="middle">
+                <input type="text" name="email" id="email" />
+              </td>
+              <td width="78" align="left" valign="middle">
+                <input type="submit" name="sing_up" id="sing_up" value="SING UP" />
+              </td>
+            </tr>
+          </table>
+        </form>
+      </div>
+    </div>
+    <div class="bottom_menu_credits">
+      <div class="bottom_menu">
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Testimonials</a></li>
+          <li><a href="#">Reservations</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+    <div class="credits">Andes Conexion. All Rights Reserved  ©  2012<br />
+      Web Design &amp; SEO by: <a href="http://www.seowebsdesign.com/" target="_blank">SEOWEBSDESIGN.COM </a>
+    </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>

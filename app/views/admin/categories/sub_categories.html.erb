@@ -1,0 +1,128 @@
+<div class="shell">
+  <!-- Small Nav -->
+  <div class="small-nav">
+          <a href="#">Dashboard</a>
+          <span>&gt;</span>
+          Categories
+  </div>
+  <!-- End Small Nav -->
+  <br />
+  <!-- Main -->
+  <div id="main">
+    <div class="cl">&nbsp;</div>
+
+    <!-- Content -->
+    <div id="content">
+      <!-- Box -->
+          <div class="box">
+            <!-- Box Head -->
+            <div class="box-head">
+              <h2 class="left"><%= @category.name %></h2>
+              <div class="right">
+                <%= link_to 'Delete', admin_category_path(@category), :confirm => 'Are you sure?', :method => :delete, :class => 'ico del', :title => 'Delete category'%>
+                <%= link_to 'Edit', edit_admin_category_path(@category), :class => 'ico edit', :title => 'Edit category' %>
+              </div>
+            </div>
+            <!-- End Box Head -->
+            
+            <dl class="show">
+		<dt>Description</dt>
+		<dd><%= @category.description.html_safe unless @category.description.nil?%></p></dd>
+                <% unless @category.parent.nil? %>
+                  <dt>Belongs to</dt>
+                  <dd><%= @category.parent.name %></p></dd>
+                <% end %>
+                <dt>Homepage photo</dt>
+		<dd><%= image_tag(@category.homepage_photo.url, :width=>'250px') %></dd>
+            </dl>
+            
+          </div>
+          <!-- End Box -->
+      <!-- Box -->
+      <div class="box">
+        <!-- Box Head -->
+        <div class="box-head">
+          <h2 class="left">Sub Categories for <%= @category.name %></h2>
+          <div class="right">
+            <label>search category</label>
+            <input type="text" class="field small-field" />
+            <input type="submit" class="button" value="search" />
+          </div>
+        </div>
+        <!-- End Box Head -->	
+          <!-- Table -->
+          <div class="table">
+            <%= form_tag(update_order_admin_categories_path, :id => "sort-grouping-form", :method => :put) do %>
+              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <th width="13"></th>
+                  <th>Name</th>
+                  <th width="110" class="ac">Content Control</th>
+                </tr>
+                <tbody id="grouping-sortables">
+                  <% @category.children.order("sort_order asc").each do |category| %>
+                    <%= content_tag_for(:tr, category, :class=> "#{cycle("", "odd")}") do %>
+                      <td class="handle">
+                        <img src="/images/admin/sort.png" alt="grab to sort" />
+                        <%= hidden_field_tag "order[]", category.id %>
+                      </td>
+                      <td><h3><%= link_to category.name, admin_category_tours_path(category) %></td>
+                      <td>
+                        <%= link_to 'Delete', admin_category_path(category), :confirm => 'Are you sure?', :method => :delete, :class => 'ico del', :title => 'Delete category'%>
+                        <%= link_to 'Edit', edit_admin_category_path(category), :class => 'ico edit', :title => 'Edit category' %>
+                      </td>
+                    <% end %>
+                  <% end %>
+                </tbody>
+              </table>
+            <% end %>
+            <!-- Pagging -->
+            <div class="pagging">
+              <%= paginate @category.children.page(params[:page]).per(10) %>
+            </div>
+            <!-- End Pagging -->
+          </div>
+          <!-- Table -->
+      </div>
+      <!-- End Box -->
+    </div>
+    <!-- End Content -->
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+      <!-- Box -->
+      <div class="box">
+        <!-- Box Head -->
+        <div class="box-head">
+          <h2>Management</h2>
+        </div>
+        <!-- End Box Head-->
+        <div class="box-content">
+          <%= link_to(content_tag(:span, "Add sub category"), new_admin_category_path(:parent_cat => @category.id), :class => 'add-button') %>
+          <div class="cl">&nbsp;</div>
+          <p class="select-all"><input type="checkbox" class="checkbox" /><label>select all</label></p>
+          <p><a href="#">Delete Selected</a></p>
+          <!-- Sort -->
+          <div class="sort">
+            <label>Sort by</label>
+            <select class="field">
+                    <option value="">Title</option>
+            </select>
+            <select class="field">
+                    <option value="">Date</option>
+            </select>
+            <select class="field">
+                    <option value="">Author</option>
+            </select>
+          </div>
+          <!-- End Sort -->
+        </div>
+      </div>
+      <!-- End Box -->
+    </div>
+    <!-- End Sidebar -->
+
+    <div class="cl">&nbsp;</div>			
+  </div>
+  <!-- Main -->
+</div>

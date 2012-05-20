@@ -6,9 +6,13 @@
   <%= form.text_field :title, :class => "field size1" %>
 </p>	
 <p>
-  <label>Description</label>
+  <label>Short Description (Promotions)</label>
   <%= form.cktext_area :description, :class => "field size4" %>
-</p>		
+</p>
+<p>
+  <label>Long Description (Internal Page)</label>
+  <%= form.cktext_area :long_description, :class => "field size4" %>
+</p>
 <p>
   <span class="req">max 100 symbols</span>
   <label>Start Price</label>

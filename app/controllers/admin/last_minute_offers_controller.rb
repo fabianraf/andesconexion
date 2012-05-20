@@ -1,6 +1,6 @@
 class Admin::LastMinuteOffersController < Admin::BaseController
   def index
-    @last_minute_offers = LastMinuteOffer.page(params[:page]).per(10)
+    @last_minute_offers = LastMinuteOffer.page(params[:page]).per(10).order("sort_order asc")
   end
   def new
     @last_minute_offer = LastMinuteOffer.new
@@ -49,4 +49,33 @@ class Admin::LastMinuteOffersController < Admin::BaseController
       format.xml  { head :ok }
     end
   end
+  
+  def update_status
+	  investment_content = InvestmentContent.find(params[:id])
+	  investment_content.status = params[:status]
+	  if investment_content.save
+		  flash[:notice] = "InvestmentContent status saved."
+	  else
+		  flash[:error] = investment_content.errors
+	  end
+	  redirect_to :back
+  end
+  
+  def update_order
+		begin
+      LastMinuteOffer.order = params[:order]
+      render :json => {
+				:status => true
+			}
+			return
+		rescue Exception => errno
+			render :json => {
+				:status => false,
+				:error_message => "There was an error saving the new order.  Please try again later. #{errno}"
+			}
+			return
+		end
+  end
 end
+
+

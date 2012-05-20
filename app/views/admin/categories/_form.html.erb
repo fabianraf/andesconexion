@@ -1,0 +1,29 @@
+<%= javascript_include_tag 'ckeditor/ckeditor' %>
+<div class="form">
+  <p>
+    <label>Show in homepage?</label>
+    Yes <%= form.radio_button :is_present_in_homepage, true %>
+    No <%= form.radio_button :is_present_in_homepage, false %>
+  </p>
+  <p>
+    <label>Homepage Photo</label>
+    <%= form.file_field :homepage_photo %>
+  </p>
+  <p>
+    <span class="req">max 100 symbols</span>
+    <label>Name <span>(Required Field)</span></label>
+    <%= form.text_field :name, :class => "field size1" %>
+  </p>	
+  <p>
+    <label>Belongs to</label>
+    <% unless params[:parent_cat].blank? %>
+      <%= form.select :parent_id, nested_set_options(Category, @category) {|i| "#{'-' * i.level} #{i.name}" }, {:include_blank => true, :selected => params[:parent_cat]} %>
+    <% else %>
+      <%= form.select :parent_id, nested_set_options(Category, @category) {|i| "#{'-' * i.level} #{i.name}" }, {:include_blank => true} %>
+    <% end %>
+  </p>
+  <p>
+    <label>Description</label>
+    <%= form.cktext_area :description, :class => "field size4" %>
+  </p>
+</div>

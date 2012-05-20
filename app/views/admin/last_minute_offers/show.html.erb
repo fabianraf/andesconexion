@@ -26,12 +26,14 @@
             <!-- End Box Head -->
             
             <dl class="show">
-		<dt>Description</dt>
+		<dt>Short Description</dt>
 		<dd><%= @last_minute_offer.description.html_safe %></p></dd>
 		<dt>Start Price</dt>
 		<dd><%= @last_minute_offer.start_from_price %></p></dd>
 		<dt>Image</dt>
 		<dd><%= image_tag(@last_minute_offer.image.url, :width=>'250px') %></dd>
+                <dt>Long Description</dt>
+		<dd><%= @last_minute_offer.long_description.html_safe %></p></dd>
             </dl>
             
           </div>

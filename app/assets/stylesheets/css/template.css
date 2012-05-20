@@ -1,0 +1,1846 @@
+@charset "utf-8";
+html, body {
+margin: 0;
+padding:0;
+height:100%;
+}
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #2D2D2C;
+	text-align: left;
+	
+	background-repeat: repeat-x;
+	background-position: left top;
+	background-color: #F7F7F4;
+	margin: 0px;
+	padding: 0px;
+}
+.main_body{
+    background-image: url(../images/bg.jpg);
+}
+.internal_body{
+    background-image: url(../images/bg_internal.jpg);
+}
+#general_center {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: left;
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+}
+#wrapper01{
+	position: relative;
+	width: 100%;
+	text-align: center;
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+	top: 0px;
+}
+.headerimg {
+	background-position: center top;
+	background-repeat: no-repeat;
+	width:100%;
+	height:652px;
+	position:absolute;
+}
+#pageWrapper {
+	position: relative;
+	width: 100%;
+	background-image: url(../images/bg_transparent.png);
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+	background-repeat: repeat-x;
+	background-position: left top;
+	behavior: url("../html/iepngfix.htc");
+}
+body>#general_center {
+	height: auto;
+	min-height: 100%;
+}
+.content{
+	width: 1000px;
+	text-align: left;
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+	height: 1320px;
+}
+.header {
+	height: 142px;
+	width: 980px;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+.logo_search {
+	height: 100px;
+	width: 980px;
+}
+.logo {
+	display: block;
+	float: left;
+	height: 83px;
+	width: 445px;
+	text-align: center;
+	padding-top: 17px;
+}
+.logo a img {
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+
+.search_top_links {
+	display: block;
+	float: left;
+	height: 100px;
+	width: 282px;
+	padding-right: 33px;
+	padding-left: 220px;
+}
+.search {
+	background-image: url(../images/bg_search.png);
+	background-repeat: no-repeat;
+	background-position: center top;
+	height: 22px;
+	width: 265px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #AAAC99;
+	padding-top: 3px;
+	padding-right: 3px;
+	padding-bottom: 3px;
+	padding-left: 14px;
+	behavior: url("../html/iepngfix.htc");
+}
+.search form {
+	width: 265px;
+}
+.search form table {
+	height: auto;
+	width: 265px;
+}
+.search form table tr td input#search {
+	background-color: #4D4D4D;
+	height: 18px;
+	width: 182px;
+	border: 1px solid #4D4D4D;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #AAAC99;
+	padding-right: 2px;
+	padding-left: 2px;
+}
+.search form table tr td input#searchbutton {
+	background-image: url(../images/search.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	height: 22px;
+	width: 71px;
+	cursor: pointer;
+	margin-left: 1px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	text-transform: uppercase;
+	color: #FFF;
+	font-weight: bold;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+
+
+.top_links {
+	height: 34px;
+	width: 282px;
+	padding-top: 38px;
+}
+.top_links ul {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+.top_links ul li {
+	display: inline-block;
+	float: left;
+}
+.top_links ul li a {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #C6C7BC;
+	text-decoration: none;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #CCCCCC;
+	padding-right: 10px;
+	padding-left: 11px;
+}
+.top_links ul li a:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #C5E680;
+	text-decoration: none;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #C5E680;
+	padding-right: 10px;
+	padding-left: 10px;
+	font-weight: bold;
+}
+.top_menu {
+	background-image: url(../images/bg_menu.png);
+	background-repeat: no-repeat;
+	background-position: center top;
+	height: 42px;
+	width: 966px;
+	padding-right: 7px;
+	padding-left: 7px;
+}
+.top_menu ul {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+.intros {
+	position: relative;
+	top: 390px;
+	height: auto;
+	width: 1000px;
+}
+.intro_content {
+	display: block;
+	float: left;
+	height: auto;
+	width: 250px;
+}
+.intro_content_title {
+	height: 28px;
+	width: 250px;
+}
+.intro_content_title h1 {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 22px;
+	font-weight: bold;
+	margin: 0px;
+	background-image: url(../images/bullet_intros.png);
+	background-repeat: no-repeat;
+	background-position: 40px center;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 62px;
+	behavior: url("../html/iepngfix.htc");
+}
+.intro_content_title h1 a {
+	text-decoration: none;
+	color: #805020;
+}
+.intro_content_title h1 a:hover {
+	color: #000;
+	text-decoration: none;
+}
+.intro_content_text {
+	background-image: url(../images/intro_bg_text.jpg);
+	background-repeat: repeat-y;
+	background-position: center top;
+	height: auto;
+	width: 250px;
+}
+.intro_content_text a img {
+	background-image: url(../images/intro_bg_img.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	height: 129px;
+	width: 227px;
+	display: block;
+	padding-top: 11px;
+	padding-right: 12px;
+	padding-bottom: 11px;
+	padding-left: 11px;
+}
+.intro_content_text p {
+	margin: 0px;
+	height: auto;
+	width: 174px;
+	padding-top: 4px;
+	padding-right: 38px;
+	padding-bottom: 9px;
+	padding-left: 38px;
+	text-align: justify;
+}
+.intro_content_text ul {
+	padding: 0px;
+	list-style-type: none;
+	height: auto;
+	width: 180px;
+	margin-top: 0px;
+	margin-right: 36px;
+	margin-bottom: 0px;
+	margin-left: 34px;
+	background-color: #E2E1CE;
+	border: 1px solid #82B200;
+	border-radius:7px 7px;
+	-moz-border-radius:7px 7px;
+	-webkit-border-radius:7px 7px;
+}
+.intro_content_text ul li {
+	margin: 0px;
+	padding: 0px;
+}
+.intro_content_text ul li a {
+	text-decoration: none;
+	display: block;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	color: #805020;
+	background-image: url(../images/intro_bullet.png);
+	background-repeat: no-repeat;
+	background-position: 12px center;
+	padding-left: 26px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	behavior: url("../html/iepngfix.htc");
+}
+.intro_content_text ul li a:hover {
+	text-decoration: none;
+	display: block;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	color: #000000;
+	background-image: url(../images/intro_bullet.png);
+	background-repeat: no-repeat;
+	background-position: 12px center;
+	padding-left: 26px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	behavior: url("../html/iepngfix.htc");
+}
+.intro_content_end {
+	background-image: url(../images/intro_bg_end.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	height: 18px;
+	width: 250px;
+}
+.intro_content_title h2 {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 22px;
+	font-weight: bold;
+	margin: 0px;
+	background-image: url(../images/bullet_intros.png);
+	background-repeat: no-repeat;
+	background-position: 24px center;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 46px;
+	behavior: url("../html/iepngfix.htc");
+}
+.intro_content_title h2 a {
+	text-decoration: none;
+	color: #805020;
+}
+.intro_content_title h2 a:hover {
+	color: #000000;
+	text-decoration: none;
+}
+.intro_content_title h3 {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 22px;
+	font-weight: bold;
+	margin: 0px;
+	background-image: url(../images/bullet_intros.png);
+	background-repeat: no-repeat;
+	background-position: 42px center;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 64px;
+	behavior: url("../html/iepngfix.htc");
+}
+.intro_content_title h3 a {
+	text-decoration: none;
+	color: #805020;
+}
+.intro_content_title h3 a:hover {
+	color: #000;
+	text-decoration: none;
+}
+.intro_content_title h4 {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 22px;
+	font-weight: bold;
+	margin: 0px;
+	background-image: url(../images/bullet_intros.png);
+	background-repeat: no-repeat;
+	background-position: 60px center;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 82px;
+	behavior: url("../html/iepngfix.htc");
+}
+.intro_content_title h4 a {
+	text-decoration: none;
+	color: #805020;
+}
+.intro_content_title h4 a:hover {
+	color: #000;
+	text-decoration: none;
+}
+.special_packages {
+	height: auto;
+	width: 1000px;
+	display: block;
+	float: left;
+	margin-top: 20px;
+}
+.galapagos_tours {
+	display: block;
+	float: left;
+	height: auto;
+	width: 372px;
+	padding-right: 4px;
+	padding-left: 5px;
+}
+.galapagos_tours_title {
+	background-image: url(../images/galapagos_tours_bg_title.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	height: 33px;
+	width: 372px;
+}
+.galapagos_tours_title h1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	font-weight: normal;
+	color: #F8F6EE;
+	margin: 0px;
+	padding-top: 5px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 15px;
+}
+.galapagos_tours_middle {
+	background-image: url(../images/galapagos_tours_bg.jpg);
+	background-repeat: repeat-y;
+	background-position: center top;
+	height: auto;
+	width: 352px;
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-bottom: 5px;
+}
+.galapagos_tours_text {
+	height: auto;
+	width: 352px;
+	padding-bottom: 8px;
+}
+.galapagos_tours_text h2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	font-style: italic;
+	font-weight: normal;
+	color: #000;
+	padding-top: 10px;
+	padding-right: 0px;
+	padding-bottom: 1px;
+	padding-left: 29px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #ECE197;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 8px;
+	margin-left: 0px;
+	background-image: url(../images/galapagos_tours_bullet.jpg);
+	background-repeat: no-repeat;
+	background-position: 12px 16px;
+}
+.galapagos_tours_text h2 a {
+	color: #000;
+	text-decoration: none;
+}
+.galapagos_tours_text h2 a:hover {
+	color: #79A701;
+	text-decoration: none;
+}
+
+.galapagos_tours_text a img {
+	background-color: #FFF;
+	display: block;
+	float: left;
+	height: 84px;
+	width: 140px;
+	margin-right: 12px;
+	margin-left: 8px;
+	border: 1px solid #E0DCCF;
+	box-shadow: 1px 1px 2px rgba(153,153,153,0.5);
+	padding-top: 5px;
+	padding-right: 4px;
+	padding-bottom: 4px;
+	padding-left: 5px;
+}
+.galapagos_tours_text a:hover img {
+	background-color: #FFF;
+	display: block;
+	float: left;
+	height: 84px;
+	width: 140px;
+	margin-right: 12px;
+	margin-left: 8px;
+	border: 1px solid #8CC101;
+	box-shadow: 1px 1px 2px rgba(51,51,51,0.5);
+	padding-top: 5px;
+	padding-right: 4px;
+	padding-bottom: 4px;
+	padding-left: 5px;
+}
+.galapagos_tours_text p {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #504C3A;
+	line-height: 16px;
+	margin: 0px;
+	padding-top: 6px;
+	padding-right: 10px;
+	padding-bottom: 4px;
+	padding-left: 0px;
+	text-align: left;
+}
+.galapagos_tours_text p a {
+	display: block;
+	padding-left: 182px;
+	width: 80px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #7EAC01;
+	text-decoration: none;
+	background-image: url(../images/galapagos_tours_bullet_moreinfo.jpg);
+	background-repeat: no-repeat;
+	background-position: 170px center;
+}
+.galapagos_tours_text p a:hover {
+	color: #805020;
+	text-decoration: underline;
+}
+.galapagos_tours_end {
+	background-image: url(../images/galapagos_tours_bg_end.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	height: 8px;
+	width: 372px;
+}
+.galapagos_last_minutes {
+	display: block;
+	float: left;
+	height: auto;
+	width: 372px;
+}
+.galapagos_last_minutes_title {
+	background-image: url(../images/galapagos_last_minute_bg_title.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	height: 33px;
+	width: 372px;
+}
+.galapagos_last_minutes_title h1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	font-weight: normal;
+	color: #F8F6EE;
+	margin: 0px;
+	padding-top: 5px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 15px;
+}
+.galapagos_last_minutes_middle {
+	background-image: url(../images/galapagos_last_minute_bg.jpg);
+	background-repeat: repeat-y;
+	background-position: center top;
+	height: auto;
+	width: 352px;
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-bottom: 5px;
+}
+.galapagos_last_minutes_text {
+	height: auto;
+	width: 352px;
+	padding-bottom: 8px;
+}
+.galapagos_last_minutes_text h2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	font-style: italic;
+	font-weight: normal;
+	color: #006BC4;
+	padding-top: 10px;
+	padding-right: 0px;
+	padding-bottom: 1px;
+	padding-left: 29px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #DADADA;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 8px;
+	margin-left: 0px;
+	background-image: url(../images/galapagos_last_minute_bullet.jpg);
+	background-repeat: no-repeat;
+	background-position: 12px 16px;
+}
+.galapagos_last_minutes_text h2 a {
+	text-decoration: none;
+	color: #006BC4;
+}
+.galapagos_last_minutes_text h2 a:hover {
+	text-decoration: none;
+	color: #003333;
+}
+
+.galapagos_last_minutes_text a img {
+	background-color: #FFF;
+	display: block;
+	float: left;
+	height: 84px;
+	width: 140px;
+	margin-right: 12px;
+	margin-left: 8px;
+	border: 1px solid #DADADA;
+	box-shadow: 1px 1px 2px rgba(153,153,153,0.5);
+	padding-top: 5px;
+	padding-right: 4px;
+	padding-bottom: 4px;
+	padding-left: 5px;
+}
+.galapagos_last_minutes_text a:hover img {
+	background-color: #FFF;
+	display: block;
+	float: left;
+	height: 84px;
+	width: 140px;
+	margin-right: 12px;
+	margin-left: 8px;
+	border: 1px solid #00A8A8;
+	box-shadow: 1px 1px 2px rgba(51,51,51,0.5);
+	padding-top: 5px;
+	padding-right: 4px;
+	padding-bottom: 4px;
+	padding-left: 5px;
+}
+.galapagos_last_minutes_text p {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #878686;
+	line-height: 16px;
+	margin: 0px;
+	padding-top: 6px;
+	padding-right: 10px;
+	padding-bottom: 4px;
+	padding-left: 0px;
+	text-align: left;
+}
+.galapagos_last_minutes_text p strong {
+	font-weight: bold;
+	color: #006BC4;
+}
+
+.galapagos_last_minutes_text p a {
+	display: block;
+	padding-left: 182px;
+	width: 80px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #00A7A7;
+	text-decoration: none;
+	background-image: url(../images/galapagos_last_minute_bullet_moreinfo.jpg);
+	background-repeat: no-repeat;
+	background-position: 170px center;
+}
+.galapagos_last_minutes_text p a:hover {
+	color: #003333;
+	text-decoration: underline;
+}
+
+.galapagos_last_minutes_end {
+	background-image: url(../images/galapagos_last_minute_bg_end.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	height: 8px;
+	width: 372px;
+}
+
+
+.family_travel {
+	display: block;
+	float: left;
+	height: auto;
+	width: 247px;
+}
+.family_travel_title {
+	background-image: url(../images/peru_bg_title.png);
+	background-repeat: no-repeat;
+	background-position: center top;
+	height: 38px;
+	width: 247px;
+	behavior: url("../html/iepngfix.htc");
+}
+.family_travel_title h1 {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #90C44F;
+	text-align: center;
+	margin: 0px;
+	padding-top: 10px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+}
+.family_travel_title h1 a {
+	text-decoration: none;
+	color: #90C44F;
+}
+.family_travel_title h1 a:hover {
+	color: #38322E;
+	text-decoration: none;
+}
+
+.family_travel_middle {
+	background-image: url(../images/peru_bg.jpg);
+	background-repeat: repeat-y;
+	background-position: 9px top;
+	height: auto;
+	width: 200px;
+	padding-right: 21px;
+	padding-left: 26px;
+	padding-top: 8px;
+	padding-bottom: 3px;
+}
+.family_travel_middle a img {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	border: 1px solid #90C44F;
+}
+.family_travel_middle a:hover img {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	border: 1px solid #FFFFFF;
+}
+.family_travel_end {
+	background-image: url(../images/peru_bg_end.jpg);
+	background-repeat: no-repeat;
+	background-position: 9px top;
+	height: 9px;
+	width: 234px;
+	padding-right: 4px;
+	padding-left: 9px;
+}
+.family_travel_middle p {
+	text-align: center;
+	padding-right: 17px;
+	padding-left: 17px;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 14px;
+	margin: 0px;
+	padding-top: 9px;
+	padding-bottom: 0px;
+	color: #E7E1D0;
+}
+.family_travel_middle p a {
+	background-image: url(../images/peru_bg_readmore.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	text-align: center;
+	display: block;
+	height: 20px;
+	width: 110px;
+	padding-top: 8px;
+	margin-top: 7px;
+	margin-right: auto;
+	margin-left: auto;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	text-transform: uppercase;
+	color: #FFF;
+	text-decoration: none;
+}
+.family_travel_middle p a:hover {
+	color: #292421;
+	text-decoration: none;
+}
+
+
+
+
+#footer {
+	position: absolute;
+	width: 100%;
+	color: #999999;
+	text-align: left;
+	font-size: 13px;
+	height: 269px;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	background-image: url(../images/footer_bg.jpg);
+	background-repeat: repeat-x;
+	background-position: top;
+	margin: 0px;
+	z-index: 0;
+	padding: 0;
+}
+.footer_information {
+	background-image: url(../images/footer_contact_bg.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	height: 231px;
+	width: 1000px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.bottom_links {
+	display: block;
+	float: left;
+	height: 200px;
+	width: 162px;
+	padding-top: 31px;
+	padding-right: 10px;
+	padding-left: 50px;
+}
+.bottom_links h1 {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 19px;
+	font-weight: normal;
+	color: #DADADA;
+	margin: 0px;
+	padding: 0px;
+}
+.bottom_links ul {
+	margin: 0px;
+	list-style-type: none;
+	padding-top: 21px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+}
+.bottom_links ul li a {
+	text-decoration: none;
+	display: block;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #999999;
+	padding-bottom: 7px;
+	background-image: url(../images/footer_bullet.jpg);
+	background-repeat: no-repeat;
+	background-position: left 9px;
+	padding-left: 10px;
+}
+.bottom_links ul li a:hover {
+	color: #D9CB68;
+	text-decoration: underline;
+}
+.bottom_contact {
+	display: block;
+	float: left;
+	height: 201px;
+	width: 506px;
+	padding-top: 30px;
+	padding-right: 14px;
+	padding-left: 36px;
+}
+.contact_information {
+	height: 96px;
+	width: 506px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #393E3B;
+}
+.contact_information h1 {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 19px;
+	font-weight: normal;
+	color: #7EAC00;
+	margin: 0px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 7px;
+	padding-left: 6px;
+}
+.contact_information ul {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+.contact_information ul li {
+	margin: 0px;
+	padding: 0px;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #E9F2D1;
+}
+.contact_information ul li strong {
+	font-weight: bold;
+	color: #FFF;
+	background-image: url(../images/contact_information_bullet.jpg);
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding-left: 16px;
+	margin-left: 8px;
+}
+.contact_information ul li a {
+	color: #E9F2D1;
+	text-decoration: none;
+}
+.contact_information ul li a:hover {
+	color: #D9CB68;
+	text-decoration: underline;
+}
+.newsletter {
+	height: auto;
+	width: 506px;
+}
+.newsletter h1 {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 19px;
+	font-weight: normal;
+	color: #7EAC00;
+	margin: 0px;
+	padding-top: 10px;
+	padding-right: 0px;
+	padding-bottom: 6px;
+	padding-left: 6px;
+}
+.newsletter form {
+	height: auto;
+	width: 506px;
+}
+.newsletter form table {
+	height: auto;
+	width: 506px;
+}
+.newsletter form table tr th {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #D8CB66;
+	font-weight: normal;
+	padding-left: 8px;
+	padding-bottom: 2px;
+}
+.newsletter form table tr td {
+	padding-left: 8px;
+}
+.newsletter form table tr td input#name {
+	height: 18px;
+	width: 192px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #FFF;
+	background-color: #4D4D4D;
+	padding-right: 2px;
+	padding-left: 2px;
+	border: 1px solid #6E6E6E;
+}
+.newsletter form table tr td input#email {
+	height: 18px;
+	width: 192px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #FFF;
+	background-color: #4D4D4D;
+	padding-right: 2px;
+	padding-left: 2px;
+	border: 1px solid #6E6E6E;
+}
+.newsletter form table tr td input#sing_up {
+	background-image: url(../images/newsletter_sing_up.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	height: 22px;
+	width: 61px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #FFFFFF;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	cursor: pointer;
+	text-align: center;
+}
+.bottom_menu_credits {
+	height: 38px;
+	width: 990px;
+	display: block;
+	float: left;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+.bottom_menu {
+	display: block;
+	float: left;
+	width: 740px;
+	padding-right: 5px;
+}
+.bottom_menu ul {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+.bottom_menu ul li a {
+	display: inline-block;
+	float: left;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #918177;
+	text-decoration: none;
+	background-image: url(../images/bottom_menu_bullet.jpg);
+	background-repeat: no-repeat;
+	background-position: left 18px;
+	padding-top: 13px;
+	padding-left: 12px;
+	padding-right: 10px;
+}
+.bottom_menu ul li a:hover {
+	color: #DADADA;
+	text-decoration: underline;
+}
+.credits {
+	display: block;
+	float: left;
+	width: 245px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #515353;
+	text-align: right;
+	padding-top: 6px;
+	height: 32px;
+}
+.credits a {
+	color: #7B7D7D;
+	text-decoration: none;
+}
+.credits a:hover {
+	color: #FFF;
+	text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/** NEW STYLES Added by fabian*/
+.content_internal{
+	width: 1000px;
+	text-align: left;
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+}
+#main_information {
+	width:1000px;
+	margin-right: auto;
+	margin-left: auto;
+	height: auto;
+	margin-top: 0px;
+	padding-top: 268px;
+	padding-right: 5px;
+	padding-bottom: 20px;
+	padding-left: 5px;
+}
+#information_content {
+	width:956px;
+	position:relative;
+	height:auto !important;
+	border:1px solid #fff;
+	*border:1px solid #e9e9e8;
+	border-radius:2px;
+	-moz-border-radius:12px;
+	-webkit-border-radius:12px;
+	box-shadow: 0 0 4px #ccc;
+	-moz-box-shadow:0 0 4px #ccc;
+	-webkit-box-shadow:0 0 4px #ccc;
+	*box-shadow: none;
+	*-moz-box-shadow:none;
+	*-webkit-box-shadow:none;
+	background-image: url(../images/content_bg.png);
+	background-repeat: repeat;
+	background-position: 0 0;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	padding-top: 0px;
+	padding-right: 17px;
+	padding-bottom: 17px;
+	padding-left: 17px;
+	behavior: url("../html/iepngfix.htc");
+}
+#information_content table {
+	height: auto;
+	width: 956px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.left {
+	height: auto;
+	width: 716px;
+	padding-right: 8px;
+}
+.path_navigation{
+	text-align: left;
+	height: 26px;
+	width: 716px;
+}
+.path_navigation ul {
+	margin: 0px;
+	list-style-type: none;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 14px;
+}
+.path_navigation ul li a {
+	text-decoration: none;
+	display: inline-block;
+	float: left;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #000;
+	padding-top: 6px;
+	background-image: url(../images/bullet_path.png);
+	background-repeat: no-repeat;
+	background-position: left 10px;
+	padding-right: 6px;
+	padding-left: 12px;
+	behavior: url("../html/iepngfix.htc");
+}
+.path_navigation ul li a:hover {
+	color: #623800;
+	text-decoration: underline;
+}
+.main_text {
+	width:684px;
+	height:auto;
+	border:1px solid #C7C7B8;
+	border-radius:12px;
+	-moz-border-radius:12px;
+	-webkit-border-radius:12px;
+	background-image: url(../images/content_texture.png);
+	background-repeat: repeat;
+	background-position: 0 0;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	padding-top: 14px;
+	padding-right: 16px;
+	padding-left: 16px;
+	padding-bottom: 8px;
+	behavior: url("../html/iepngfix.htc");
+}
+#code_share {
+	position: absolute;
+	z-index: 3;
+	height: 30px;
+	width: 200px;
+	left: 520px;
+	text-align: right;
+}
+.main_text h1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 22px;
+	font-weight: normal;
+	color: #FFF;
+	background-image: url(../images/content_left_bg_title.png);
+	background-repeat: no-repeat;
+	background-position: left top;
+	height: 36px;
+	width: 647px;
+	padding-top: 11px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 37px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 12px;
+	margin-left: 0px;
+	behavior: url("../html/iepngfix.htc");
+}
+.main_text h2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	font-weight: normal;
+	color: #7F572C;
+	margin: 0px;
+	padding-top: 0px;
+	padding-right: 16px;
+	padding-bottom: 0px;
+	padding-left: 16px;
+}
+.main_text p {
+	margin: 0px;
+	padding-top: 8px;
+	padding-right: 16px;
+	padding-bottom: 16px;
+	padding-left: 16px;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #000;
+	text-align: justify;
+	line-height: 18px;
+}
+.main_text h3 {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #EA8500;
+	margin: 0px;
+	padding-top: 4px;
+	padding-right: 16px;
+	padding-bottom: 0px;
+	padding-left: 16px;
+}
+img.left_image  {
+	padding: 6px;
+	border: 1px solid #95C753;
+	background-color: #FFF;
+	display: block;
+	float: left;
+	margin-right: 10px;
+}
+img.right_image  {
+	padding: 6px;
+	border: 1px solid #95C753;
+	background-color: #FFF;
+	display: block;
+	float: right;
+	margin-left: 10px;
+}
+.main_text h4 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #7F572C;
+	margin: 0px;
+	padding-top: 18px;
+	padding-right: 16px;
+	padding-bottom: 0px;
+	padding-left: 32px;
+	background-image: url(../images/bullet_subtitle.jpg);
+	background-repeat: no-repeat;
+	background-position: 16px 21px;
+}
+.main_text .book_now {
+	background-image: url(../images/content_left_bg_book_now.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	height: 33px;
+	width: 684px;
+	text-align: center;
+	padding-top: 4px;
+}
+.main_text .book_now a {
+	display: block;
+	height: 23px;
+	width: 112px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 6px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	color: #BEE084;
+	text-decoration: none;
+}
+.main_text .book_now a:hover {
+	display: block;
+	height: 23px;
+	width: 112px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 6px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+.right {
+	height: auto;
+	width: 234px;
+}
+.section_menu {
+	height: auto;
+	width: 234px;
+	padding-top: 26px;
+}
+.section_menu .section_menu_up {
+	background-image: url(../images/content_right_menu_title.png);
+	background-repeat: no-repeat;
+	background-position: center top;
+	height: 40px;
+	width: 234px;
+	behavior: url("../html/iepngfix.htc");
+}
+.section_menu .section_menu_up h1 {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #6D615A;
+	margin: 0px;
+	text-align: center;
+	padding-top: 12px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+}
+.section_menu .section_menu_middle{
+	background-image: url(../images/content_right_menu_midle.png);
+	background-repeat: repeat-y;
+	background-position: center top;
+	height: auto;
+	width: 234px;
+	padding-bottom: 8px;
+	behavior: url("../html/iepngfix.htc");
+}
+.section_menu .section_menu_middle ul {
+	margin: 0px;
+	padding-top: 0px;
+	padding-right: 18px;
+	padding-bottom: 0px;
+	padding-left: 17px;
+	list-style-type: none;
+}
+.section_menu .section_menu_middle ul li {
+	background-image: url(../images/content_right_menu_separator.jpg);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+}
+.section_menu .section_menu_middle ul li a {
+	display: block;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	color: #FFF;
+	text-decoration: none;
+	background-image: url(../images/content_right_menu_bullet.png);
+	background-repeat: no-repeat;
+	background-position: 15px center;
+	padding-left: 30px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+.section_menu .section_menu_middle ul li a:hover {
+	display: block;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	color: #000;
+	text-decoration: none;
+	background-image: url(../images/content_right_menu_bullet.png);
+	background-repeat: no-repeat;
+	background-position: 15px center;
+	padding-left: 30px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	background-color: #7BAF3D;
+	border: 1px solid #6F9C36;
+	behavior: url("../html/iepngfix.htc");
+}
+
+.section_menu .section_menu_end {
+	background-image: url(../images/content_right_menu_end.png);
+	background-repeat: no-repeat;
+	background-position: center top;
+	height: 8px;
+	width: 234px;
+	padding-bottom: 14px;
+	behavior: url("../html/iepngfix.htc");
+}
+.promotions {
+	height: auto;
+	width: 234px;
+}
+.promotions_up {
+	background-image: url(../images/content_right_promotions_title.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	height: 40px;
+	width: 234px;
+}
+.promotions_up h1 {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #006BC4;
+	text-align: center;
+	margin: 0px;
+	padding-top: 12px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+}
+.promotions_middle {
+	background-image: url(../images/content_right_promotions_middle.png);
+	background-repeat: repeat-y;
+	background-position: center top;
+	height: auto;
+	width: 198px;
+	padding-right: 18px;
+	padding-left: 18px;
+	padding-top: 9px;
+	behavior: url("../html/iepngfix.htc");
+}
+.promotions_middle a img {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	border: 3px solid #009898;
+	margin-bottom: 2px;
+}
+.promotions_middle a:hover img {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	border: 3px solid #002D2D;
+	margin-bottom: 2px;
+}
+.promotions_middle p {
+	text-align: center;
+	margin: 0px;
+	padding-top: 10px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	color: #FFF;
+}
+.promotions_middle p strong {
+	font-weight: bold;
+	color: #002D2D;
+}
+.promotions_middle p a {
+	background-image: url(../images/content_right_promotions_readmore.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	display: block;
+	height: 20px;
+	width: 104px;
+	margin-right: auto;
+	margin-left: auto;
+	text-transform: uppercase;
+	color: #FFF;
+	text-decoration: none;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	padding-top: 5px;
+	padding-right: 3px;
+	padding-bottom: 3px;
+	padding-left: 3px;
+}
+.promotions_middle p a:hover {
+	background-image: url(../images/content_right_promotions_readmore.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	display: block;
+	height: 20px;
+	width: 104px;
+	margin-right: auto;
+	margin-left: auto;
+	text-transform: uppercase;
+	color: #002020;
+	text-decoration: none;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	padding-top: 5px;
+	padding-right: 3px;
+	padding-bottom: 3px;
+	padding-left: 3px;
+	font-weight: bold;
+}
+.promotions_end {
+	background-image: url(../images/content_right_promotions_end.png);
+	background-repeat: no-repeat;
+	background-position: center top;
+	height: 9px;
+	width: 234px;
+	padding-bottom: 14px;
+	behavior: url("../html/iepngfix.htc");
+}
+.special_package {
+	height: auto;
+	width: 234px;
+}
+.special_package_title {
+	height: 28px;
+	width: 234px;
+}
+.special_package_title h1 {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	margin: 0px;
+	behavior: url("../html/iepngfix.htc");
+	text-align: center;
+	padding: 0px;
+}
+.special_package_title h1 a {
+	text-decoration: none;
+	color: #805020;
+}
+.special_package_title h1 a:hover {
+	color: #000;
+	text-decoration: none;
+}
+.special_package_text {
+	background-image: url(../images/content_right_special_bg.jpg);
+	background-repeat: repeat-y;
+	background-position: center top;
+	height: auto;
+	width: 234px;
+	padding-bottom: 10px;
+}
+.special_package_text a img {
+	background-image: url(../images/content_right_special_bg_img.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	height: 94px;
+	width: 220px;
+	display: block;
+	padding: 7px;
+}
+.special_package_text p {
+	margin: 0px;
+	height: auto;
+	width: 186px;
+	padding-top: 4px;
+	padding-right: 24px;
+	padding-bottom: 9px;
+	padding-left: 24px;
+	text-align: center;
+}
+.special_package_text .read_more a {
+	background-image: url(../images/content_right_special_bg_readmore.jpg);
+	background-repeat: no-repeat;
+	background-position: left top;
+	display: block;
+	height: 24px;
+	width: 172px;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: right;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #FFF;
+	text-decoration: none;
+	padding-right: 28px;
+	padding-top: 5px;
+}
+.special_package_text .read_more a:hover {
+	background-image: url(../images/content_right_special_bg_readmore.jpg);
+	background-repeat: no-repeat;
+	background-position: left top;
+	display: block;
+	height: 23px;
+	width: 172px;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: right;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #000;
+	text-decoration: none;
+	padding-right: 28px;
+	padding-top: 6px;
+	font-weight: bold;
+}
+
+
+.special_package_end {
+	background-image: url(../images/content_right_special_bg_end.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	height: 4px;
+	width: 234px;
+}
+
+
+/* Estilos Tabs */
+div#tabs {
+	display: block;
+	height: auto;
+	width: 652px;
+	margin-right: auto;
+	margin-left: auto;
+}
+/* Estilos Tab 1*/
+div#tabs div#tabs-1 h3 {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #EA8500;
+	margin: 0px;
+	padding-top: 4px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+}
+div#tabs div#tabs-1 p {
+	margin: 0px;
+	padding-top: 4px;
+	padding-right: 0px;
+	padding-bottom: 12px;
+	padding-left: 0px;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #000;
+	text-align: justify;
+	line-height: 17px;
+}
+div#tabs div#tabs-1 p strong {
+	font-weight: bold;
+	color: #000;
+}
+div#tabs div#tabs-1 img.left_image  {
+	padding: 6px;
+	border: 1px solid #95C753;
+	background-color: #FFF;
+	display: block;
+	float: left;
+	margin-right: 10px;
+}
+div#tabs div#tabs-1 img.right_image  {
+	padding: 6px;
+	border: 1px solid #95C753;
+	background-color: #FFF;
+	display: block;
+	float: right;
+	margin-left: 10px;
+}
+/* Fin Estilos Tab 1*/
+/* Estilos Tab 2*/
+div#tabs div#tabs-2 h3 {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #EA8500;
+	margin: 0px;
+	padding-top: 4px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+}
+div#tabs div#tabs-2 p {
+	margin: 0px;
+	padding-top: 4px;
+	padding-right: 0px;
+	padding-bottom: 12px;
+	padding-left: 0px;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #000;
+	text-align: justify;
+	line-height: 17px;
+}
+div#tabs div#tabs-2 p strong {
+	font-weight: bold;
+	color: #000;
+}
+
+div#tabs div#tabs-2 img.left_image  {
+	padding: 6px;
+	border: 1px solid #95C753;
+	background-color: #FFF;
+	display: block;
+	float: left;
+	margin-right: 10px;
+}
+div#tabs div#tabs-2 img.right_image  {
+	padding: 6px;
+	border: 1px solid #95C753;
+	background-color: #FFF;
+	display: block;
+	float: right;
+	margin-left: 10px;
+}
+/* Fin Estilos Tab 2*/
+/* Estilos Tab 3*/
+div#tabs div#tabs-3 h3 {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #EA8500;
+	margin: 0px;
+	padding-top: 4px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+}
+div#tabs div#tabs-3 p {
+	margin: 0px;
+	padding-top: 4px;
+	padding-right: 0px;
+	padding-bottom: 12px;
+	padding-left: 0px;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #000;
+	text-align: justify;
+	line-height: 17px;
+}
+div#tabs div#tabs-3 p strong {
+	font-weight: bold;
+	color: #000;
+}
+
+div#tabs div#tabs-3 img.left_image  {
+	padding: 6px;
+	border: 1px solid #95C753;
+	background-color: #FFF;
+	display: block;
+	float: left;
+	margin-right: 10px;
+}
+div#tabs div#tabs-3 img.right_image  {
+	padding: 6px;
+	border: 1px solid #95C753;
+	background-color: #FFF;
+	display: block;
+	float: right;
+	margin-left: 10px;
+}
+/* Fin Estilos Tab 3*/
+/* Estilos Tab 4*/
+div#tabs div#tabs-4 h3 {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #EA8500;
+	margin: 0px;
+	padding-top: 4px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+}
+div#tabs div#tabs-4 p {
+	margin: 0px;
+	padding-top: 4px;
+	padding-right: 0px;
+	padding-bottom: 12px;
+	padding-left: 0px;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #000;
+	text-align: justify;
+	line-height: 17px;
+}
+div#tabs div#tabs-4 p strong {
+	font-weight: bold;
+	color: #000;
+}
+
+div#tabs div#tabs-4 img.left_image  {
+	padding: 6px;
+	border: 1px solid #95C753;
+	background-color: #FFF;
+	display: block;
+	float: left;
+	margin-right: 10px;
+}
+div#tabs div#tabs-4 img.right_image  {
+	padding: 6px;
+	border: 1px solid #95C753;
+	background-color: #FFF;
+	display: block;
+	float: right;
+	margin-left: 10px;
+}
+/* Fin Estilos Tab 4*/
+/* Estilos Tab 5*/
+div#tabs div#tabs-5 h3 {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #EA8500;
+	margin: 0px;
+	padding-top: 4px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+}
+div#tabs div#tabs-5 p {
+	margin: 0px;
+	padding-top: 4px;
+	padding-right: 0px;
+	padding-bottom: 12px;
+	padding-left: 0px;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #000;
+	text-align: justify;
+	line-height: 17px;
+}
+div#tabs div#tabs-5 p strong {
+	font-weight: bold;
+	color: #000;
+}
+div#tabs div#tabs-5 img.left_image  {
+	padding: 6px;
+	border: 1px solid #95C753;
+	background-color: #FFF;
+	display: block;
+	float: left;
+	margin-right: 10px;
+}
+div#tabs div#tabs-5 img.right_image  {
+	padding: 6px;
+	border: 1px solid #95C753;
+	background-color: #FFF;
+	display: block;
+	float: right;
+	margin-left: 10px;
+}
+
+h7 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	font-weight: normal;
+	color: #F8F6EE;
+	margin: 0px;
+	padding-top: 5px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 15px;
+}

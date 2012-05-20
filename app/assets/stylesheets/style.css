@@ -988,11 +988,13 @@ ul.art-menu
 .art-blockcontent-body a:visited,
 .art-blockcontent-body a:hover
 {
-  color: #B6DEF1;
+  color: #FFFFFF;
   font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
   font-size: 12px;
 }
-
+.art-blockcontent-body .title {
+    color: #30A7CF;
+}
 .art-blockcontent-body p
 {
   margin: 6px 0 6px 0;
@@ -1508,7 +1510,7 @@ h2.art-postheader a:hover,  h2.art-postheader a.hovered
 .art-content-layout .art-sidebar1
 {
   background-color: #E8E8E8;
-  width: 200px;
+  width: 250px;
 }
 
 /* end LayoutCell, sidebar1 */

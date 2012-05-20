@@ -1,0 +1,2 @@
+module LastMinuteOffersHelper
+end
