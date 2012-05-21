@@ -1,5 +1,5 @@
 class CategoriesController < ApplicationController
-  impressionist
+  #impressionist
   def index
     
   end

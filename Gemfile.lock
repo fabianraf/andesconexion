@@ -86,6 +86,8 @@ GEM
     mini_magick (3.4)
       subexec (~> 0.2.1)
     multi_json (1.1.0)
+    mysql (2.8.1)
+    mysql2 (0.3.11)
     nokogiri (1.5.2)
     orm_adapter (0.0.6)
     paperclip (2.7.0)
@@ -93,7 +95,6 @@ GEM
       activesupport (>= 2.3.2)
       cocaine (>= 0.0.2)
       mime-types
-    pg (0.13.2)
     polyamorous (0.5.0)
       activerecord (~> 3.0)
     polyglot (0.3.3)
@@ -168,8 +169,9 @@ DEPENDENCIES
   kaminari
   meta_search
   mini_magick
+  mysql
+  mysql2
   paperclip
-  pg
   rails (= 3.1.0)
   rails3-generators
   sass-rails (~> 3.1.0)

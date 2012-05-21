@@ -7,5 +7,6 @@ class LastMinuteOffer < ActiveRecord::Base
                     :url => "/system/:class/:attachment/:id/:style/:filename"
   scope :active, :conditions => { :is_highlighted => true }
 	scope :inactive, :conditions => { :is_highlighted => false }
+  
 end
 
