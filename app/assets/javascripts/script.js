@@ -5,13 +5,13 @@ var slideshowSpeed = 4000;
 // which also includes some text and url's.
 var photos = [ {
 		"title" : "Slide 1",
-		"image" : "../../assets/photos/slide1.jpg",
+		"image" : "/images/slide1.jpg",
 		"url" : "#",
 		"firstline" : "Texto slide 1",
 		"secondline" : "active"
 	}, {
 		"title" : "Slide 2",
-		"image" : "../../assets/photos/slide2.jpg",
+		"image" : "/images/slide2.jpg",
 		"url" : "#",
 		"firstline" : "Texto slide 2",
 		"secondline" : "nature"
