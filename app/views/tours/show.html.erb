@@ -34,24 +34,16 @@ Share Code
               <li><a href="#tabs-5">PHOTOS</a></li>
             </ul>
             <div id="tabs-1">
-              <h3>Day 2: Cuzco - Machu Picchu</h3>
-              <p><img src="photos/content_sample.jpg" width="290" height="180" class="right_image" />Breakfast at the hotel. Transfer to station.. Train goes through<strong> Urubamba Valley,</strong> the Sacred Valley of the Incas, to the fabulous mountaintop ruins of Machu Picchu. Full day tour with lunch included.</p>
-              <h3>Day 3: Machu Picchu</h3>
-              <p>Breakfast at the hotel. Transfer to station. Train goes through Urubamba Valley, the Sacred Valley of the Incas, to the fabulous mountaintop ruins of Machu Picchu. Full day tour with lunch included.</p>
-              <h3>Day 4: Cuzco</h3>
-              <p>Breakfast at the hotel. Transfer to station. Train goes through Urubamba Valley, the Sacred Valley of the Incas, to the fabulous mountaintop ruins of Machu Picchu. Breakfast at the hotel. Transfer to station. Train goes through Urubamba Valley, the Sacred Valley of the Incas, to the fabulous mountaintop ruins of Machu Picchu. Full day tour with lunch included.</p>
+              <%= @tour.itinerary.html_safe %>
             </div>
             <div id="tabs-2">
-              <h3>Tab Include</h3>
-              <p>Breakfast at the hotel. Transfer to station.. Train goes through<strong> Urubamba Valley,</strong> the Sacred Valley of the Incas, to the fabulous mountaintop ruins of Machu Picchu. Full day tour with lunch included.</p>
+              <%= @tour.included %>
             </div>
             <div id="tabs-3">
-              <h3>Tab Not Include</h3>
-              <p>Breakfast at the hotel. Transfer to station.. Train goes through<strong> Urubamba Valley,</strong> the Sacred Valley of the Incas, to the fabulous mountaintop ruins of Machu Picchu. Full day tour with lunch included.</p>
+              <%= @tour.not_included %>
             </div>
             <div id="tabs-4">
-              <h3>Tab Prices</h3>
-              <p>Breakfast at the hotel. Transfer to station.. Train goes through<strong> Urubamba Valley,</strong> the Sacred Valley of the Incas, to the fabulous mountaintop ruins of Machu Picchu. Full day tour with lunch included.</p>
+              <%= @tour.prices %>
             </div>
             <div id="tabs-5">
               <h3>Tab Photos</h3>
