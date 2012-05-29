@@ -10,7 +10,23 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120507044338) do
+ActiveRecord::Schema.define(:version => 20120529050143) do
+
+  create_table "assets", :force => true do |t|
+    t.string   "attachment_content_type"
+    t.string   "attachment_file_name"
+    t.string   "type"
+    t.string   "title"
+    t.integer  "attachment_size"
+    t.integer  "user_id"
+    t.datetime "attachment_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "category_id"
+    t.integer  "tour_id"
+  end
+
+  add_index "assets", ["user_id"], :name => "index_assets_on_user_id"
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -21,12 +37,9 @@ ActiveRecord::Schema.define(:version => 20120507044338) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "description"
-    t.string   "homepage_photo_file_name"
-    t.string   "homepage_photo_content_type"
-    t.integer  "homepage_photo_file_size"
-    t.datetime "homepage_photo_updated_at"
-    t.boolean  "is_present_in_homepage"
+    t.boolean  "is_present_in_middle_homepage"
     t.integer  "sort_order"
+    t.boolean  "is_present_in_lowerpage"
   end
 
   create_table "ckeditor_assets", :force => true do |t|

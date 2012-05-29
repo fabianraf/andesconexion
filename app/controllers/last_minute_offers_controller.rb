@@ -1,5 +1,4 @@
 class LastMinuteOffersController < ApplicationController
-  #impressionist
   def index
     
   end

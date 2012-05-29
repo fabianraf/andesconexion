@@ -6,6 +6,7 @@ class Admin::ToursController < Admin::BaseController
   def new
     @category = Category.find(params[:category_id])
     @tour = @category.tours.new
+    @tour.build_main_tour_image
   end
   def show
     @tour = Category.find(params[:category_id]).tours.find(params[:id])
@@ -19,7 +20,8 @@ class Admin::ToursController < Admin::BaseController
         format.html { redirect_to admin_category_tours_path(@category) }
         format.xml  { head :ok }
       else
-        format.html { render :new }
+        @tour.build_main_tour_image
+        format.html { render :new, :locals => {:tour => @tour} }
         format.xml  { render :xml => @tour.errors, :status => :unprocessable_entity }
       end
     end 

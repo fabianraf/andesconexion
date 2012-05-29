@@ -1,44 +1,44 @@
 <div class="intros">
-  <% @categories.homepage_active.each do |category|%>
+  <% @categories.middle_homepage_active.each do |category|%>
     <div class="intro_content">
-    <div class="intro_content_title">
-      <h1><%= link_to category.name, "" %></h1>
-    </div>
-    <div class="intro_content_text">
-      <a href="#"><%= image_tag(category.homepage_photo.url, :width => '227px', :height => "129px", :border => 0) %></a>
-      <p><%= category.description.html_safe[0, 180] %>...</p>
-      <ul>
-        <% category.children.each do |sub_category| %>
-          <li><%= link_to sub_category.name, "" %></li>
-        <% end %>
-      </ul>
-    </div>						
+      <div class="intro_content_title">
+        <h1><%= link_to category.name, first_level_category_path(category) %></h1>
+      </div>
+      <div class="intro_content_text">
+        <a href="#"><%= image_tag(category.category_image.attachment.url, :width => '227px', :height => "129px", :border => 0) %></a>
+        <p><%= category.description.html_safe[0, 180] %>...</p>
+        <ul>
+          <% category.children.each do |sub_category| %>
+            <li><%= link_to sub_category.name, nested_categories_path(sub_category.parent, sub_category) %></li>
+          <% end %>
+        </ul>
+      </div>						
       <div class="intro_content_end"></div>
     </div>
   <% end %>
   
   
   <div class="special_packages">
-    <div class="galapagos_tours">
-      <div class="galapagos_tours_title">
-      <h1>Galapagos Tours</h1>
+    <% @categories.lower_homepage_active.each do |category|%>
+      <div class="galapagos_tours">
+        <div class="galapagos_tours_title">
+        <h1><%= category.name %></h1>
+        </div>
+      <div class="galapagos_tours_middle">
+
+          <% category.children.each do |sub_category| %>
+            <div class="galapagos_tours_text">
+              <h2><%= link_to sub_category.name, nested_categories_path(sub_category.parent, sub_category) %></h2>
+              <a href="#"><%= image_tag(sub_category.category_image.attachment.url, :width => "132px", :height => "76px", :border => 0) %></a>
+              <p><%= sub_category.description.html_safe[0, 180] %></p>
+              <p><a href="#">More Info ++</a></p>                                    
+            </div>
+          <% end %>
+
       </div>
-    <div class="galapagos_tours_middle">
-      <div class="galapagos_tours_text">
-        <h2><a href="#">Land Based Tours</a></h2>
-        <a href="#"><img src="/assets/photos/galapagos_tours1.jpg" width="132" height="76" border="0" /></a>
-        <p>Flight from Quito or Guayaquil to San Cristobal (Galapagos). Upon arrival to the Island our...</p>
-        <p><a href="#">More Info ++</a></p>                                    
+      <div class="galapagos_tours_end"></div>
       </div>
-      <div class="galapagos_tours_text">
-        <h2><a href="#">Galapagos Diving</a></h2>
-        <a href="#"><img src="/assets/photos/galapagos_tours2.jpg" width="132" height="76" border="0" /></a>
-        <p>The Deep Blue Galapagos Yacht is a first class Galapagos Diving Cruise. The services included...</p>
-        <p><a href="#">More Info ++</a></p>
-      </div>
-    </div>
-    <div class="galapagos_tours_end"></div>
-    </div>
+    <% end %>
     <div class="galapagos_last_minutes">
       <%= render :template => "last_minute_offers/show_some_last_minute_offers", :last_minute_offers => @last_minute_offers %>
     </div>

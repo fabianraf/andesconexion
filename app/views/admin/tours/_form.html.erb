@@ -1,5 +1,14 @@
 <%= javascript_include_tag 'ckeditor/ckeditor' %>
 <div class="form">
+<%= form.fields_for :main_tour_image do |main_tour_image|%>
+  <p>
+    <label>Main Image</label>
+    <%= main_tour_image.file_field :attachment %>
+    <% unless main_tour_image.object.attachment.nil? %>
+      <%= image_tag(main_tour_image.object.attachment.url, :width=>'75px') %>
+    <% end %>
+  </p>
+<% end %>
 <p>
   <span class="req">max 100 symbols</span>
   <label>Name <span>(Required Field)</span></label>

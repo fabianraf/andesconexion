@@ -26,14 +26,18 @@
             <!-- End Box Head -->
             
             <dl class="show">
-		<dt>Description</dt>
-		<dd><%= @category.description.html_safe unless @category.description.nil?%></p></dd>
-                <% unless @category.parent.nil? %>
-                  <dt>Belongs to</dt>
-                  <dd><%= @category.parent.name %></p></dd>
-                <% end %>
-                <dt>Homepage photo</dt>
-		<dd><%= image_tag(@category.homepage_photo.url, :width=>'250px') %></dd>
+              <dt>Description</dt>
+              <dd><%= @category.description.html_safe unless @category.description.nil?%></p></dd>
+              <% unless @category.parent.nil? %>
+                <dt>Belongs to</dt>
+                <dd><%= @category.parent.name %></p></dd>
+              <% end %>
+              <dt>Category Image</dt>
+              <dd><%= image_tag(@category.category_image.attachment.url, :width=>'250px') %></dd>
+              <% if @category.is_present_in_lowerpage? %>
+                <dt>Lower Homepage photo</dt>
+                <dd>Will be present in lower homepage</dd>
+              <% end %>
             </dl>
             
           </div>

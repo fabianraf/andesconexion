@@ -1,13 +1,38 @@
 <%= javascript_include_tag 'ckeditor/ckeditor' %>
 <div class="form">
+  <% if form.object.is_main_category? && params[:parent_cat].nil?%>
+    <p>
+      <table>
+        <tr>
+          <td><label>Show in homepage middle level?</label></td>
+          <td>&nbsp;</td>
+          <td>
+            Yes <%= form.radio_button :is_present_in_middle_homepage, true %>
+            No <%= form.radio_button :is_present_in_middle_homepage, false %>
+          </td>
+        </tr>
+      </table>
+    </p>
+    <p>
+      <table>
+        <tr>
+          <td><label>Show in homepage lower level?</label></td>
+          <td>
+            Yes <%= form.radio_button :is_present_in_lowerpage, true %>
+            No <%= form.radio_button :is_present_in_lowerpage, false %>
+          </td>
+        </tr>
+      </table>
+    </p>
+  <% end %>
   <p>
-    <label>Show in homepage?</label>
-    Yes <%= form.radio_button :is_present_in_homepage, true %>
-    No <%= form.radio_button :is_present_in_homepage, false %>
-  </p>
-  <p>
-    <label>Homepage Photo</label>
-    <%= form.file_field :homepage_photo %>
+    <label>Image</label>
+    <%= form.fields_for :category_image do |category_image|%>
+      <%= category_image.file_field :attachment %>
+      <% unless category_image.object.attachment.nil? %>
+        <%= image_tag(category_image.object.attachment.url, :width=>'75px') %>
+      <% end %>
+    <% end %>
   </p>
   <p>
     <span class="req">max 100 symbols</span>

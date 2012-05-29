@@ -4,6 +4,8 @@ class Admin::CategoriesController < Admin::BaseController
   end
   def new
     @category = Category.new
+    @category.build_middle_homepage_image
+    @category.build_category_image
   end
   def show
     @category = Category.find(params[:id])
@@ -19,7 +21,9 @@ class Admin::CategoriesController < Admin::BaseController
         format.html { redirect_to admin_categories_path }
         format.xml  { head :ok }
       else
-        format.html { render :new }
+        @category.build_middle_homepage_image
+        @category.build_category_image
+        format.html { render :new, :locals => {:category => @category} }
         format.xml  { render :xml => @category.errors, :status => :unprocessable_entity }
       end
     end 
@@ -32,8 +36,6 @@ class Admin::CategoriesController < Admin::BaseController
   def update
     @category = Category.find(params[:id])
     respond_to do |format|
-      logger.debug "************"
-      logger.debug params[:category].inspect
       if @category.update_attributes(params[:category])
         flash[:notice] = 'category was successfully updated.'
           format.html { redirect_to admin_categories_path }

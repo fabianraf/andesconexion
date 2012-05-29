@@ -38,7 +38,7 @@ Andesconexion::Application.routes.draw do
   resources :last_minute_offers
   
   
-  match ":main_category/:sub_category", :controller => 'categories', :action => "show_info", :as => "nested_categories"
+  match ":main_category/:sub_category", :controller => 'categories', :action => "show_info_sub_category", :as => "nested_categories"
   match ":main_category/:sub_category/:tour", :controller => 'tours', :action => "show", :as => "tours"
   match ":main_category/", :controller => 'categories', :action => "show_info", :as => "first_level_category"
   
