@@ -5,7 +5,7 @@
         <h1><%= link_to category.name, first_level_category_path(category) %></h1>
       </div>
       <div class="intro_content_text">
-        <a href="#"><%= image_tag(category.category_image.attachment.url, :width => '227px', :height => "129px", :border => 0) %></a>
+        <a href="#"><%= image_tag(category.category_image.attachment.url, :width => '227px', :height => "129px", :border => 0) unless category.category_image.nil? %></a>
         <p><%= category.description.html_safe[0, 180] %>...</p>
         <ul>
           <% category.children.each do |sub_category| %>
@@ -29,7 +29,7 @@
           <% category.children.each do |sub_category| %>
             <div class="galapagos_tours_text">
               <h2><%= link_to sub_category.name, nested_categories_path(sub_category.parent, sub_category) %></h2>
-              <a href="#"><%= image_tag(sub_category.category_image.attachment.url, :width => "132px", :height => "76px", :border => 0) %></a>
+              <a href="#"><%= image_tag(sub_category.category_image.attachment.url, :width => "132px", :height => "76px", :border => 0) unless sub_category.category_image.nil? %></a>
               <p><%= sub_category.description.html_safe[0, 180] %></p>
               <p><a href="#">More Info ++</a></p>                                    
             </div>
