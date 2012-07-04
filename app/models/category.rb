@@ -8,12 +8,15 @@ class Category < ActiveRecord::Base
   scope :without_parents, :conditions => {:parent_id => nil}
   scope :middle_homepage_active, :conditions => {:is_present_in_middle_homepage => true}
   scope :lower_homepage_active, :conditions => {:is_present_in_lowerpage => true}
+  scope :with_tours, joins(:tours).where("tours.category_id IS NOT NULL")
+  
   validates :name, :description, :category_image, :presence => true
   #after_validation :check_if_middle_homepage_is_selected, :check_if_lower_homepage_is_selected
   accepts_nested_attributes_for :middle_homepage_image, :category_image
   def to_param  # overridden in order to show the name in the url
      "#{id}-#{name}"
   end
+  
   def is_main_category?
     return true if self.parent.nil?
     return false unless self.parent.nil?

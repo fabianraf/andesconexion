@@ -10,6 +10,7 @@ Andesconexion::Application.routes.draw do
     resources :countries
     resources :categories do
       member do
+        get 'show_tours'
         get 'sub_categories'
       end
       resources :tours

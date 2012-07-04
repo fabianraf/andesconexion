@@ -1,7 +1,7 @@
 class Admin::ToursController < Admin::BaseController
   def index
-    @category = Category.find(params[:category_id])
-    @tours = @category.tours.page(params[:page]).per(10)
+    #@tours = Category.with_tours
+    @tours = Tour.order("category_id asc").page(params[:page]).per(10)
   end
   def new
     @category = Category.find(params[:category_id])
@@ -37,7 +37,7 @@ class Admin::ToursController < Admin::BaseController
     respond_to do |format|
       if @tour.update_attributes(params[:tour])
         flash[:notice] = 'tour was successfully updated.'
-          format.html { redirect_to admin_category_tours_path }
+          format.html { redirect_to show_tours_admin_category_path(Category.find(params[:category_id])) }
           format.xml  { head :ok }
       else
         format.html { render :edit }

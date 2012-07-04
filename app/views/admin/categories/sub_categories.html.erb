@@ -70,7 +70,7 @@
                         <img src="/images/admin/sort.png" alt="grab to sort" />
                         <%= hidden_field_tag "order[]", category.id %>
                       </td>
-                      <td><h3><%= link_to category.name, admin_category_tours_path(category) %></td>
+                      <td><h3><%= link_to category.name, show_tours_admin_category_path(category) %></td>
                       <td>
                         <%= link_to 'Delete', admin_category_path(category), :confirm => 'Are you sure?', :method => :delete, :class => 'ico del', :title => 'Delete category'%>
                         <%= link_to 'Edit', edit_admin_category_path(category), :class => 'ico edit', :title => 'Edit category' %>

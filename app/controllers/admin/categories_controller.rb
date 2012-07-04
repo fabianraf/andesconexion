@@ -2,6 +2,10 @@ class Admin::CategoriesController < Admin::BaseController
    def index
     @categories = Category.without_parents.page(params[:page]).per(10).order("sort_order asc")
   end
+  def show_tours
+    @category = Category.find(params[:id])
+    @tours = @category.tours.page(params[:page]).per(10)
+  end
   def new
     @category = Category.new
     @category.build_middle_homepage_image

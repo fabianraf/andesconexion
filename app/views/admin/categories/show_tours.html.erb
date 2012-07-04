@@ -17,7 +17,7 @@
       <div class="box">
         <!-- Box Head -->
         <div class="box-head">
-          <h2 class="left"><%#= @category.name %></h2>
+          <h2 class="left"><%= @category.name %></h2>
           <div class="right">
             <label>search tour</label>
             <input type="text" class="field small-field" />
@@ -31,7 +31,6 @@
               <tr>
                 <th width="13"><input type="checkbox" class="checkbox" /></th>
                 <th>Name</th>
-                <th>Category</th>
                 <th>Hits</th>
                 <th width="110" class="ac">Content Control</th>
               </tr>
@@ -39,7 +38,6 @@
                 <%= content_tag_for(:tr, tour, :class=> "#{cycle("", "odd")}") do %>
                  <td><input type="checkbox" class="checkbox" /></td>
                   <td><h3><%= link_to tour.name, admin_category_tour_path(tour.category, tour) %></td>
-                  <td><h3><%= link_to tour.category.name, show_tours_admin_category_path(tour.category) %></td>
                   <td><h3>(<%= tour.impressionist_count %>)</td>
                   <td>
                     <%= link_to 'Delete', admin_category_tour_path(tour.category, tour), :confirm => 'Are you sure?', :method => :delete, :class => 'ico del', :title => 'Delete tour'%>
@@ -71,7 +69,7 @@
         </div>
         <!-- End Box Head-->
         <div class="box-content">
-          <%= link_to(content_tag(:span, "Add new tour"), new_admin_tour_path, :class => 'add-button') %>
+          <%= link_to(content_tag(:span, "Add new tour"), new_admin_category_tour_path(@category), :class => 'add-button') %>
           <div class="cl">&nbsp;</div>
           <p class="select-all"><input type="checkbox" class="checkbox" /><label>select all</label></p>
           <p><a href="#">Delete Selected</a></p>
