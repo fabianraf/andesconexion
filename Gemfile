@@ -17,10 +17,10 @@ end
 
 gem 'jquery-rails'
 gem "therubyracer", :require => 'v8'
-#gem 'pg'
-gem 'mysql2'
-gem 'mysql'
-gem 'authlogic', :branch => 'rails3'
+gem 'pg'
+#gem 'authlogic', :branch => 'rails3'
+gem 'devise'
+gem 'rolify'
 gem "cancan"
 gem 'paperclip'
 gem 'meta_search'

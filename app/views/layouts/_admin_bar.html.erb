@@ -5,80 +5,74 @@
 		<div id="top">
 			<h1><a href="#">AndesConexion</a></h1>
 			<div id="top-navigation">
-				Welcome <strong><%= current_user.login %></strong>
+				Welcome <strong><%#= current_user.login %></strong>
 				<span>|</span>
 				<a href="#">Help</a>
 				<span>|</span>
 				<a href="#">Profile Settings</a>
 				<span>|</span>
-				<a href="/logout">Log out</a>
+				<%= link_to "Log Out", destroy_user_session_path %>
 			</div>
 		</div>
 		<!-- End Logo + Top Nav -->
 		<div class="top_menu">
-                  <ul id="nav">
-                    <li class="top">
-                      <%= link_to content_tag(:span, "Dashboard", {:class => "down"}), "", :class => "top_link", :id => "dashboard" %>
-                      <ul class="sub">
-                        <li><%= link_to "Algo", "#", :class => "fly" %>
-                          <ul>
-                            <li><%= link_to "algo", "#" %></li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="<%= are_you_here?("categories") ? "selected" : "top"%>">
-                      <%= link_to content_tag(:span, "Top Menu", {:class => "down"}), admin_categories_path, :class => "top_link", :id => "dashboard" %>
-                      <ul class="sub">
-                        <li><%= link_to "Algo", "#", :class => "fly" %>
-                          <ul>
-                            <li><%= link_to "algo", "#" %></li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="<%= are_you_here?("last_minute_offers") ? "selected" : "top" %>">
-                      <%= link_to content_tag(:span, "Last Minute", {:class => "down"}), admin_last_minute_offers_path, :class => "top_link", :id => "dashboard" %>
-                      <ul class="sub">
-                        <li><%= link_to "Algo", "#", :class => "fly" %>
-                          <ul>
-                            <li><%= link_to "algo", "#" %></li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="<%= are_you_here?("tours") ? "selected" : "top" %>">
-                      <%= link_to content_tag(:span, "Tours", {:class => "down"}), admin_tours_path, :class => "top_link", :id => "dashboard" %>
-                      <ul class="sub">
-                        <li><%= link_to "Algo", "#", :class => "fly" %>
-                          <ul>
-                            <li><%= link_to "algo", "#" %></li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="<%= are_you_here?("hotels") ? "selected" : "top" %>">
-                      <%= link_to content_tag(:span, "Hotels", {:class => "down"}), admin_hotels_path, :class => "top_link", :id => "dashboard" %>
-                      <ul class="sub">
-                        <li><%= link_to "Algo", "#", :class => "fly" %>
-                          <ul>
-                            <li><%= link_to "algo", "#" %></li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="<%= are_you_here?("clients") ? "selected" : "top" %>">
-                      <%= link_to content_tag(:span, "Clients", {:class => "down"}), admin_clients_path, :class => "top_link", :id => "dashboard" %>
-                      <ul class="sub">
-                        <li><%= link_to "Algo", "#", :class => "fly" %>
-                          <ul>
-                            <li><%= link_to "algo", "#" %></li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </li>
-                 </ul>
-               </div>
+      <ul id="nav">
+        <li class="top">
+          <%= link_to content_tag(:span, "Dashboard", {:class => "down"}), "", :class => "top_link", :id => "dashboard" %>
+          <ul class="sub">
+            
+          </ul>
+        </li>
+        <li class="<%= are_you_here?("categories") ? "selected" : "top"%>">
+          <%= link_to content_tag(:span, "Top Menu", {:class => "down"}), admin_categories_path, :class => "top_link", :id => "dashboard" %>
+          <ul class="sub">
+            <% @top_categories.each do |category| %>
+              <li><%= link_to category.name, sub_categories_admin_category_path(category), :class => "fly" %></li>
+            <% end %>
+          </ul>
+        </li>
+        <li class="<%= are_you_here?("last_minute_offers") ? "selected" : "top" %>">
+          <%= link_to content_tag(:span, "Last Minute", {:class => "down"}), admin_last_minute_offers_path, :class => "top_link", :id => "dashboard" %>
+          <ul class="sub">
+            <li><%= link_to "Algo", "#", :class => "fly" %>
+              <ul>
+                <li><%= link_to "algo", "#" %></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="<%= are_you_here?("tours") ? "selected" : "top" %>">
+          <%= link_to content_tag(:span, "Tours", {:class => "down"}), admin_tours_path, :class => "top_link", :id => "dashboard" %>
+          <ul class="sub">
+            <li><%= link_to "Algo", "#", :class => "fly" %>
+              <ul>
+                <li><%= link_to "algo", "#" %></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="<%= are_you_here?("hotels") ? "selected" : "top" %>">
+          <%= link_to content_tag(:span, "Hotels", {:class => "down"}), admin_hotels_path, :class => "top_link", :id => "dashboard" %>
+          <ul class="sub">
+            <li><%= link_to "Algo", "#", :class => "fly" %>
+              <ul>
+                <li><%= link_to "algo", "#" %></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="<%= are_you_here?("clients") ? "selected" : "top" %>">
+          <%= link_to content_tag(:span, "Clients", {:class => "down"}), admin_clients_path, :class => "top_link", :id => "dashboard" %>
+          <ul class="sub">
+            <li><%= link_to "Algo", "#", :class => "fly" %>
+              <ul>
+                <li><%= link_to "algo", "#" %></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+     </ul>
+   </div>
 		<!-- Main Nav 
 		<div id="navigation">
 			<ul>

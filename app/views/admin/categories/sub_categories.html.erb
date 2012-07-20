@@ -1,9 +1,7 @@
 <div class="shell">
   <!-- Small Nav -->
   <div class="small-nav">
-          <a href="#">Dashboard</a>
-          <span>&gt;</span>
-          Categories
+    <%= link_to "Top Menu", admin_categories_path %>
   </div>
   <!-- End Small Nav -->
   <br />
@@ -35,7 +33,7 @@
               <dt>Category Image</dt>
               <dd><%= image_tag(@category.category_image.attachment.url, :width=>'250px') %></dd>
               <% if @category.is_present_in_lowerpage? %>
-                <dt>Lower Homepage photo</dt>
+                <dt>Lower photo</dt>
                 <dd>Will be present in lower homepage</dd>
               <% end %>
             </dl>

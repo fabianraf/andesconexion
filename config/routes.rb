@@ -1,9 +1,7 @@
 Andesconexion::Application.routes.draw do
   
-  resource :user_session
-  
-  match '/logout', :controller => 'user_sessions', :action => 'destroy'
-    
+  devise_for :users
+  root :to => "sites#index"
   match "/admin", :controller => "admin/site", :action => "index"
   namespace "admin" do
     #resources :travel_packages

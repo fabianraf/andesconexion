@@ -5,8 +5,10 @@
         <h1><%= link_to category.name, first_level_category_path(category) %></h1>
       </div>
       <div class="intro_content_text">
-        <a href="#"><%= image_tag(category.category_image.attachment.url, :width => '227px', :height => "129px", :border => 0) unless category.category_image.nil? %></a>
-        <p><%= category.description.html_safe[0, 180] %>...</p>
+        <%= link_to first_level_category_path(category) do %>
+          <%= image_tag(category.category_image.attachment.url, :width => '227px', :height => "129px", :border => 0) unless category.category_image.nil? %>
+        <% end %>
+          <p><%= category.description.html_safe[0, 180] %>...</p>
         <ul>
           <% category.children.each do |sub_category| %>
             <li><%= link_to sub_category.name, nested_categories_path(sub_category.parent, sub_category) %></li>

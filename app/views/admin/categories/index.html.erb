@@ -35,7 +35,6 @@
                 <tr>
                   <th width="13"></th>
                   <th>Name</th>
-                  <th>Parent</th>
                   <th width="110" class="ac">Content Control</th>
                 </tr>
                 <tbody id="grouping-sortables">
@@ -46,7 +45,6 @@
                         <%= hidden_field_tag "order[]", category.id %>
                       </td>
                       <td><h3><%= link_to category.name, sub_categories_admin_category_path(category) %></td>
-                      <td><h3><%= link_to category.parent.name if category.parent.present? %></td>
                       <td>
                         <%= link_to 'Delete', admin_category_path(category), :confirm => 'Are you sure you want to delete this category?', :method => :delete, :class => 'ico del', :title => 'Delete category'%>
                         <%= link_to 'Edit', edit_admin_category_path(category), :class => 'ico edit', :title => 'Edit category' %>
@@ -81,8 +79,6 @@
         <div class="box-content">
           <%= link_to(content_tag(:span, "Add new category"), new_admin_category_path, :class => 'add-button') %>
           <div class="cl">&nbsp;</div>
-          <p class="select-all"><input type="checkbox" class="checkbox" /><label>select all</label></p>
-          <p><a href="#">Delete Selected</a></p>
           <!-- Sort -->
           <div class="sort">
             <label>Sort by</label>
