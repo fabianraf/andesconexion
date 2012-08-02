@@ -382,7 +382,7 @@ textarea.size4 { height:80px; }
 	list-style-type: none;
 }
 
-.selected{
+li .selected{
     margin: 0px;
     height: 34px;
     width: 161px;
@@ -391,3 +391,77 @@ textarea.size4 { height:80px; }
 #middle-photo{
     display: none;
 }
+
+.col {
+  margin-right: 24px;
+  float: left;
+}
+.one {
+  width: 58px;
+}
+.two {
+  width: 140px;
+}
+.three {
+  width: 222px;
+}
+.four {
+  width: 304px;
+}
+.five {
+  width: 386px;
+}
+.six {
+  width: 468px;
+}
+.seven {
+  width: 550px;
+}
+.eight {
+  width: 632px;
+}
+.nine {
+  width: 714px;
+}
+.ten {
+  width: 796px;
+}
+.eleven {
+  width: 878px;
+}
+.twelve {
+  width: 960px;
+}
+.last {
+  margin-right: 0 !important;
+}
+.leftmargin {
+  margin-left: 24px;
+}
+
+
+#assets .simple-asset {
+    float: left; 
+		clear: none;
+		width: 140px;
+		height: 123px;
+		overflow: hidden;
+		margin: 10px 24px 10px 0;
+}
+#assets .simple-asset	.asset-wrapper {
+			max-height: auto;
+			overflow: hidden;
+}
+#assets .simple-asset .asset-wrapper img {
+				width: 100px;
+				height: 100px;
+			}
+#assets .simple-asset .asset-wrapper	p {
+			clear: left;
+			height: 18px;
+			margin: 0;
+		}
+	
+
+
+

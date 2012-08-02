@@ -61,6 +61,16 @@
             </li>
           </ul>
         </li>
+        <li class="<%= are_you_here?("assets") ? "selected" : "top" %>">
+          <%= link_to content_tag(:span, "Assets", {:class => "down"}), admin_assets_path, :class => "top_link", :id => "dashboard" %>
+          <ul class="sub">
+            <li><%= link_to "Algo", "#", :class => "fly" %>
+              <ul>
+                <li><%= link_to "algo", "#" %></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
         <li class="<%= are_you_here?("clients") ? "selected" : "top" %>">
           <%= link_to content_tag(:span, "Clients", {:class => "down"}), admin_clients_path, :class => "top_link", :id => "dashboard" %>
           <ul class="sub">

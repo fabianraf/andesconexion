@@ -20,6 +20,11 @@ Andesconexion::Application.routes.draw do
     resources :tours
     resources :hotels
     resources :clients
+    resources :assets do
+      collection do
+        get 'index_new'
+      end
+    end
     resources :last_minute_offers do
       collection do 
         put 'update_order'

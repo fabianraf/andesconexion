@@ -1,0 +1,42 @@
+<% content_for :page_specific_javascript do %>
+  <%= stylesheet_link_tag 'admin/galleriffic/basic.css' -%>
+  <%= stylesheet_link_tag 'admin/galleriffic/galleriffic-2.css' -%>
+  <%= javascript_include_tag "admin/galleriffic/galleriffic_calls.js" %>  
+<% end %>
+<div class="shell">
+  <div id="page">
+			<div id="container-galleriffic">
+				<h2>Thumbnail rollover effects and slideshow crossfades</h2>
+
+				<!-- Start Advanced Gallery Html Containers -->
+				<div id="gallery" class="contentg">
+					<div id="controls" class="controls"></div>
+					<div class="slideshow-container">
+						<div id="loading" class="loader"></div>
+						<div id="slideshow" class="slideshow"></div>
+					</div>
+					<div id="caption" class="caption-container"></div>
+				</div>
+				<div id="thumbs" class="navigation">
+					<ul class="thumbs noscript">
+            <% @assets.each do |asset| %>
+              <li>
+								<%= link_to image_tag(asset.attachment.url(:original), :alt => asset.attachment_file_name, :width => '75px', :height => '75px'), asset.attachment.url(:original), :class => 'thumb', :name => 'leaf'  %>
+              
+							<div class="caption">
+								<div class="download">
+									<a href="http://farm4.static.flickr.com/3261/2538183196_8baf9a8015_b.jpg">Download Original</a>
+								</div>
+								<div class="image-title">Title #0</div>
+								<div class="image-desc">Description</div>
+							</div>
+						</li>
+            <% end %>
+						
+					</ul>
+				</div>
+				<div style="clear: both;"></div>
+			</div>
+		</div>
+		
+</div>

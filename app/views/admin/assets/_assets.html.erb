@@ -1,0 +1,26 @@
+<% assets = @max_number_assets.present? ? @assets.limit(@max_number_assets) : @assets  %>
+<% assets.each_with_index do |asset,index| %>
+  <div id="simple-asset-<%= asset.id %>" class="simple-asset<% if ( index + 1 )  % @horizontal_number_assets.to_i == 0 %> last<% end %>">
+    <% if @max_number_assets.present? %>
+        <div class="asset-wrapper"><%= link_to image_tag(asset.attachment.url(:original), :alt => asset.attachment_file_name), admin_asset_path(asset, :per_row => @horizontal_number_assets, :limit => @max_number_assets), :class => 'show-asset-info', :id => "show-asset-info-#{asset.id}" %></div>
+      <p id="edit-delete-asset-<%= asset.id %>" style="float:inherit ; display: none;">
+        <%# if can? :update, asset %>
+          <%= link_to "Edit", edit_admin_asset_path(asset, :per_row => @horizontal_number_assets, :limit => @max_number_assets), :remote => true, :class => "link-edit-simple-asset" %>
+        <%# end %>
+        <%# if can? :delete, asset %>
+          / <%= link_to "Delete", admin_asset_path(asset, :per_row => @horizontal_number_assets, :limit => @max_number_assets), :confirm => 'Are you sure you want to delete this asset?', :method => :delete, :remote => true, :class => 'ico del', :title => 'Delete asset' %>
+        <%# end %>
+      </p>      
+    <%# else %>
+     
+      <p id="edit-delete-asset-<%= asset.id %>" style="float:inherit ; display: none;">
+        <%# if can? :update, asset %>
+          <%= link_to "Edit", edit_admin_asset_path(asset, :per_row => @horizontal_number_assets), :remote => true, :class => "link-edit-simple-asset" %>
+        <%# end %>  
+        <%# if can? :delete, asset %>
+          / <%= link_to "Delete", admin_asset_path(asset, :per_row => @horizontal_number_assets), :confirm => 'Are you sure you want to delete this asset?', :method => :delete, :remote => true, :class => 'ico del', :title => 'Delete asset' %>
+        <%# end %>
+      </p>
+    <% end %>
+  </div>
+<% end %>
