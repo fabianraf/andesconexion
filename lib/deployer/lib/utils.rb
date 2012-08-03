@@ -42,8 +42,6 @@ def defaults
 end
 
 def global_defaults
-	set :repository,  "https://svn.nettheory.com/#{application}/trunk"
-#	set :files_repository,  "https://svn.nettheory.com/#{application}/files"
 	set :ruby_path, "/usr/local/ruby/bin"
 	set :apache_user, "www-data"
 	set :apache_group, "dev"

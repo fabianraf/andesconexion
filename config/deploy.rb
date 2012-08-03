@@ -21,21 +21,6 @@ set :git_enable_submodules, 1
 # if you're still using the script/reaper helper you will need
 # these http://github.com/rails/irs_process_scripts
 
-
-task :staging do
-  # set :repository,  "https://svn.nettheory.com/mws-2011/trunk"  
-  # set :files_repository,  "https://svn.nettheory.com/mws-2011/files"  
-  set :rails_env, "staging"
-  set :ruby_path, "/usr/local/bin"
-  server "", :app, :web, :db, :primary => true
-  defaults
-  set :deploy_via, :remote_cache  
-  set :apache_user, "www-data"
-  set :apache_group, "dev"
-  set :apache_dir, "/etc/apache2/conf.d"
-  set :apache_logs, "/var/log/apache2/#{application}-#{rails_env}"
-end
-
 task :preview do
   set :rails_env, "preview"
   set :ruby_path, "/usr/local/ruby/bin"
