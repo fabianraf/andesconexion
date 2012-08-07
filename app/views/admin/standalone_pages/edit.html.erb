@@ -1,0 +1,65 @@
+<!-- Small Nav -->
+<div class="small-nav">
+        <a href="#">Dashboard</a>
+        <span>&gt;</span>
+        Standalone Page
+</div>
+<!-- End Small Nav -->
+
+<!-- Message Error -->
+<% if @standalone_page.errors.any? %>
+  <div class="msg msg-error">
+     <% @standalone_page.errors.full_messages.each do |msg| %>
+       <p><strong><%= msg %></strong></p>
+     <% end %>
+  </div>
+<% end %>
+<!-- End Message Error -->
+<br />
+<!-- Main -->
+<div id="main">
+        <div class="cl">&nbsp;</div>
+
+        <!-- Content -->
+        <div id="content">
+          <!-- Box -->
+          <div class="box">
+            <!-- Box Head -->
+            <div class="box-head">
+              <h2 class="left">Edit standalone_page</h2>
+            </div>
+            <!-- End Box Head -->
+            <%= form_for([:admin, @standalone_page]) do |f| %>
+              <%= render :partial => "form", :object => f %>
+              <div class="buttons">
+                  <%= f.submit "Save" %>
+                  <%= link_to "Cancel", admin_standalone_pages_path %>
+              </div>
+            <% end %>
+          </div>
+          <!-- End Box -->
+        </div>
+        <!-- End Content -->
+        <!-- Sidebar -->
+        <div id="sidebar">
+          <!-- Box -->
+          <div class="box">
+            <!-- Box Head -->
+            <div class="box-head">
+              <h2>Management</h2>
+            </div>
+            <!-- End Box Head-->
+            <div class="box-content">
+              <%= link_to(content_tag(:span, "Add new SA page"), new_admin_standalone_page_path, :class => 'add-button') %>
+              <%= link_to(content_tag(:span, "Delete SA page"), admin_standalone_page_path(@standalone_page), :confirm => 'Are you sure?', :method => :delete, :title => 'Delete standalone_page') %>
+              <div class="cl">&nbsp;</div>
+            </div>
+          </div>
+          <!-- End Box -->
+        </div>
+        <!-- End Sidebar -->
+
+        <div class="cl">&nbsp;</div>			
+</div>
+<!-- Main -->
+	

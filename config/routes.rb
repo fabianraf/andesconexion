@@ -38,6 +38,11 @@ Andesconexion::Application.routes.draw do
       end
     end
     resources :travel_packages
+    resources :standalone_pages do
+      collection do 
+        put 'update_order'
+      end
+    end
   end
   resources :last_minute_offers
   

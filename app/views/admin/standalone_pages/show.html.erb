@@ -1,0 +1,64 @@
+<!-- Small Nav -->
+<div class="small-nav">
+        <a href="#">Dashboard</a>
+        <span>&gt;</span>
+        Hotel
+</div>
+<!-- End Small Nav -->
+
+<br />
+<!-- Main -->
+<div id="main">
+        <div class="cl">&nbsp;</div>
+
+        <!-- Content -->
+        <div id="content">
+          <!-- Box -->
+          <div class="box">
+            <!-- Box Head -->
+            <div class="box-head">
+              <h2 class="left"><%= @hotel.name %></h2>
+              <div class="right">
+                <%= link_to 'Delete', admin_hotel_path(@hotel), :confirm => 'Are you sure?', :method => :delete, :class => 'ico del', :title => 'Delete Hotel'%>
+                <%= link_to 'Edit', edit_admin_hotel_path(@hotel), :class => 'ico edit', :title => 'Edit Hotel' %>
+              </div>
+            </div>
+            <!-- End Box Head -->
+            
+            <dl class="show">
+		<dt>Description</dt>
+		<dd><%= @hotel.description.html_safe %></p></dd>
+		<dt>Country</dt>
+		<dd><%= @hotel.country %></p></dd>
+		<dt>City</dt>
+		<dd><%= @hotel.city %></p></dd>
+		<dt>Image</dt>
+		<dd><%= image_tag(@hotel.image.url, :width=>'250px') %></dd>
+            </dl>
+            
+          </div>
+          <!-- End Box -->
+        </div>
+        <!-- End Content -->
+        <!-- Sidebar -->
+        <div id="sidebar">
+          <!-- Box -->
+          <div class="box">
+            <!-- Box Head -->
+            <div class="box-head">
+              <h2>Management</h2>
+            </div>
+            <!-- End Box Head-->
+            <div class="box-content">
+              <%= link_to(content_tag(:span, "Add new Hotel"), new_admin_hotel_path, :class => 'add-button') %>
+              <div class="cl">&nbsp;</div>
+            </div>
+          </div>
+          <!-- End Box -->
+        </div>
+        <!-- End Sidebar -->
+
+        <div class="cl">&nbsp;</div>			
+</div>
+<!-- Main -->
+	

@@ -1,0 +1,24 @@
+<%= javascript_include_tag 'ckeditor/ckeditor' %>
+<div class="form">
+  <p>
+    <span class="req">max 100 symbols</span>
+    <label>Name <span>(Required Field)</span></label>
+    <%= form.text_field :name, :class => "field size1" %>
+  </p>
+  <p>
+    <table>
+      <tr>
+        <td><label>Is active?</label></td>
+        <td>&nbsp;</td>
+        <td>
+          Yes <%= form.radio_button :is_active, true %>
+          No <%= form.radio_button :is_active, false %>
+        </td>
+      </tr>
+    </table>
+  </p>
+  <p>
+    <label>Description</label>
+    <%= form.cktext_area :description, :class => "field size4" %>
+  </p>  
+</div>

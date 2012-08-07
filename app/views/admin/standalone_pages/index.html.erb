@@ -6,7 +6,7 @@
   <div class="small-nav">
           <a href="#">Dashboard</a>
           <span>&gt;</span>
-          Categories
+          standalone_pages
   </div>
   <!-- End Small Nav -->
   <br />
@@ -20,9 +20,9 @@
       <div class="box">
         <!-- Box Head -->
         <div class="box-head">
-          <h2 class="left">Categories</h2>
+          <h2 class="left">Standalone Pages</h2>
           <div class="right">
-            <label>search category</label>
+            <label>search standalone page</label>
             <input type="text" class="field small-field" />
             <input type="submit" class="button" value="search" />
           </div>
@@ -30,7 +30,7 @@
         <!-- End Box Head -->	
           <!-- Table -->
           <div class="table">
-            <%= form_tag(update_order_admin_categories_path, :id => "sort-grouping-form", :method => :put) do %>
+            <%= form_tag(update_order_admin_standalone_pages_path, :id => "sort-grouping-form", :method => :put) do %>
               <table width="100%" border="0" cellspacing="0" cellpadding="0">
                 <tr>
                   <th width="13"></th>
@@ -38,16 +38,17 @@
                   <th width="110" class="ac">Content Control</th>
                 </tr>
                 <tbody id="grouping-sortables">
-                  <% @categories.each do |category| %>
-                    <%= content_tag_for(:tr, category, :class=> "#{cycle("", "odd")}") do %>
+                  <% @standalone_pages.each do |standalone_page| %>
+                    <%= content_tag_for(:tr, standalone_page, :class=> "#{cycle("", "odd")}") do %>
                       <td class="handle">
-                        <img src="/images/admin/sort.png" alt="grab to sort" />
-                        <%= hidden_field_tag "order[]", category.id %>
+                          <img src="/images/admin/sort.png" alt="grab to sort" />
+                          <%= hidden_field_tag "order[]", standalone_page.id %>
                       </td>
-                      <td><h3><%= link_to category.name, sub_categories_admin_category_path(category) %></td>
+                      <td><h3><%= link_to standalone_page.name, admin_standalone_page_path(standalone_page) %></td>
+
                       <td>
-                        <%= link_to 'Delete', admin_category_path(category), :confirm => 'Are you sure you want to delete this category?', :method => :delete, :class => 'ico del', :title => 'Delete category'%>
-                        <%= link_to 'Edit', edit_admin_category_path(category), :class => 'ico edit', :title => 'Edit category' %>
+                        <%= link_to 'Delete', admin_standalone_page_path(standalone_page), :confirm => 'Are you sure?', :method => :delete, :class => 'ico del', :title => 'Delete standalone_page'%>
+                        <%= link_to 'Edit', edit_admin_standalone_page_path(standalone_page), :class => 'ico edit', :title => 'Edit standalone_page' %>
                       </td>
                     <% end %>
                   <% end %>
@@ -56,7 +57,7 @@
             <% end %>
             <!-- Pagging -->
             <div class="pagging">
-              <%= paginate @categories %>
+              <%= paginate @standalone_pages %>
             </div>
             <!-- End Pagging -->
           </div>
@@ -76,8 +77,10 @@
         </div>
         <!-- End Box Head-->
         <div class="box-content">
-          <%= link_to(content_tag(:span, "Add new category"), new_admin_category_path, :class => 'add-button') %>
+          <%= link_to(content_tag(:span, "Add new standalone_page"), new_admin_standalone_page_path, :class => 'add-button') %>
           <div class="cl">&nbsp;</div>
+          <p class="select-all"><input type="checkbox" class="checkbox" /><label>select all</label></p>
+          <p><a href="#">Delete Selected</a></p>
           <!-- Sort -->
           <div class="sort">
             <label>Sort by</label>
