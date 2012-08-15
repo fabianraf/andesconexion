@@ -45,6 +45,7 @@ Andesconexion::Application.routes.draw do
     end
   end
   resources :last_minute_offers
+  resources :contact_us
   
   
   match ":main_category/:sub_category", :controller => 'categories', :action => "show_info_sub_category", :as => "nested_categories"
