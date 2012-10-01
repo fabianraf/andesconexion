@@ -13,6 +13,33 @@
 	margin: 0px;
 	padding: 0px;
 }
+#nav li.top-left {
+	display:block;
+	float:left;
+	height:32px;
+	text-align: center;
+	margin: 0px;
+	padding: 0px;
+  background-image: url(../images/menu_left.png);
+}
+#nav li.top-middle {
+	display:block;
+	float:left;
+	height:32px;
+	text-align: center;
+	margin: 0px;
+	padding: 0px;
+  background-image: url(../images/menu_middle.png);
+}
+#nav li.top-right {
+	display:block;
+	float:left;
+	height:32px;
+	text-align: center;
+	margin: 0px;
+	padding: 0px;
+  background-image: url(../images/menu_right.png);
+}
 #nav li.selected {
 	display:block;
 	float:left;

@@ -3,12 +3,17 @@ class ApplicationController < ActionController::Base
   helper :all
   #filter_parameter_logging :password, :password_confirmation
   helper_method :current_user_session, :current_user 
-  prepend_before_filter :show_some_last_minute_offers
+  prepend_before_filter :show_some_last_minute_offers, :load_standalone_pages
   
   def show_some_last_minute_offers
     @last_minute_offers = LastMinuteOffer.limit(2).order("sort_order asc")
     @categories = Category.where("parent_id is null").order("sort_order asc")
   end
+  
+  def load_standalone_pages
+    @standalone_pages = StandalonePage.is_active
+  end
+  
   private
 
   def current_user_session

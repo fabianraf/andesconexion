@@ -17,19 +17,19 @@
 		<!-- End Logo + Top Nav -->
 		<div class="top_menu">
       <ul id="nav">
-        <li class="top">
+        <li class="top-left">
           <%= link_to content_tag(:span, "Dashboard", {:class => "down"}), "", :class => "top_link", :id => "dashboard" %>
           <ul class="sub">
             
           </ul>
         </li>
-        <li class="<%= are_you_here?("standalone_pages") ? "selected" : "top"%>">
+        <li class="<%= are_you_here?("standalone_pages") ? "selected" : "top-middle"%>">
           <%= link_to content_tag(:span, "Standalone Pages", {:class => "down"}), admin_standalone_pages_path, :class => "top_link", :id => "dashboard" %>
           <ul class="sub">
             
           </ul>
         </li>
-        <li class="<%= are_you_here?("categories") ? "selected" : "top"%>">
+        <li class="<%= are_you_here?("categories") ? "selected" : "top-middle"%>">
           <%= link_to content_tag(:span, "Top Menu", {:class => "down"}), admin_categories_path, :class => "top_link", :id => "dashboard" %>
           <ul class="sub">
             <% @top_categories.each do |category| %>
@@ -37,7 +37,7 @@
             <% end %>
           </ul>
         </li>
-        <li class="<%= are_you_here?("last_minute_offers") ? "selected" : "top" %>">
+        <li class="<%= are_you_here?("last_minute_offers") ? "selected" : "top-middle" %>">
           <%= link_to content_tag(:span, "Last Minute", {:class => "down"}), admin_last_minute_offers_path, :class => "top_link", :id => "dashboard" %>
           <ul class="sub">
             <!--<li><%#= link_to "Algo", "#", :class => "fly" %>
@@ -47,19 +47,19 @@
             </li> -->
           </ul>
         </li>
-        <li class="<%= are_you_here?("tours") ? "selected" : "top" %>">
+        <li class="<%= are_you_here?("tours") ? "selected" : "top-middle" %>">
           <%= link_to content_tag(:span, "Tours", {:class => "down"}), admin_tours_path, :class => "top_link", :id => "dashboard" %>
           
         </li>
-        <li class="<%= are_you_here?("hotels") ? "selected" : "top" %>">
+        <li class="<%= are_you_here?("hotels") ? "selected" : "top-middle" %>">
           <%= link_to content_tag(:span, "Hotels", {:class => "down"}), admin_hotels_path, :class => "top_link", :id => "dashboard" %>
           
         </li>
-        <li class="<%= are_you_here?("assets") ? "selected" : "top" %>">
+        <li class="<%= are_you_here?("assets") ? "selected" : "top-right" %>">
           <%= link_to content_tag(:span, "Galleries", {:class => "down"}), admin_assets_path, :class => "top_link", :id => "dashboard" %>
           
         </li>
-        <li class="<%= are_you_here?("clients") ? "selected" : "top" %>">
+        <li class="<%= are_you_here?("clients") ? "selected" : "top-middle" %>">
           <%= link_to content_tag(:span, "Clients", {:class => "down"}), admin_clients_path, :class => "top_link", :id => "dashboard" %>
           
         </li>

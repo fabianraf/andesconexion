@@ -368,10 +368,9 @@ textarea.size4 { height:80px; }
 	font-weight: bold;
 }
 .top_menu {
-	background-image: url(../images/bg_menu.png);
 	background-repeat: no-repeat;
 	background-position: center top;
-	height: 42px;
+	height: 31px;
 	width: 966px;
 	padding-right: 7px;
 	padding-left: 7px;
@@ -384,7 +383,7 @@ textarea.size4 { height:80px; }
 
 li .selected{
     margin: 0px;
-    height: 34px;
+    height: 24px;
     width: 161px;
     padding: 0px;
 }
