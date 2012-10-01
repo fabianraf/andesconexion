@@ -1,0 +1,91 @@
+<%= content_for :page_specific_javascript do %>
+  <script>
+    $(document).ready(function() {
+      $("#tabs").tabs();
+    });
+  </script>
+<% end %>
+<div id="main_information">
+  <div id="information_content">
+  <table width="956" border="0" align="center" cellpadding="0" cellspacing="0">
+    <tr>
+    <td align="left" valign="top">
+      <div class="left">
+        <div class="path_navigation">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Peru Tours</a></li>
+            <li><a href="#">Cusco and Machu Picchu</a></li>                           		    
+          </ul>
+        </div>
+        <div class="main_text">
+          <h1>Contact Us</h1>
+          <!-- Message Error -->
+          <% if @contact_us.errors.any? %>
+            <div class="msg msg-error">
+               <% @contact_us.errors.full_messages.each do |msg| %>
+                 <p><strong><%= msg %></strong></p>
+               <% end %>
+            </div>
+          <% end %>
+          <!-- End Message Error -->
+          <%= form_for([@contact_us]) do |f| %>
+            <%= render :partial => "form", :object => f %>
+            <div class="buttons">
+                <%= f.submit "Save" %>
+                <%= link_to "Cancel", "" %>
+            </div>
+          <% end %>
+          <h2>Overview</h2>
+                                                              
+          
+        </div>
+      </div>
+</td>
+        <td align="left" valign="top">
+<div class="right">
+<div class="section_menu">
+<div class="section_menu_up">
+<h1>IN THIS SECTION</h1>
+</div>
+<div class="section_menu_middle">
+<ul>
+                                <li><a href="#">Clasic Cusco</a></li>
+                        <li><a href="#">Cusco & Machu Picchu</a></li>
+                                <li><a href="#">Southern Cross</a></li>  
+    <li><a href="#">Nazca Lines</a></li>                           		    
+                        </ul>
+</div>
+<div class="section_menu_end"></div>
+</div>
+<div class="promotions">
+        <div class="promotions_up">
+<h1>GALAPAGOS PROMOTIONS</h1>
+        </div>
+<div class="promotions_middle">
+<a href="#"><img src="photos/promotions.jpg" width="192" height="96" /></a>
+<p><strong>Departure: Dic 201<br />
+    $ 800 OFF </strong><br />
+05-09 Dec 2011 (5D/ 4N)<br />
+    12-16 Dec 2011 (5D/ 4N)</p>
+<p><a href="#">Read More</a></p>
+</div>
+<div class="promotions_end"></div>
+</div>
+<div class="special_package">
+<div class="special_package_title">
+<h1><a href="#">Ecuador Tours</a></h1>
+</div>
+<div class="special_package_text">
+        <a href="#"><img src="photos/ecuador_tours.jpg" width="220" height="93" border="0" /></a>
+                <p>Personal travel planning in Ecuador  Tailor-made Ecuador tours. Let Andes-Conexion personalize your travel to the Highlands, Ecuador and Peru Amazon Rain Forest or the Coast of Ecuador!...</p>
+<div class="read_more"><a href="#">Read More</a></div>
+</div>						
+<div class="special_package_end"></div>
+</div>
+</div>
+</td>
+        </tr>
+</table>
+</div>
+              	</div>

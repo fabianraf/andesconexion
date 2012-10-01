@@ -45,6 +45,7 @@ Andesconexion::Application.routes.draw do
     end
   end
   resources :last_minute_offers
+  resources :contact_us
   
   
   
