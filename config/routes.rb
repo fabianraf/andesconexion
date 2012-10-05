@@ -2,7 +2,8 @@ Andesconexion::Application.routes.draw do
   
   devise_for :users
   root :to => "sites#index"
-  match "/admin", :controller => "admin/site", :action => "index"
+  #match "/admin", :controller => "admin/site", :action => "index"
+  match "/admin", :controller => "admin/standalone_pages", :action => "index"
   namespace "admin" do
     #resources :travel_packages
     resources :countries
@@ -43,6 +44,7 @@ Andesconexion::Application.routes.draw do
         put 'update_order'
       end
     end
+    resources :banners
   end
   resources :last_minute_offers
   resources :contact_us

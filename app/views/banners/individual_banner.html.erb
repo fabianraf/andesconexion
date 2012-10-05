@@ -1,0 +1,13 @@
+<% @banners.each do |banner| %>
+	<div class="banner">
+	  <div class="banner_title">
+	   <h1><%= link_to banner.title, "#" %></h1>
+	  </div>
+	<div class="banner_middle"> 
+	  <a href="#"><%= image_tag(banner.banner_image.attachment.url(:original), :width => "198px", :height => "146px", :border => 0)%></a>
+	  <p><%= banner.description.html_safe %></p>
+	  <p><a href="#">Read More</a></p>
+	</div>
+	<div class="banner_end"></div>
+	</div>
+<% end %>

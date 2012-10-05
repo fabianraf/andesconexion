@@ -35,7 +35,7 @@
                       <li>
                         <div class="left">
                           <%= link_to tour.name, "" %>
-                          <%= image_tag(tour.main_tour_image.attachment.url, :width => '150px', :height => "100px", :border => 0) %>
+                          <%= image_tag(tour.main_tour_image.attachment.url(:original), :width => '150px', :height => "100px", :border => 0) %>
                         </div>
                         <div class="right">
                           <%= sub_category.description.html_safe %>

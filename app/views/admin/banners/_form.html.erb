@@ -1,0 +1,32 @@
+<%= javascript_include_tag 'ckeditor/ckeditor' %>
+<div class="form">
+  <p>
+    <table>
+      <tr>
+        <td><label>Is active?<span>(Required Field)</span></label></td>
+        <td>
+          Yes <%= form.radio_button :is_active, true %>
+          No <%= form.radio_button :is_active, false %>
+        </td>
+      </tr>
+    </table>
+  </p>
+  <p>
+    <label>Image</label>
+    <%= form.fields_for :banner_image do |banner_image|%>
+      <%= banner_image.file_field :attachment %>
+      <% unless banner_image.object.attachment.nil? %>
+        <%= image_tag(banner_image.object.attachment.url(:original), :width=>'75px') %>
+      <% end %>
+    <% end %>
+  </p>
+  <p>
+    <span class="req">max 100 symbols</span>
+    <label>Name <span>(Required Field)</span></label>
+    <%= form.text_field :title, :class => "field size1" %>
+  </p>	
+  <p>
+    <label>Description</label>
+    <%= form.cktext_area :description, :class => "field size4" %>
+  </p>
+</div>
