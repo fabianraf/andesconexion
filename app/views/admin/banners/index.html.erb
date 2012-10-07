@@ -1,0 +1,93 @@
+<% content_for :page_specific_javascript do %>
+  <%= javascript_include_tag "admin/grouping_sort.js" %>
+<% end %>
+<div class="shell">
+  <!-- Small Nav -->
+  <div class="small-nav">
+          <a href="#">Dashboard</a>
+          <span>&gt;</span>
+          Banners
+  </div>
+  <!-- End Small Nav -->
+  <br />
+  <!-- Main -->
+  <div id="main">
+    <div class="cl">&nbsp;</div>
+
+    <!-- Content -->
+    <div id="content">
+      <!-- Box -->
+      <div class="box">
+        <!-- Box Head -->
+        <div class="box-head">
+          <h2 class="left">banners</h2>
+          <div class="right">
+            <label>search banner</label>
+            <input type="text" class="field small-field" />
+            <input type="submit" class="button" value="search" />
+          </div>
+        </div>
+        <!-- End Box Head -->	
+          <!-- Table -->
+          <div class="table">
+            <%#= form_tag(update_order_admin_banners_path, :id => "sort-grouping-form", :method => :put) do %>
+              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+				  <!--
+                  <th width="13"></th>
+                  -->
+				  <th>Title</th>
+                  <th width="110" class="ac">Content Control</th>
+                </tr>
+                <tbody id="grouping-sortables">
+                  <% @banners.each do |banner| %>
+                    <%= content_tag_for(:tr, banner, :class=> "#{cycle("", "odd")}") do %>
+                      <!--
+					  <td class="handle">
+                        <img src="/images/admin/sort.png" alt="grab to sort" />
+                        <%#= hidden_field_tag "order[]", category.id %>
+                      </td> -->
+                      <td><h3><%= link_to banner.title, admin_banner_path(banner) %></td>
+                      <td>
+                        <%= link_to 'Delete', admin_banner_path(banner), :confirm => 'Are you sure you want to delete this banner?', :method => :delete, :class => 'ico del', :title => 'Delete banner'%>
+                        <%= link_to 'Edit', edit_admin_banner_path(banner), :class => 'ico edit', :title => 'Edit banner' %>
+                      </td>
+                    <% end %>
+                  <% end %>
+                </tbody>
+              </table>
+            <%# end %>
+            <!-- Pagging -->
+            <div class="pagging">
+              <%= paginate @banners %>
+            </div>
+            <!-- End Pagging -->
+          </div>
+          <!-- Table -->
+      </div>
+      <!-- End Box -->
+    </div>
+    <!-- End Content -->
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+      <!-- Box -->
+      <div class="box">
+        <!-- Box Head -->
+        <div class="box-head">
+          <h2>Management</h2>
+        </div>
+        <!-- End Box Head-->
+        <div class="box-content">
+          <%= link_to(content_tag(:span, "Add new banner"), new_admin_banner_path, :class => 'add-button') %>
+          <div class="cl">&nbsp;</div>
+        </div>
+      </div>
+      <!-- End Box -->
+    </div>
+    <!-- End Sidebar -->
+
+    <div class="cl">&nbsp;</div>			
+  </div>
+  <!-- Main -->
+</div>

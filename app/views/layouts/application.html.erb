@@ -160,11 +160,14 @@
     <div class="bottom_menu_credits">
       <div class="bottom_menu">
         <ul>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Terms & Conditions</a></li>
-          <li><a href="#">Testimonials</a></li>
-          <li><a href="#">Reservations</a></li>
-          <li><a href="#">Contact Us</a></li>
+          <% @standalone_pages.each do |standalone_page| %>
+            <li><%= link_to standalone_page.name, standalone_page_path(standalone_page)%> </li>
+          <% end %>
+          <%#*<li><a href="standalone_pages/about_us">About Us</a></li>%>
+          <%#*<li><a href="#">Terms & Conditions</a></li>%>
+          <%#*<li><a href="#">Testimonials</a></li>%>
+          <%#*<li><a href="#">Reservations</a></li>%>
+          <%#*<li><a href="#">Contact Us</a></li>%>
         </ul>
       </div>
     <div class="credits">Andes Conexion. All Rights Reserved  ©  2012<br />

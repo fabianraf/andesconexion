@@ -687,13 +687,13 @@ body>#general_center {
 }
 
 
-.family_travel {
+.banner {
 	display: block;
 	float: left;
 	height: auto;
 	width: 247px;
 }
-.family_travel_title {
+.banner_title {
 	background-image: url(../images/peru_bg_title.png);
 	background-repeat: no-repeat;
 	background-position: center top;
@@ -701,7 +701,7 @@ body>#general_center {
 	width: 247px;
 	behavior: url("../html/iepngfix.htc");
 }
-.family_travel_title h1 {
+.banner_title h1 {
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 	font-size: 16px;
 	font-weight: bold;
@@ -714,16 +714,16 @@ body>#general_center {
 	padding-bottom: 0px;
 	padding-left: 0px;
 }
-.family_travel_title h1 a {
+.banner_title h1 a {
 	text-decoration: none;
 	color: #90C44F;
 }
-.family_travel_title h1 a:hover {
+.banner_title h1 a:hover {
 	color: #38322E;
 	text-decoration: none;
 }
 
-.family_travel_middle {
+.banner_middle {
 	background-image: url(../images/peru_bg.jpg);
 	background-repeat: repeat-y;
 	background-position: 9px top;
@@ -734,19 +734,19 @@ body>#general_center {
 	padding-top: 8px;
 	padding-bottom: 3px;
 }
-.family_travel_middle a img {
+.banner_middle a img {
 	display: block;
 	margin-right: auto;
 	margin-left: auto;
 	border: 1px solid #90C44F;
 }
-.family_travel_middle a:hover img {
+.banner_middle a:hover img {
 	display: block;
 	margin-right: auto;
 	margin-left: auto;
 	border: 1px solid #FFFFFF;
 }
-.family_travel_end {
+.banner_end {
 	background-image: url(../images/peru_bg_end.jpg);
 	background-repeat: no-repeat;
 	background-position: 9px top;
@@ -755,7 +755,7 @@ body>#general_center {
 	padding-right: 4px;
 	padding-left: 9px;
 }
-.family_travel_middle p {
+.banner_middle p {
 	text-align: center;
 	padding-right: 17px;
 	padding-left: 17px;
@@ -767,7 +767,7 @@ body>#general_center {
 	padding-bottom: 0px;
 	color: #E7E1D0;
 }
-.family_travel_middle p a {
+.banner_middle p a {
 	background-image: url(../images/peru_bg_readmore.jpg);
 	background-repeat: no-repeat;
 	background-position: center top;
@@ -785,7 +785,7 @@ body>#general_center {
 	color: #FFF;
 	text-decoration: none;
 }
-.family_travel_middle p a:hover {
+.banner_middle p a:hover {
 	color: #292421;
 	text-decoration: none;
 }
