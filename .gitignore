@@ -7,3 +7,4 @@ vendor/**/*
 public/system/travel_packages/**
 public/system/uploads/**
 test/**
+.DS_Store

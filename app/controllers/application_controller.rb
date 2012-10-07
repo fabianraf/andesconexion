@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
   end
   
   def load_banners
-    @banners = Banner.active.order("RANDOM()").limit(1)
+    @banners = Banner.active.order("RANDOM()").limit(2)
   end
   
   private
