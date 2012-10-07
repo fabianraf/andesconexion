@@ -1,4 +1,5 @@
 <%= content_for :page_specific_javascript do %>
+<%= javascript_include_tag "jquery-ui-timepicker-addon.js" %>
   <script>
     $(document).ready(function() {
       $("#tabs").tabs();
@@ -18,7 +19,7 @@
             <li><a href="#">Cusco and Machu Picchu</a></li>                           		    
           </ul>
         </div>
-        <div class="main_text">
+        <div class="maikhn_text">
           <h1>Contact Us</h1>
           <!-- Message Error -->
           <% if @contact_us.errors.any? %>
@@ -29,7 +30,7 @@
             </div>
           <% end %>
           <!-- End Message Error -->
-          <%= form_for([@contact_us]) do |f| %>
+          <%= form_for([@contact_us], :url => contact_us_path) do |f| %>
             <%= render :partial => "form", :object => f %>
             <div class="buttons">
                 <%= f.submit "Save" %>
