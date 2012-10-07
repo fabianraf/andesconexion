@@ -7,4 +7,16 @@
     <label>Surname</label>
     <%= form.text_field :surname, :class => "field size1" %>
   </p>	
+  <p>
+    <label>Nationality</label>
+    <%= form.text_field :nationality, :class => "field size1" %>
+  </p>	
+  <p>
+    <label>Number of Passengers</label>
+    <%= form.select :number_of_passengers, options_for_select( (1..30).map{|n| n } ), {:include_blank => false}, {} %>      
+  </p>	
+  <p>
+    <label>Aprox. Date</label>
+     <%= form.text_field :aprox_date_of_travel, :value => "01/01/2004", :readonly => true %>
+  </p>	
 </div>
