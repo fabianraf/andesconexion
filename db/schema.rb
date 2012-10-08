@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121005065847) do
+ActiveRecord::Schema.define(:version => 20121007193212) do
 
   create_table "assets", :force => true do |t|
     t.string   "attachment_content_type"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(:version => 20121005065847) do
     t.integer  "category_id"
     t.integer  "tour_id"
     t.integer  "banner_id"
+    t.integer  "tour_image_id"
   end
 
   add_index "assets", ["user_id"], :name => "index_assets_on_user_id"
@@ -81,10 +82,10 @@ ActiveRecord::Schema.define(:version => 20121005065847) do
     t.string   "nationality"
     t.string   "email"
     t.integer  "number_of_passengers"
-    t.string   "destination_or_package_of_interest"
-    t.string   "aprox_date_of_travel"
+    t.text     "destination_or_package_of_interest"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.datetime "aprox_date_of_travel"
   end
 
   create_table "countries", :force => true do |t|

@@ -35,5 +35,17 @@
   <label>Prices<span>(Required Field)</span></label>
   <%= form.text_area :prices, :class => "field size1" %>
 </p>
-
+<p>
+  <label>Tour Images</label><%= link_to "Add New", "javascript:void(0);", :class => "add_new_tour_image" %>
+</p>
+<%= form.fields_for :tour_images do |tour_image|%>
+  <div class="tour_image">
+    <p>
+      <%= tour_image.file_field :attachment %>
+      <% if File.exist?("#{tour_image.object.attachment.path}") %>
+        <%= image_tag(tour_image.object.attachment.url, :width=>'75px') %>
+      <% end %>
+    </p>
+  </div>
+<% end %>
 </div>
