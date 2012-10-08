@@ -47,7 +47,7 @@
                     <% @tour.tour_images.each do |tour_image| %>
                       <div class="simple-photo">
                         <div class="photo-wrapper">
-                          <%= image_tag(tour_image.attachment.url(:original)) %>
+                          <%= image_tag(tour_image.attachment.url(:original), :width => "138px", :height => "121px") %>
                         </div>
                     </div>
                     <% end %>
