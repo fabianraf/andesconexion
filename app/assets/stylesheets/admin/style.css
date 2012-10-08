@@ -149,7 +149,7 @@ h3 a{ text-decoration: none; }
 .box-head .right input { float:left; }
 .box-head .right label { padding:4px 0 0 0;}
 .box-head .right input { margin-left:5px;}
-
+.box-head .right a {color:white;}
 .pagging { height:20px; padding:8px 10px; line-height:19px; color:#949494; }
 .pagging a{ background:url(images/pagging.gif) repeat-x 0 0; height:20px; float:left; padding:0 8px; border:solid 1px #d5d5d5; text-decoration: none; color:#949494; margin-left:5px; }
 .pagging a:hover { border-color:#8c3521; background:#ba4c32; color:#fff; }
@@ -160,7 +160,6 @@ a.ico { color:#9d9c9a; font-size:10px; text-decoration: none; padding:0 0 0 14px
 a.ico:hover { color:#333;}
 a.del { background-image:url(images/del.gif)}
 a.edit { background-image:url(images/edit.gif); margin-left:14px;}
-
 
 .form { padding:15px 10px 5px 10px; }
 .form label{ display:block; font-weight: bold; font-size:13px; padding-bottom:4px; }
