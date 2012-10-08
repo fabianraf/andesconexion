@@ -31,7 +31,7 @@
                     <% unless tour.nil? %>
                       <li>
                         <div class="left">
-						  <%= link_to tour.name, tours_path(@category, sub_category, tour) %>
+						              <%= link_to tour.name, tours_path(@category, sub_category, tour) %>
                           <%= link_to image_tag(tour.main_tour_image.attachment.url(:original), :width => '150px', :height => "100px", :border => 0), tours_path(@category, sub_category, tour) %>
                         </div>
                         <div class="right">

@@ -43,8 +43,16 @@
                   <%= @tour.prices %>
                 </div>
                 <div id="tabs-5">
-                  <h3>Tab Photos</h3>
-                  <p>Breakfast at the hotel. Transfer to station.. Train goes through<strong> Urubamba Valley,</strong> the Sacred Valley of the Incas, to the fabulous mountaintop ruins of Machu Picchu. Full day tour with lunch included.</p>
+                  <div id="tour_images_photos" class="col eight leftmargin">
+                    <% @tour.tour_images.each do |tour_image| %>
+                      <div class="simple-photo">
+                        <div class="photo-wrapper">
+                          <%= image_tag(tour_image.attachment.url(:original)) %>
+                        </div>
+                    </div>
+                    <% end %>
+                  </div>
+                  
                 </div>
               </div>                                            
       		    <div class="book_now">

@@ -57,7 +57,15 @@
                 <%= @tour.prices.html_safe %>
               </div>
               <div id="tabs-5">
-                Here should be the photos
+                <div id="tour_images_photos" class="col eight leftmargin">
+                  <% @tour.tour_images.each do |tour_image| %>
+                    <div class="simple-photo">
+                      <div class="photo-wrapper">
+                        <%= image_tag(tour_image.attachment.url(:original)) %>
+                      </div>
+                  </div>
+                  <% end %>
+                </div>
               </div>
             </div>     
           </div>

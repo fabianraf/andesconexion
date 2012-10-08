@@ -7,6 +7,7 @@ class Admin::ToursController < Admin::BaseController
     @category = Category.find(params[:category_id])
     @tour = @category.tours.new
     @tour.build_main_tour_image
+    @tour.tour_images.build
   end
   def show
     @tour = Category.find(params[:category_id]).tours.find(params[:id])
@@ -30,6 +31,7 @@ class Admin::ToursController < Admin::BaseController
   def edit
     @category = Category.find(params[:category_id])
     @tour = @category.tours.find(params[:id])
+    @tour.tour_images.build
   end
   
   def update

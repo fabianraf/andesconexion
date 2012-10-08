@@ -115,7 +115,7 @@ h3 a{ text-decoration: none; }
 .table tr:hover td{ background:#fff9e1; }
 .table a.ico{ }
 
-.box { background:#fbfcfc; height:100%; padding:1px; margin-bottom:20px; }
+.box { background:#fbfcfc; height:100%; padding:1px; margin-bottom:20px; overflow: auto; }
 
 .box dl {
   margin-right: 10px;
@@ -461,5 +461,24 @@ li .selected{
 		}
 	
 
+.simple-photo {
+	float: left; 
+	clear: none;
+	width: 140px;
+	height: 123px;
+	overflow: hidden;
+	margin: 5px 12px 5px 0;
+
+	.photo-wrapper {
+		max-height: 105px;
+		overflow: hidden;
+		
+		img {
+			width: 140px;
+			height: auto;
+		}
+	}
+
+}
 
 
