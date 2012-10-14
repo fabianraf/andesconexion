@@ -36,7 +36,7 @@
         <%= render :partial => "form", :object => f %>
         <div class="buttons">
             <%= f.submit "Save" %>
-            <%= link_to "Cancel", admin_category_tours_path(@category) %>
+            <%= link_to "Cancel", :back %>
         </div>
       <% end %>
     </div>

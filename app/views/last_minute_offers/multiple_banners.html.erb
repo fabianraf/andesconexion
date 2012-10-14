@@ -1,0 +1,26 @@
+<% if !@banners[0].nil? %>
+	<div class="promotions">
+	  <div class="promotions_up">
+	  <h1><%= link_to @banners[0].name, tours_path(@banners[0].category.parent.name, @banners[0].category, @banners[0]) %></h1>
+	  </div>
+	  <div class="promotions_middle">
+	    <%= link_to image_tag(@banners[0].main_tour_image.attachment.url(:original), :width => "198px", :height => "146px", :border => 0), tours_path(@banners[0].category.parent.name, @banners[0].category, @banners[0]) %>
+	    <p><%= @banners[0].overview.html_safe %></p>
+	    <p><%= link_to "Read more", tours_path(@banners[0].category.parent.name, @banners[0].category, @banners[0]) %></p>
+	  </div>
+	  <div class="promotions_end"></div>
+	</div>
+<% end %>
+<% if !@banners[1].nil? %>
+	<div class="special_package">
+	  <div class="special_package_title">
+	    <h1><%= link_to @banners[1].name, tours_path(@banners[1].category.parent.name, @banners[1].category, @banners[1]) %></h1>
+	  </div>
+	  <div class="special_package_text">
+	    <%= link_to image_tag(@banners[1].main_tour_image.attachment.url(:original), :width => "198px", :height => "146px", :border => 0), tours_path(@banners[1].category.parent.name, @banners[1].category, @banners[1]) %>
+	    <p><%= @banners[1].overview.html_safe %></p>
+	    <div class="read_more"><%= link_to "Read more", tours_path(@banners[1].category.parent.name, @banners[1].category, @banners[1]) %></div>
+	  </div>						
+	  <div class="special_package_end"></div>
+	</div>
+<% end %>

@@ -1,5 +1,10 @@
 <%= javascript_include_tag 'ckeditor/ckeditor' %>
 <div class="form">
+<p>
+  <span class="req">max 100 symbols</span>
+  <label>Category <span>(Required Field)</span></label>
+  <%= form.select :category_id, nested_set_options(Category.with_parents) {|i| "#{'-' * i.level} #{i.name}" }, {:include_blank => true, :selected => params[:parent_cat]} %>
+</p>
 <%= form.fields_for :main_tour_image do |main_tour_image|%>
   <p>
     <label>Main Image</label>
@@ -9,6 +14,17 @@
     <% end %>
   </p>
 <% end %>
+<p>
+  <table>
+    <tr>
+      <td><label>Is last minute offer?<span>(Required Field)</span></label></td>
+      <td>
+        Yes <%= form.radio_button :is_last_minute_offer, true %>
+        No <%= form.radio_button :is_last_minute_offer, false %>
+      </td>
+    </tr>
+  </table>
+</p>
 <p>
   <span class="req">max 100 symbols</span>
   <label>Name <span>(Required Field)</span></label>

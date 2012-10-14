@@ -18,7 +18,11 @@ Andesconexion::Application.routes.draw do
         put 'update_status'
       end
     end
-    resources :tours
+    resources :tours do
+      collection do
+        get 'last_minute_offers'
+      end
+    end
     resources :hotels
     resources :clients
     resources :assets do
@@ -26,12 +30,12 @@ Andesconexion::Application.routes.draw do
         get 'index_new'
       end
     end
-    resources :last_minute_offers do
-      collection do 
-        put 'update_order'
-        put 'update_status'
-      end
-    end
+    #resources :last_minute_offers do
+     # collection do 
+      #  put 'update_order'
+       # put 'update_status'
+      #end
+    #end
     resources :private_services do 
       resources :travel_packages 
       collection do
@@ -43,8 +47,7 @@ Andesconexion::Application.routes.draw do
       collection do 
         put 'update_order'
       end
-    end
-    resources :banners
+    end  
   end
   resources :last_minute_offers
   resources :contact_us

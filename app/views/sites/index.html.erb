@@ -32,7 +32,7 @@
             <div class="galapagos_tours_text">
               <h2><%= link_to sub_category.name, nested_categories_path(sub_category.parent, sub_category) %></h2>
               <a href="#"><%= image_tag(sub_category.category_image.attachment.url(:original), :width => "132px", :height => "70px", :border => 0) unless sub_category.category_image.nil? %></a>
-              <p><%= sub_category.description.html_safe[0, 180] %></p>
+              <p><%= sub_category.description.html_safe[0, 217] %>...</p>
               <p><a href="#">More Info ++</a></p>                                    
             </div>
           <% end %>
@@ -44,6 +44,6 @@
     <div class="galapagos_last_minutes">
       <%= render :template => "last_minute_offers/show_some_last_minute_offers", :last_minute_offers => @last_minute_offers %>
     </div>
-	  <%= render :template => "banners/individual_banner", :banners => @banners %>	
+	  <%= render :template => "last_minute_offers/individual_banner", :banners => @banners %>	
   </div>
 </div>
