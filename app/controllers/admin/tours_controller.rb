@@ -1,11 +1,19 @@
 class Admin::ToursController < Admin::BaseController
   def index
-    #@tours = Category.with_tours
-    @tours = Tour.order("category_id asc").page(params[:page]).per(10)
+    if params[:last_minute] == "true"
+      @tours = Tour.last_minute_offers.order("category_id asc").page(params[:page]).per(10)
+    else
+      @tours = Tour.not_last_minute_offers.order("category_id asc").page(params[:page]).per(10)
+    end
+    
   end
   def new
-    @category = Category.find(params[:category_id])
-    @tour = @category.tours.new
+    if params[:category_id].present?
+      @category = Category.find(params[:category_id])
+      @tour = @category.tours.new
+    else
+      @tour = Tour.new
+    end
     @tour.build_main_tour_image
     @tour.tour_images.build
   end
@@ -13,12 +21,16 @@ class Admin::ToursController < Admin::BaseController
     @tour = Category.find(params[:category_id]).tours.find(params[:id])
   end
   def create
-    @category = Category.find(params[:category_id])
-    @tour = @category.tours.new(params[:tour])
+    if params[:category_id].present?
+      @category = Category.find(params[:category_id]) 
+      @tour = @category.tours.new(params[:tour])
+    else
+      @tour = Tour.new(params[:tour])
+    end
     respond_to do |format|
       if @tour.save
         flash[:notice] = 'tour was successfully created.'
-        format.html { redirect_to admin_category_tours_path(@category) }
+        format.html { redirect_to admin_tours_path(@tour) }
         format.xml  { head :ok }
       else
         @tour.build_main_tour_image

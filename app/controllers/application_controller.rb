@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   prepend_before_filter :show_some_last_minute_offers, :load_standalone_pages, :load_banners
   
   def show_some_last_minute_offers
-    @last_minute_offers = LastMinuteOffer.limit(2).order("sort_order asc")
+    @last_minute_offers = Tour.last_minute_offers.limit(2).order("RANDOM()")
     @categories = Category.where("parent_id is null").order("sort_order asc")
   end
   
@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
   end
   
   def load_banners
-    @banners = Banner.active.order("RANDOM()").limit(2)
+    @banners = Tour.last_minute_offers.limit(2).order("RANDOM()")
   end
   
   private

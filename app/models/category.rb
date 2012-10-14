@@ -6,6 +6,7 @@ class Category < ActiveRecord::Base
   has_one :category_image
   #attr_accessible :name, :parent_id, :description, :is_present_in_middle_homepage, :is_present_in_lowerpage, :homepage_photo
   scope :without_parents, :conditions => {:parent_id => nil}
+  scope :with_parents, where("parent_id is not null AND depth = 1")
   scope :middle_homepage_active, :conditions => {:is_present_in_middle_homepage => true}
   scope :lower_homepage_active, :conditions => {:is_present_in_lowerpage => true}
   scope :with_tours, joins(:tours).where("tours.category_id IS NOT NULL")
