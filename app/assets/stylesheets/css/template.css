@@ -15,6 +15,14 @@ body {
 	background-color: #F7F7F4;
 	margin: 0px;
 	padding: 0px;
+}                    
+#login_div{
+	color: #FFFFFF;         
+	border: 3px none;
+	height: 200px;
+  padding: 10px 5px 5px 20px;
+  width: 250px;          
+	
 }
 .main_body{
     background-image: url(../images/bg.jpg);

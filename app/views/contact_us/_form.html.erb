@@ -1,22 +1,32 @@
-<div class="form">
-  <p>
-    <label>Name</label>
-    <%= form.text_field :name, :class => "field size1" %>
-  </p>	
-  <p>
-    <label>Surname</label>
-    <%= form.text_field :surname, :class => "field size1" %>
-  </p>	
-  <p>
-    <label>Nationality</label>
-    <%= form.text_field :nationality, :class => "field size1" %>
-  </p>	
-  <p>
-    <label>Number of Passengers</label>
-    <%= form.select :number_of_passengers, options_for_select( (1..30).map{|n| n } ), {:include_blank => false}, {} %>      
-  </p>	
-  <p>
-    <label>Aprox. Date</label>
-     <%= form.text_field :aprox_date_of_travel, :value => "01/01/2004", :readonly => true %>
-  </p>	
+<div class="form">     
+  <table width="460" cellspacing="0" cellpadding="0" border="0" align="center" class="boat_statistics">
+     <tbody><tr>
+       <td width="148"><p><strong>First name:</strong></p></td>
+       <td width="292"><p><%= form.text_field :name, :class => "field size1" %>*</p></td>
+     </tr>
+     <tr>
+       <td><p><strong>Last Name: </strong></p></td>
+       <td><p><%= form.text_field :surname, :class => "field size1" %>*</p></td>
+     </tr>
+     <tr>
+       <td><p><strong>E-mail address:</strong></p></td>
+       <td><p><%= form.text_field :email, :class => "field size1" %>   *</p></td>
+     </tr>
+     <tr>
+       <td><p><strong>Phone:</strong></p></td>
+       <td><p><%= form.text_field :phone, :class => "field size1"  %>*</p></td>
+     </tr>
+     <tr>
+       <td><p><strong>Number of passengers:</strong></p></td>
+       <td><p><%= form.text_field :number_of_passengers, :class => "field size1"  %></p></td>
+     </tr>      
+     <tr>
+       <td><p><strong>Approx. Date of travel:</strong></p></td>
+       <td><p><%= form.text_field :aprox_date_of_travel, :value => "01/01/2004", :readonly => true %></p></td>
+     </tr>   
+     <tr>
+        <td><p><strong>Destination / Package of interest:</strong></p></td>
+        <td><p><%= form.text_area :destination_or_package_of_interest %></p></td>
+      </tr>
+   </tbody></table>
 </div>

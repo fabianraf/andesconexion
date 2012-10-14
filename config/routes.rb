@@ -2,8 +2,8 @@ Andesconexion::Application.routes.draw do
   
   devise_for :users
   root :to => "sites#index"
-  #match "/admin", :controller => "admin/site", :action => "index"
-  match "/admin", :controller => "admin/standalone_pages", :action => "index"
+  #match "/admin", :controller => "admin/site", :action => "index"                  
+  match "/admin", :controller => "admin/standalone_pages", :action => "index"      
   namespace "admin" do
     #resources :travel_packages
     resources :countries
@@ -62,6 +62,7 @@ Andesconexion::Application.routes.draw do
   match ":main_category/:sub_category", :controller => 'categories', :action => "show_info_sub_category", :as => "nested_categories"
   match ":main_category/:sub_category/:tour", :controller => 'tours', :action => "show", :as => "tours"
   match ":main_category/", :controller => 'categories', :action => "show_info", :as => "first_level_category"
+                                                    
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

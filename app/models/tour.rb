@@ -8,6 +8,6 @@ class Tour < ActiveRecord::Base
   scope :last_minute_offers, :conditions => {:is_last_minute_offer => true}
   scope :not_last_minute_offers, :conditions => {:is_last_minute_offer => false}
   def to_param  # overridden in order to show the name in the url
-     "#{id}-#{name}"
+     ("#{id}-#{name}").parameterize
   end
 end

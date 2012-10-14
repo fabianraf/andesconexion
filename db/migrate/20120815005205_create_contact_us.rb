@@ -4,7 +4,6 @@ class CreateContactUs < ActiveRecord::Migration
       t.string "name"
       t.string "surname"
       t.string "nationality"
-      t.string "nationality"
       t.string "email"
       t.integer "number_of_passengers"
       t.string "destination_or_package_of_interest"
