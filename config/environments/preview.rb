@@ -14,7 +14,7 @@ Andesconexion::Application.configure do
   config.action_controller.perform_caching = true
 
   # Don't care if the mailer can't send
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
 
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log
@@ -28,8 +28,10 @@ Andesconexion::Application.configure do
   # Expands the lines which load the assets   
   config.middleware.use ExceptionNotifier,
     :email_prefix => "[AndesConexion Preview] ",
-    :sender_address => %{"notifier" <notifier@example.com>},
+    :sender_address => %{"notifier" <notifier@andesconexion-preview.fabianraf.com>},
     :exception_recipients => %w{fabianraf@gmail.com}
     
-  config.action_mailer.default_url_options = { :host => 'andesconexion-preview.fabianraf.com' }
+  config.action_mailer.default_url_options = { :host => 'andesconexion-preview.fabianraf.com' }      
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {:enable_starttls_auto => false}
 end
