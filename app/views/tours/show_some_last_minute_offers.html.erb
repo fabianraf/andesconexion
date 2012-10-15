@@ -4,10 +4,10 @@
 <div class="galapagos_last_minutes_middle">
   <% @last_minute_offers.each do |last_minute_offer| %>
     <div class="galapagos_last_minutes_text">
-      <h2><%= link_to last_minute_offer.title, last_minute_offer_path(last_minute_offer) %></h2>
-      <a href="#"><%= image_tag(last_minute_offer.image.url, :width => 132, :height => 76, :style => "float:left") %></a>
+      <h2><%= link_to last_minute_offer.title, tours_path(last_minute_offer.category.parent, last_minute_offer.category, last_minute_offer) %></h2>
+      <%= link_to image_tag(last_minute_offer.image.url, :width => 132, :height => 76, :style => "float:left"), tours_path(last_minute_offer.category.parent, last_minute_offer.category, last_minute_offer) %>
       <p><%= last_minute_offer.description.html_safe %></p>
-      <p><a href="#">More Info ++</a></p>                                   
+      <p><%= link_to "More Info ++", tours_path(last_minute_offer.category.parent, last_minute_offer.category, last_minute_offer) %></p>                                   
     </div>
   <% end %>
 </div>

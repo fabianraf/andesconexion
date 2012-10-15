@@ -53,7 +53,7 @@
             <div class="section_menu_middle">
               <ul>
                 <% @category.tours.each do |tour| %>
-                  <li><%= link_to tour.name, tours_path(tour.category.parent.name, tour.category, tour) %></li>
+                  <li><%= link_to tour.name, tours_path(tour.category.parent, tour.category, tour) %></li>
                 <% end %> 		    
               </ul>
             </div>

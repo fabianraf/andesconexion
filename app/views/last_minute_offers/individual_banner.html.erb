@@ -4,9 +4,9 @@
 	   <h1><%= link_to @banners[0].name, "#" %></h1>
 	  </div>
 	<div class="banner_middle"> 
-	  <a href="#"><%= link_to image_tag(@banners[0].main_tour_image.attachment.url(:original), :width => "198px", :height => "146px", :border => 0), tours_path(@banners[0].category.parent.name, @banners[0].category, @banners[0]) %></a>
+	  <a href="#"><%= link_to image_tag(@banners[0].main_tour_image.attachment.url(:original), :width => "198px", :height => "146px", :border => 0), tours_path(@banners[0].category.parent, @banners[0].category, @banners[0]) %></a>
 	  <p><%= @banners[0].overview.html_safe[0, 130]  %></p>
-	  <p><%= link_to "Read more", tours_path(@banners[0].category.parent.name, @banners[0].category, @banners[0]) %>  </p>
+	  <p><%= link_to "Read more", tours_path(@banners[0].category.parent, @banners[0].category, @banners[0]) %>  </p>
 	</div>
 	<div class="banner_end"></div>
 	</div>

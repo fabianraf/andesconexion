@@ -31,9 +31,9 @@
           <% category.children.limit(2).each do |sub_category| %>
             <div class="galapagos_tours_text">
               <h2><%= link_to sub_category.name, nested_categories_path(sub_category.parent, sub_category) %></h2>
-              <a href="#"><%= image_tag(sub_category.category_image.attachment.url(:original), :width => "132px", :height => "70px", :border => 0) unless sub_category.category_image.nil? %></a>
+              <%= link_to image_tag(sub_category.category_image.attachment.url(:original), :width => "132px", :height => "70px", :border => 0), nested_categories_path(sub_category.parent, sub_category) unless sub_category.category_image.nil? %>
               <p><%= sub_category.description.html_safe[0, 217] %>...</p>
-              <p><a href="#">More Info ++</a></p>                                    
+              <p><%= link_to "More Info ++", nested_categories_path(sub_category.parent, sub_category) %></p>                                    
             </div>
           <% end %>
 
