@@ -25,5 +25,11 @@ Andesconexion::Application.configure do
   # Do not compress assets
   config.assets.compress = true
 
-  # Expands the lines which load the assets
+  # Expands the lines which load the assets   
+  config.middleware.use ExceptionNotifier,
+    :email_prefix => "[AndesConexion Preview] ",
+    :sender_address => %{"notifier" <notifier@example.com>},
+    :exception_recipients => %w{fabianraf@gmail.com}
+    
+  config.action_mailer.default_url_options = { :host => 'andesconexion-preview.fabianraf.com' }
 end

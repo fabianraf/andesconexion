@@ -8,18 +8,16 @@ class ContactUsController < ApplicationController
   end
   
   def create
-    logger.debug "**********************"
-#    @hotel = Hotel.new(params[:hotel])
-#    respond_to do |format|
-#      if @hotel.save
-#        flash[:notice] = 'Hotel was successfully created.'
-#        format.html { redirect_to admin_hotels_path }
-#        format.xml  { head :ok }
-#      else
-#        format.html { render :new }
-#        format.xml  { render :xml => @hotel.errors, :status => :unprocessable_entity }
-#      end
-#    end 
+    @contact_us = ContactUs.new(params[:contact_us])
+    respond_to do |format| 
+      if @contact_us.save                              
+        Notifier.send_book_now_information(@contact_us).deliver
+        format.html { redirect_to contact_us_path }
+      else
+        format.html { render :new, :locals => {:contact_us => @contact_us} }
+        format.xml  { render :xml => @contact_us.errors, :status => :unprocessable_entity }
+      end
+    end
   end
   
 end

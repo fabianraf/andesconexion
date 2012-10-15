@@ -1,0 +1,44 @@
+<p>
+Dear AndesConexion,
+</p>    
+<p>
+  <%= @contact_us.fullname %> has contacted us with the following information:
+</p>
+<p>
+  <table border="1">
+    <tr>
+      <td>Name</td>    
+      <td><%= @contact_us.fullname %></td>
+    </tr>
+    <tr>
+      <td>
+        E-mail address 
+      </td>                               
+      <td><%= @contact_us.email %></td>
+    </tr>
+    <tr>
+      <td>
+        Phone
+      </td>                    
+      <td><%= @contact_us.phone %></td>
+    </tr>
+    <tr>
+      <td>
+        Number of Passengers
+      </td>                    
+      <td><%= @contact_us.number_of_passengers %></td>
+    </tr>                   
+    <tr>
+      <td>
+        Approx. Date of Travel
+      </td>                   
+      <td><%= @contact_us.aprox_date_of_travel %></td>
+    </tr>
+    <tr>
+      <td>
+        Destination / Package of interest 
+      </td>                                  
+      <td><%= @contact_us.destination_or_package_of_interest %></td> 
+    </tr>                                            
+  </table>          
+</p>
