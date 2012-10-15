@@ -10,7 +10,7 @@ class Notifier < ActionMailer::Base
       @emails = TEST_RECIPIENT
     end    
     @contact_us = contact_us                        
-    if Rails.env.production                                       
+    if Rails.env.production?                                       
       mail(:to => @emails, :subject => "Book Now" )
     else
       mail(:to => @emails, :subject => "#{Rails.env} - Book Now" )
