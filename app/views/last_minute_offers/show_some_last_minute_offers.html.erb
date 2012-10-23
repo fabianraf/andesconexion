@@ -3,7 +3,9 @@
 </div>
 <div class="galapagos_last_minutes_middle">
   <% @last_minute_offers.each do |last_minute_offer| %>
-    <div class="galapagos_last_minutes_text">
+    <div class="galapagos_last_minutes_text">                 
+      <% p "**********" %>
+      <% p last_minute_offer.inspect %>
       <h2><%= link_to last_minute_offer.name, tours_path(last_minute_offer.category.parent, last_minute_offer.category, last_minute_offer) %></h2>
       <%= link_to image_tag(last_minute_offer.main_tour_image.attachment.url(:original), :width => 132, :height => 76, :style => "float:left"), tours_path(last_minute_offer.category.parent, last_minute_offer.category, last_minute_offer) %>
       <p><%= last_minute_offer.overview.html_safe[0, 217] %>...</p>

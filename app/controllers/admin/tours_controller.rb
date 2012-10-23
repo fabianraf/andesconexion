@@ -18,7 +18,7 @@ class Admin::ToursController < Admin::BaseController
     @tour.tour_images.build
   end
   def show
-    @tour = Category.find(params[:category_id]).tours.find(params[:id])
+    @tour = Tour.find(params[:id])
   end
   def create
     if params[:category_id].present?
@@ -40,31 +40,30 @@ class Admin::ToursController < Admin::BaseController
     end 
   end
   
-  def edit
-    @category = Category.find(params[:category_id])
-    @tour = @category.tours.find(params[:id])
+  def edit                      
+    @tour = Tour.find(params[:id])
     @tour.tour_images.build
   end
   
   def update
-    @tour = Category.find(params[:category_id]).tours.find(params[:id])
+    @tour = Tour.find(params[:id])
     respond_to do |format|
       if @tour.update_attributes(params[:tour])
         flash[:notice] = 'tour was successfully updated.'
-          format.html { redirect_to show_tours_admin_category_path(Category.find(params[:category_id])) }
+          format.html { redirect_to admin_tour_path(@tour) }
           format.xml  { head :ok }
-      else
-        format.html { render :edit }
+      else                   
+        format.html { render :new }
         format.xml  { render :xml => @tour.errors, :status => :unprocessable_entity }
       end
     end 
   end
   
   def destroy
-    @tour = Category.find(params[:category_id]).tours.find(params[:id])
+    @tour = Tour.find(params[:id])
     @tour.destroy
     respond_to do |format|
-      format.html { redirect_to admin_category_tours_path }
+      format.html { redirect_to admin_tours_path }
       format.xml  { head :ok }
     end
   end

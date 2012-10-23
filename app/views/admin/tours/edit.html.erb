@@ -32,11 +32,11 @@
               <h2 class="left">Edit tour</h2>
             </div>
             <!-- End Box Head -->
-            <%= form_for([:admin, @category, @tour]) do |f| %>
+            <%= form_for([:admin, @tour]) do |f| %>
               <%= render :partial => "form", :object => f %>
               <div class="buttons">
                   <%= f.submit "Save" %>
-                  <%= link_to "Cancel", admin_category_tours_path(@category) %>
+                  <%= link_to "Cancel", admin_tour_path(@tour) %>
               </div>
             <% end %>
           </div>
@@ -53,8 +53,8 @@
             </div>
             <!-- End Box Head-->
             <div class="box-content">
-              <%= link_to(content_tag(:span, "Add new tour"), new_admin_category_tour_path(@category), :class => 'add-button') %>
-              <%= link_to(content_tag(:span, "Delete tour"), admin_category_tour_path(@category, @tour), :confirm => 'Are you sure?', :method => :delete, :title => 'Delete tour') %>
+              <%= link_to(content_tag(:span, "Add new tour"), new_admin_tour_path, :class => 'add-button') %>
+              <%= link_to(content_tag(:span, "Delete tour"), admin_tour_path(@tour), :confirm => 'Are you sure?', :method => :delete, :title => 'Delete tour') %>
               <div class="cl">&nbsp;</div>
             </div>
           </div>

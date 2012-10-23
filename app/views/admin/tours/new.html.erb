@@ -32,7 +32,7 @@
               <h2>Add New tour</h2>
       </div>
       <!-- End Box Head -->
-      <%= form_for([:admin, @category, @tour]) do |f| %>
+      <%= form_for([:admin, @tour]) do |f| %>
         <%= render :partial => "form", :object => f %>
         <div class="buttons">
             <%= f.submit "Save" %>
@@ -58,25 +58,11 @@
       <div class="box-content">
         <a href="#" class="add-button"><span>Add new Article</span></a>
         <div class="cl">&nbsp;</div>
-
-        <p class="select-all"><input type="checkbox" class="checkbox" /><label>select all</label></p>
-        <p><a href="#">Delete Selected</a></p>
-
-        <!-- Sort -->
-        <div class="sort">
-          <label>Sort by</label>
-          <select class="field">
-                  <option value="">Title</option>
-          </select>
-          <select class="field">
-                  <option value="">Date</option>
-          </select>
-          <select class="field">
-                  <option value="">Author</option>
-          </select>
-        </div>
-        <!-- End Sort -->
-
+          <p>
+          <%= link_to :back do %>
+            <span>Cancel</span>
+          <% end %>
+          </p>     
       </div>
     </div>
     <!-- End Box -->

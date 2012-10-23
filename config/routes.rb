@@ -12,7 +12,6 @@ Andesconexion::Application.routes.draw do
         get 'show_tours'
         get 'sub_categories'
       end
-      resources :tours
       collection do 
         put 'update_order'
         put 'update_status'

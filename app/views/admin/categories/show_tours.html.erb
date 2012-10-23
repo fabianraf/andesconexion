@@ -29,19 +29,17 @@
           <div class="table">
             <table width="100%" border="0" cellspacing="0" cellpadding="0">
               <tr>
-                <th width="13"><input type="checkbox" class="checkbox" /></th>
                 <th>Name</th>
                 <th>Hits</th>
                 <th width="110" class="ac">Content Control</th>
               </tr>
               <% @tours.each do |tour| %>
                 <%= content_tag_for(:tr, tour, :class=> "#{cycle("", "odd")}") do %>
-                 <td><input type="checkbox" class="checkbox" /></td>
-                  <td><h3><%= link_to tour.name, admin_category_tour_path(tour.category, tour) %></td>
+                  <td><h3><%= link_to tour.name, admin_tour_path(tour) %></td>
                   <td><h3>(<%= tour.impressionist_count %>)</td>
                   <td>
-                    <%= link_to 'Delete', admin_category_tour_path(tour.category, tour), :confirm => 'Are you sure?', :method => :delete, :class => 'ico del', :title => 'Delete tour'%>
-                    <%= link_to 'Edit', edit_admin_category_tour_path(tour.category, tour), :class => 'ico edit', :title => 'Edit tour' %>
+                    <%= link_to 'Delete', admin_tour_path(tour), :confirm => 'Are you sure?', :method => :delete, :class => 'ico del', :title => 'Delete tour'%>
+                    <%= link_to 'Edit', edit_admin_tour_path(tour), :class => 'ico edit', :title => 'Edit tour' %>
                   </td>
                 <% end %>
               <% end %>
@@ -69,24 +67,8 @@
         </div>
         <!-- End Box Head-->
         <div class="box-content">
-          <%= link_to(content_tag(:span, "Add new tour"), new_admin_category_tour_path(@category), :class => 'add-button') %>
+          <%= link_to(content_tag(:span, "Add new tour"), new_admin_tour_path(:category_id => @category.id), :class => 'add-button') %>
           <div class="cl">&nbsp;</div>
-          <p class="select-all"><input type="checkbox" class="checkbox" /><label>select all</label></p>
-          <p><a href="#">Delete Selected</a></p>
-          <!-- Sort -->
-          <div class="sort">
-            <label>Sort by</label>
-            <select class="field">
-                    <option value="">Title</option>
-            </select>
-            <select class="field">
-                    <option value="">Date</option>
-            </select>
-            <select class="field">
-                    <option value="">Author</option>
-            </select>
-          </div>
-          <!-- End Sort -->
         </div>
       </div>
       <!-- End Box -->
