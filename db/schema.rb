@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121014195332) do
+ActiveRecord::Schema.define(:version => 20121122212407) do
 
   create_table "assets", :force => true do |t|
     t.string   "attachment_content_type"
@@ -188,7 +188,7 @@ ActiveRecord::Schema.define(:version => 20121014195332) do
   create_table "tours", :force => true do |t|
     t.integer  "category_id"
     t.string   "name"
-    t.string   "overview"
+    t.text     "overview"
     t.text     "itinerary"
     t.text     "included"
     t.text     "not_included"

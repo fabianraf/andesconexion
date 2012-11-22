@@ -21,7 +21,7 @@
       		  <div class="main_text">
         		  <h1><%= @tour.name %></h1>
         		  <h2>Overview</h2>
-        		  <p><%= @tour.overview %></p>
+        		  <p><%= @tour.overview.html_safe %></p>
         		  <div id="tabs">
         		    <ul>
         		      <li><a href="#tabs-1">ITINERARY</a></li>
