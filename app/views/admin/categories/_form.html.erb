@@ -1,5 +1,13 @@
 <%= javascript_include_tag 'ckeditor/ckeditor' %>
 <div class="form">
+  <p>
+    <label>Page Title<span>(Inserted by Clearpath)</span></label>
+    <%= form.text_field :page_title, :class => "field size1" %>
+  </p>
+  <p>
+    <label>Meta<span>(Inserted by Clearpath)</span></label>
+    <%= form.text_field :meta_tag, :class => "field size1" %>
+  </p>
   <% if form.object.is_main_category? && params[:parent_cat].nil?%>
     <p>
       <table>

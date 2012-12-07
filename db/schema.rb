@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121122212407) do
+ActiveRecord::Schema.define(:version => 20121207015148) do
 
   create_table "assets", :force => true do |t|
     t.string   "attachment_content_type"
@@ -42,6 +42,8 @@ ActiveRecord::Schema.define(:version => 20121122212407) do
     t.boolean  "is_present_in_middle_homepage"
     t.integer  "sort_order"
     t.boolean  "is_present_in_lowerpage"
+    t.text     "page_title"
+    t.text     "meta_tag"
   end
 
   create_table "ckeditor_assets", :force => true do |t|
@@ -196,6 +198,8 @@ ActiveRecord::Schema.define(:version => 20121122212407) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "is_last_minute_offer"
+    t.text     "page_title"
+    t.text     "meta_tag"
   end
 
   create_table "travel_package_images", :force => true do |t|

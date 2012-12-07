@@ -1,71 +1,81 @@
 <%= javascript_include_tag 'ckeditor/ckeditor' %>
 <div class="form">
-<p>
-  <span class="req">max 100 symbols</span>
-  <label>Category <span>(Required Field)</span></label>      
-  <% if params[:parent_cat].present? %>
-    <%= form.select :category_id, nested_set_options(Category.with_parents) {|i| "#{'-' * i.level} #{i.name}" }, {:include_blank => true, :selected => params[:parent_cat]} %>        
-  <% else%>
-    <%= form.select :category_id, nested_set_options(Category.with_parents) {|i| "#{'-' * i.level} #{i.name}" }, {:include_blank => true} %>        
-  <% end %>
-</p>
-<%= form.fields_for :main_tour_image do |main_tour_image|%>
   <p>
-    <label>Main Image</label>
-    <%= main_tour_image.file_field :attachment %>
-    <% unless main_tour_image.object.attachment.nil? %>
-      <%= image_tag(main_tour_image.object.attachment.url, :width=>'75px') %>
+    <label>Page Title<span>(Inserted by Clearpath)</span></label>
+    <%= form.text_field :page_title, :class => "field size1" %>
+  </p>
+  <p>
+    <label>Meta<span>(Inserted by Clearpath)</span></label>
+    <%= form.text_field :meta_tag, :class => "field size1" %>
+  </p>
+
+  <p>
+    <span class="req">max 100 symbols</span>
+    <label>Category <span>(Required Field)</span></label>      
+    <% if params[:parent_cat].present? %>
+      <%= form.select :category_id, nested_set_options(Category.with_parents) {|i| "#{'-' * i.level} #{i.name}" }, {:include_blank => true, :selected => params[:parent_cat]} %>        
+    <% else%>
+      <%= form.select :category_id, nested_set_options(Category.with_parents) {|i| "#{'-' * i.level} #{i.name}" }, {:include_blank => true} %>        
     <% end %>
   </p>
-<% end %>
-<p>
-  <table>
-    <tr>
-      <td><label>Is last minute offer?<span>(Required Field)</span></label></td>
-      <td>
-        Yes <%= form.radio_button :is_last_minute_offer, true %>
-        No <%= form.radio_button :is_last_minute_offer, false %>
-      </td>
-    </tr>
-  </table>
-</p>
-<p>
-  <span class="req">max 100 symbols</span>
-  <label>Name <span>(Required Field)</span></label>
-  <%= form.text_field :name, :class => "field size1" %>
-</p>	
-<p>
-  <span class="req">max 100 symbols</span>
-  <label>Overview <span>(Required Field)</span></label>
-  <%= form.text_area :overview, :class => "field size1" %>
-</p>
-<p>
-  <label>Itinerary <span>(Required Field)</span></label>
-  <%= form.cktext_area :itinerary, :class => "field size1" %>
-</p>
-<p>
-  <label>Included <span>(Required Field)</span></label>
-  <%= form.text_area :included, :class => "field size1" %>
-</p>
-<p>
-  <label>Not Included <span>(Required Field)</span></label>
-  <%= form.text_area :not_included, :class => "field size1" %>
-</p>
-<p>
-  <label>Prices<span>(Required Field)</span></label>
-  <%= form.text_area :prices, :class => "field size1" %>
-</p>
-<p>
-  <label>Tour Images</label><%= link_to "Add New", "javascript:void(0);", :class => "add_new_tour_image" %>
-</p>
-<%= form.fields_for :tour_images do |tour_image|%>
-  <div class="tour_image">
+  <%= form.fields_for :main_tour_image do |main_tour_image|%>
     <p>
-      <%= tour_image.file_field :attachment %>
-      <% if File.exist?("#{tour_image.object.attachment.path}") %>
-        <%= image_tag(tour_image.object.attachment.url, :width=>'75px') %>
+      <label>Main Image</label>
+      <%= main_tour_image.file_field :attachment %>
+      <% unless main_tour_image.object.attachment.nil? %>
+        <%= image_tag(main_tour_image.object.attachment.url, :width=>'75px') %>
       <% end %>
     </p>
-  </div>
-<% end %>
+  <% end %>
+  <p>
+    <table>
+      <tr>
+        <td><label>Is last minute offer?<span>(Required Field)</span></label></td>
+        <td>
+          Yes <%= form.radio_button :is_last_minute_offer, true %>
+          No <%= form.radio_button :is_last_minute_offer, false %>
+        </td>
+      </tr>
+    </table>
+  </p>
+  <p>
+    <span class="req">max 100 symbols</span>
+    <label>Name <span>(Required Field)</span></label>
+    <%= form.text_field :name, :class => "field size1" %>
+  </p>	
+  <p>
+    <span class="req">max 100 symbols</span>
+    <label>Overview <span>(Required Field)</span></label>
+    <%= form.text_area :overview, :class => "field size1" %>
+  </p>
+  <p>
+    <label>Itinerary <span>(Required Field)</span></label>
+    <%= form.cktext_area :itinerary, :class => "field size1" %>
+  </p>
+  <p>
+    <label>Included <span>(Required Field)</span></label>
+    <%= form.text_area :included, :class => "field size1" %>
+  </p>
+  <p>
+    <label>Not Included <span>(Required Field)</span></label>
+    <%= form.text_area :not_included, :class => "field size1" %>
+  </p>
+  <p>
+    <label>Prices<span>(Required Field)</span></label>
+    <%= form.text_area :prices, :class => "field size1" %>
+  </p>
+  <p>
+    <label>Tour Images</label><%= link_to "Add New", "javascript:void(0);", :class => "add_new_tour_image" %>
+  </p>
+  <%= form.fields_for :tour_images do |tour_image|%>
+    <div class="tour_image">
+      <p>
+        <%= tour_image.file_field :attachment %>
+        <% if File.exist?("#{tour_image.object.attachment.path}") %>
+          <%= image_tag(tour_image.object.attachment.url, :width=>'75px') %>
+        <% end %>
+      </p>
+    </div>
+  <% end %>
 </div>
+ 

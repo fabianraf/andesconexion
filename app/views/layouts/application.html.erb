@@ -6,6 +6,8 @@
     Created by Artisteer v3.0.0.32906
     Base template (without user's data) checked by http://validator.w3.org : "This page is valid XHTML 1.0 Transitional"
     -->
+    <title><%= @page_title if @page_title %></title>
+    <meta name="description" content="<%= @meta_content if @meta_content %>" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <%= javascript_include_tag "application" %>
     <%= stylesheet_link_tag "css/template.css" %>
