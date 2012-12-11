@@ -27,6 +27,8 @@ class Admin::ToursController < Admin::BaseController
     else
       @tour = Tour.new(params[:tour])
     end
+    @tour.created_by_id = current_user.id
+    @tour.last_updated_by_id = current_user.id
     respond_to do |format|
       if @tour.save
         flash[:notice] = 'tour was successfully created.'
@@ -47,6 +49,7 @@ class Admin::ToursController < Admin::BaseController
   
   def update
     @tour = Tour.find(params[:id])
+    @tour.last_updated_by_id = current_user.id
     respond_to do |format|
       if @tour.update_attributes(params[:tour])
         flash[:notice] = 'tour was successfully updated.'

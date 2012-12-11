@@ -19,6 +19,8 @@ class Admin::CategoriesController < Admin::BaseController
   end
   def create
     @category = Category.new(params[:category])
+    @category.created_by_id = current_user.id
+    @category.last_updated_by_id = current_user.id
     respond_to do |format|
       if @category.save
         flash[:notice] = 'category was successfully created.'
@@ -39,6 +41,7 @@ class Admin::CategoriesController < Admin::BaseController
   
   def update
     @category = Category.find(params[:id])
+    @category.last_updated_by_id = current_user.id
     respond_to do |format|
       if @category.update_attributes(params[:category])
         flash[:notice] = 'category was successfully updated.'

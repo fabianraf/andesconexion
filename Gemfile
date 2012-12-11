@@ -37,6 +37,7 @@ gem "awesome_nested_set"
 gem "impressionist"          
 gem 'exception_notification'
 gem 'roadie'
+gem 'slugged'
 # Use unicorn as the web server
 # gem 'unicorn'
 

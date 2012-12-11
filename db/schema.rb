@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121207015148) do
+ActiveRecord::Schema.define(:version => 20121211041433) do
 
   create_table "assets", :force => true do |t|
     t.string   "attachment_content_type"
@@ -44,6 +44,8 @@ ActiveRecord::Schema.define(:version => 20121207015148) do
     t.boolean  "is_present_in_lowerpage"
     t.text     "page_title"
     t.text     "meta_tag"
+    t.integer  "created_by_id"
+    t.integer  "last_updated_by_id"
   end
 
   create_table "ckeditor_assets", :force => true do |t|
@@ -100,6 +102,8 @@ ActiveRecord::Schema.define(:version => 20121207015148) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.integer  "created_by_id"
+    t.integer  "last_updated_by_id"
   end
 
   create_table "impressions", :force => true do |t|
@@ -125,37 +129,6 @@ ActiveRecord::Schema.define(:version => 20121207015148) do
   add_index "impressions", ["impressionable_type", "impressionable_id", "request_hash"], :name => "poly_request_index"
   add_index "impressions", ["impressionable_type", "impressionable_id", "session_hash"], :name => "poly_session_index"
   add_index "impressions", ["user_id"], :name => "index_impressions_on_user_id"
-
-  create_table "last_minute_dates", :force => true do |t|
-    t.integer  "last_minute_offer_id"
-    t.date     "start_date"
-    t.date     "end_date"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "last_minute_offers", :force => true do |t|
-    t.string   "title"
-    t.text     "description"
-    t.decimal  "start_from_price",   :precision => 12, :scale => 2
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
-    t.text     "long_description"
-    t.integer  "sort_order"
-    t.boolean  "is_highlighted"
-  end
-
-  create_table "private_services", :force => true do |t|
-    t.string   "name"
-    t.string   "city"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "country"
-  end
 
   create_table "programs", :force => true do |t|
     t.string   "name"
@@ -185,6 +158,8 @@ ActiveRecord::Schema.define(:version => 20121207015148) do
     t.datetime "updated_at"
     t.boolean  "is_active"
     t.integer  "sort_order"
+    t.integer  "created_by_id"
+    t.integer  "last_updated_by_id"
   end
 
   create_table "tours", :force => true do |t|
@@ -200,45 +175,8 @@ ActiveRecord::Schema.define(:version => 20121207015148) do
     t.boolean  "is_last_minute_offer"
     t.text     "page_title"
     t.text     "meta_tag"
-  end
-
-  create_table "travel_package_images", :force => true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "travel_package_id"
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
-  end
-
-  create_table "travel_packages", :force => true do |t|
-    t.string   "name"
-    t.text     "description"
-    t.string   "country"
-    t.string   "city"
-    t.decimal  "price",                     :precision => 12, :scale => 2
-    t.decimal  "sale_price",                :precision => 12, :scale => 2
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
-    t.integer  "private_service_id"
-    t.decimal  "one_pax_g_or_d",            :precision => 12, :scale => 2
-    t.decimal  "two_pax_g_or_d",            :precision => 12, :scale => 2
-    t.decimal  "three_pax_g_or_d",          :precision => 12, :scale => 2
-    t.decimal  "one_pax_g_and_d",           :precision => 12, :scale => 2
-    t.decimal  "two_pax_g_and_d",           :precision => 12, :scale => 2
-    t.decimal  "three_pax_g_and_d",         :precision => 12, :scale => 2
-    t.decimal  "four_pax_g_and_d",          :precision => 12, :scale => 2
-    t.decimal  "four_to_nine_pax",          :precision => 12, :scale => 2
-    t.decimal  "ten_to_fifteen_pax",        :precision => 12, :scale => 2
-    t.decimal  "sixteen_to_twentyfive_pax", :precision => 12, :scale => 2
-    t.decimal  "five_to_nine_pax",          :precision => 12, :scale => 2
-    t.decimal  "twenty_more_pax",           :precision => 12, :scale => 2
-    t.string   "duration"
+    t.integer  "created_by_id"
+    t.integer  "last_updated_by_id"
   end
 
   create_table "users", :force => true do |t|

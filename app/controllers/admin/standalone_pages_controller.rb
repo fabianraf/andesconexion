@@ -10,6 +10,8 @@ class Admin::StandalonePagesController < Admin::BaseController
   end
   def create
     @standalone_page = StandalonePage.new(params[:standalone_page])
+    @standalone_page.created_by_id = current_user.id
+    @standalone_page.last_updated_by_id = current_user.id
     respond_to do |format|
       if @standalone_page.save
         flash[:notice] = 'standalone_page was successfully created.'
@@ -28,6 +30,7 @@ class Admin::StandalonePagesController < Admin::BaseController
   
   def update
     @standalone_page = StandalonePage.find(params[:id])
+    @standalone_page.last_updated_by_id = current_user.id
     respond_to do |format|
       if @standalone_page.update_attributes(params[:standalone_page])
         flash[:notice] = 'standalone_page was successfully updated.'
