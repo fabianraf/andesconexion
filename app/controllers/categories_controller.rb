@@ -4,12 +4,12 @@ class CategoriesController < ApplicationController
     
   end
   def show_info
-    @category = Category.find(params[:main_category])
+    @category = Category.find_using_slug params[:main_category]
     @page_title = @category.page_title
     @meta_content = @category.meta_tag
   end
   def show_info_sub_category
-    @category = Category.find(params[:sub_category])
+    @category = Category.find_using_slug params[:main_category]
     @page_title = @category.page_title
     @meta_content = @category.meta_tag
   end

@@ -1,3 +1,4 @@
+# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -10,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121211041433) do
+ActiveRecord::Schema.define(:version => 20130219053450) do
 
   create_table "assets", :force => true do |t|
     t.string   "attachment_content_type"
@@ -46,7 +47,10 @@ ActiveRecord::Schema.define(:version => 20121211041433) do
     t.text     "meta_tag"
     t.integer  "created_by_id"
     t.integer  "last_updated_by_id"
+    t.string   "cached_slug"
   end
+
+  add_index "categories", ["cached_slug"], :name => "index_categories_on_cached_slug"
 
   create_table "ckeditor_assets", :force => true do |t|
     t.string   "data_file_name",                  :null => false
@@ -151,6 +155,18 @@ ActiveRecord::Schema.define(:version => 20121211041433) do
   add_index "roles", ["name", "resource_type", "resource_id"], :name => "index_roles_on_name_and_resource_type_and_resource_id"
   add_index "roles", ["name"], :name => "index_roles_on_name"
 
+  create_table "slugs", :force => true do |t|
+    t.string   "scope"
+    t.string   "slug"
+    t.integer  "record_id"
+    t.datetime "created_at"
+  end
+
+  add_index "slugs", ["scope", "record_id", "created_at"], :name => "index_slugs_on_scope_and_record_id_and_created_at"
+  add_index "slugs", ["scope", "record_id"], :name => "index_slugs_on_scope_and_record_id"
+  add_index "slugs", ["scope", "slug", "created_at"], :name => "index_slugs_on_scope_and_slug_and_created_at"
+  add_index "slugs", ["scope", "slug"], :name => "index_slugs_on_scope_and_slug"
+
   create_table "standalone_pages", :force => true do |t|
     t.string   "name"
     t.text     "description"
@@ -177,7 +193,10 @@ ActiveRecord::Schema.define(:version => 20121211041433) do
     t.text     "meta_tag"
     t.integer  "created_by_id"
     t.integer  "last_updated_by_id"
+    t.string   "cached_slug"
   end
+
+  add_index "tours", ["cached_slug"], :name => "index_tours_on_cached_slug"
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
