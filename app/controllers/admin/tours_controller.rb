@@ -18,7 +18,7 @@ class Admin::ToursController < Admin::BaseController
     @tour.tour_images.build
   end
   def show
-    @tour = Tour.find(params[:id])
+    @tour = Tour.find_using_slug(params[:id])
   end
   def create
     if params[:category_id].present?
@@ -43,12 +43,12 @@ class Admin::ToursController < Admin::BaseController
   end
   
   def edit                      
-    @tour = Tour.find(params[:id])
+    @tour = Tour.find_using_slug(params[:id])
     @tour.tour_images.build
   end
   
   def update
-    @tour = Tour.find(params[:id])
+    @tour = Tour.find_using_slug(params[:id])
     @tour.last_updated_by_id = current_user.id
     respond_to do |format|
       if @tour.update_attributes(params[:tour])
@@ -63,7 +63,7 @@ class Admin::ToursController < Admin::BaseController
   end
   
   def destroy
-    @tour = Tour.find(params[:id])
+    @tour = Tour.find_using_slug(params[:id])
     @tour.destroy
     respond_to do |format|
       format.html { redirect_to admin_tours_path }

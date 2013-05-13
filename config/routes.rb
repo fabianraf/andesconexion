@@ -7,6 +7,7 @@ Andesconexion::Application.routes.draw do
   namespace "admin" do
     #resources :travel_packages
     resources :countries
+    resources :users
     resources :categories do
       member do
         get 'show_tours'

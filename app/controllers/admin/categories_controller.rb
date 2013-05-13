@@ -3,7 +3,7 @@ class Admin::CategoriesController < Admin::BaseController
     @categories = Category.without_parents.page(params[:page]).per(10).order("sort_order asc")
   end
   def show_tours
-    @category = Category.find(params[:id])
+    @category = Category.find_using_slug(params[:id])
     @tours = @category.tours.page(params[:page]).per(10)
   end
   def new
@@ -12,10 +12,10 @@ class Admin::CategoriesController < Admin::BaseController
     @category.build_category_image
   end
   def show
-    @category = Category.find(params[:id])
+    @category = Category.find_using_slug(params[:id])
   end
   def sub_categories
-    @category = Category.find(params[:id])
+    @category = Category.find_using_slug(params[:id])
   end
   def create
     @category = Category.new(params[:category])
@@ -36,11 +36,11 @@ class Admin::CategoriesController < Admin::BaseController
   end
   
   def edit
-    @category = Category.find(params[:id])
+    @category = Category.find_using_slug(params[:id])
   end
   
   def update
-    @category = Category.find(params[:id])
+    @category = Category.find_using_slug(params[:id])
     @category.last_updated_by_id = current_user.id
     respond_to do |format|
       if @category.update_attributes(params[:category])
@@ -55,7 +55,7 @@ class Admin::CategoriesController < Admin::BaseController
   end
   
   def destroy
-    @category = Category.find(params[:id])
+    @category = Category.find_using_slug(params[:id])
     @category.destroy
     respond_to do |format|
       format.html { redirect_to admin_categories_path }
