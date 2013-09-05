@@ -148,3 +148,6 @@ div.pagination span.ellipsis {
 	border: none;
 	padding: 5px 0 3px 2px;
 }
+.advance-link img{
+  width: 500px;
+}
