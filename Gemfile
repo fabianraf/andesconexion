@@ -21,7 +21,8 @@ gem 'pg'
 #gem 'authlogic', :branch => 'rails3'
 gem 'devise'
 gem 'rolify'
-gem "cancan"
+gem 'slugged'
+#gem "cancan"
 gem 'paperclip'
 gem 'meta_search'
 #install will_paginate
@@ -37,7 +38,7 @@ gem "awesome_nested_set"
 gem "impressionist"          
 gem 'exception_notification'
 gem 'roadie'
-gem 'slugged'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
