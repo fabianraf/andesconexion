@@ -21,7 +21,7 @@ gem 'pg'
 #gem 'authlogic', :branch => 'rails3'
 gem 'devise'
 gem 'rolify'
-gem 'slugged'
+#gem 'slugged'
 #gem "cancan"
 gem 'paperclip'
 gem 'meta_search'
