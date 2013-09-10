@@ -1,7 +1,7 @@
 class Category < ActiveRecord::Base
   include SortOrder
   acts_as_nested_set
-  #is_sluggable :name
+  is_sluggable :name
   has_many :tours
   has_one :middle_homepage_image
   has_one :category_image
@@ -17,9 +17,9 @@ class Category < ActiveRecord::Base
   validates :name, :description, :category_image, :presence => true
   #after_validation :check_if_middle_homepage_is_selected, :check_if_lower_homepage_is_selected
   accepts_nested_attributes_for :middle_homepage_image, :category_image
-#  def to_param  # overridden in order to show the name in the url
-#     ("#{cached_slug}").parameterize
-#  end
+  def to_param  # overridden in order to show the name in the url
+     ("#{cached_slug}").parameterize
+  end
   
   def is_main_category?
     return true if self.parent.nil?
