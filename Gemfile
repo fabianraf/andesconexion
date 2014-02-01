@@ -34,7 +34,7 @@ gem "mini_magick"
 gem "ckeditor-rails"
 gem "rails3-generators"
 gem "awesome_nested_set"
-#gem "impressionist"          
+gem "impressionist"          
 gem 'exception_notification'
 gem 'roadie'
 gem 'slugged'
