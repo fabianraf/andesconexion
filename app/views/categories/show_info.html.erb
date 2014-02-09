@@ -11,58 +11,54 @@
 <% end %>
 <div id="main_information">
   <div id="information_content">
-    <table width="956" border="0" align="center" cellpadding="0" cellspacing="0">
-      <tr>
-        <td align="left" valign="top">
-          <div class="left">
-            <div class="path_navigation">
-              <ul>
-                <li><a href="/">Home</a></li>
-                <li><%= link_to @category.name, first_level_category_path(@category) %></li>
-              </ul>
-            </div>
-              <div class="main_text">
-                <h1><%= @category.name %></h1>
-                <h2>Overview</h2>
-                <p><%= @category.description.html_safe unless @category.description.nil? %></p>
-                <ul id="slider1">
-                  <% @category.children.each do |sub_category| %>
-                    <% tour = sub_category.tours.first %>
-                    <% unless tour.nil? %>
-                      <li>
-                        <div class="left">
-						              <%= link_to tour.name, tours_path(@category, sub_category, tour) %>
-                          <%= link_to image_tag(tour.main_tour_image.attachment.url(:original), :width => '150px', :height => "100px", :border => 0), tours_path(@category, sub_category, tour) %>
-                        </div>
-                        <div class="right">
-                          <%= sub_category.description.html_safe %>
-                        </div>
-                      </li>
-                    <% end %>
-                  <% end %>
-                </ul>
-              </div>
-            </div>
-        </td>
-        <td align="left" valign="top">
-          <div class="right">
-            <div class="section_menu">
-              <div class="section_menu_up">
-              <h1>IN THIS SECTION</h1>
-              </div>
-            <div class="section_menu_middle">
-              <ul>
-                <% @category.children.order("sort_order asc").each do |sub_category| %>
-                  <li><%= link_to sub_category.name, nested_categories_path(sub_category.parent, sub_category) %></li>
-                <% end %> 		    
-              </ul>
-            </div>
-              <div class="section_menu_end"></div>
-            </div>
-            <%= render :template => "last_minute_offers/multiple_banners", :banners => @banners %>
-          </div>
-        </td>
-      </tr>
-    </table>
+    <div class="left">
+       <div class="path_navigation">
+         <ul>
+           <li><a href="/">Home</a></li>
+           <li><%= link_to @category.name, first_level_category_path(@category) %></li>
+         </ul>
+       </div>
+         <div class="main_text">
+           <h1><%= @category.name %></h1>
+           <h2>Overview</h2>
+           <p><%= @category.description.html_safe unless @category.description.nil? %></p>
+           <div style="width: 720px;">
+             <ul id="slider1">
+               <% @category.children.each do |sub_category| %>
+                 <% tour = sub_category.tours.first %>
+                 <% unless tour.nil? %>
+                   <li>
+                     <div class="left">
+                       <%= link_to tour.name, tours_path(@category, sub_category, tour) %>
+                       <%= link_to image_tag(tour.main_tour_image.attachment.url(:original), :width => '150px', :height => "100px", :border => 0), tours_path(@category, sub_category, tour) %>
+                     </div>
+                     <div class="right">
+                       <%= sub_category.description.html_safe %>
+                     </div>
+                   </li>
+                 <% end %>
+               <% end %>
+             </ul>
+           </div>
+         </div>
+       </div>
+       <div class="right" style="float: right;">
+       <div class="section_menu">
+         <div class="section_menu_up">
+         <h1>IN THIS SECTION</h1>
+         </div>
+       <div class="section_menu_middle">
+         <ul>
+           <% @category.children.order("sort_order asc").each do |sub_category| %>
+             <li><%= link_to sub_category.name, nested_categories_path(sub_category.parent, sub_category) %></li>
+           <% end %> 		    
+         </ul>
+       </div>
+         <div class="section_menu_end"></div>
+       </div>
+       <%= render :template => "last_minute_offers/multiple_banners", :banners => @banners %>
+     </div>
+     <div style="clear: both;"></div>
+    
   </div>
 </div>

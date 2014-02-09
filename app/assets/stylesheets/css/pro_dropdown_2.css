@@ -97,9 +97,9 @@
 	top:42px;
 	padding:4px;
 	white-space:nowrap;
-	width:170px;
+	width:auto;
 	height:auto;
-	z-index:300;
+	z-index:0;
 	text-align: left;
 	left: -10px;
 	opacity: 0.95;

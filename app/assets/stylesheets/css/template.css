@@ -261,7 +261,7 @@ body>#general_center {
 	background-image: url(../images/intro_bg_text.jpg);
 	background-repeat: repeat-y;
 	background-position: center top;
-	height: auto;
+	height: 390px;
 	width: 250px;
 }
 .intro_content_text a img {
@@ -445,14 +445,14 @@ body>#general_center {
 	background-image: url(../images/galapagos_tours_bg.jpg);
 	background-repeat: repeat-y;
 	background-position: center top;
-	height: auto;
+	height: 270px;
 	width: 352px;
 	padding-right: 10px;
 	padding-left: 10px;
 	padding-bottom: 5px;
 }
 .galapagos_tours_text {
-	height: auto;
+	height: 130px;
 	width: 352px;
 	padding-bottom: 8px;
 }
@@ -580,14 +580,14 @@ body>#general_center {
 	background-image: url(../images/galapagos_last_minute_bg.jpg);
 	background-repeat: repeat-y;
 	background-position: center top;
-	height: auto;
+	height: 270px;
 	width: 352px;
 	padding-right: 10px;
 	padding-left: 10px;
 	padding-bottom: 5px;
 }
 .galapagos_last_minutes_text {
-	height: auto;
+	height: 130px;
 	width: 352px;
 	padding-bottom: 8px;
 }
@@ -699,13 +699,13 @@ body>#general_center {
 	display: block;
 	float: left;
 	height: auto;
-	width: 247px;
+	width: 237px;
 }
 .banner_title {
 	background-image: url(../images/peru_bg_title.png);
 	background-repeat: no-repeat;
 	background-position: center top;
-	height: 38px;
+	height: 27px;
 	width: 247px;
 	behavior: url("../html/iepngfix.htc");
 }
@@ -735,7 +735,7 @@ body>#general_center {
 	background-image: url(../images/peru_bg.jpg);
 	background-repeat: repeat-y;
 	background-position: 9px top;
-	height: auto;
+	height: 270px;
 	width: 200px;
 	padding-right: 21px;
 	padding-left: 26px;
@@ -1121,8 +1121,9 @@ body>#general_center {
 }
 .left {
 	height: auto;
-	width: 716px;
+	width: 650px;
 	padding-right: 8px;
+  float: left;
 }
 .path_navigation{
 	text-align: left;

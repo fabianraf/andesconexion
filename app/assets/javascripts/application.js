@@ -8,3 +8,8 @@
 //= require jquery_ujs
 //= require jquery-ui
 //= require script
+//= require menu.js
+jQuery(document).ready(function($) {
+  $("#general_center").next("div").remove();
+  $(".bx-wrapper").attr("style", "");
+});

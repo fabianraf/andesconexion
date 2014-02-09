@@ -59,7 +59,7 @@
                   </td>
                   <td><h3><%= link_to last_minute_offer.title, admin_last_minute_offer_path(last_minute_offer) %></td>
                   <td><%= last_minute_offer.start_from_price %></td>
-                  <td>(<%= last_minute_offer.impressionist_count %>)</td>
+                  <td>(<%#= last_minute_offer.impressionist_count %>)</td>
                   <td>
                     <%= link_to 'Delete', admin_last_minute_offer_path(last_minute_offer), :confirm => 'Are you sure?', :method => :delete, :class => 'ico del', :title => 'Delete last_minute_offer'%>
                     <%= link_to 'Edit', edit_admin_last_minute_offer_path(last_minute_offer), :class => 'ico edit', :title => 'Edit last_minute_offer' %>

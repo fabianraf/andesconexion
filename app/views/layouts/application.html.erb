@@ -9,31 +9,30 @@
     <title><%= @page_title if @page_title %></title>
     <meta name="description" content="<%= @meta_content if @meta_content %>" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <%= javascript_include_tag "application" %>
+    
     <%= stylesheet_link_tag "css/template.css" %>
-    <%= stylesheet_link_tag "css/pro_dropdown_2.css" %>
+    <%= stylesheet_link_tag "css/menu.css" %>
     <%= stylesheet_link_tag "css/jquery-ui-1.8.18.custom.css" %>
     <%= stylesheet_link_tag "css/effects.css" %>
-    <%= content_for :page_specific_javascript %>
     <%= csrf_meta_tags %>
     <!--[if IE 6]><link rel="stylesheet" href="style.ie6.css" type="text/css" media="screen" /><![endif]-->
     <!--[if IE 7]><link rel="stylesheet" href="style.ie7.css" type="text/css" media="screen" /><![endif]-->
 
     <style type="text/css">
-.clearfix:after {
-	visibility: hidden;
- 	display: block;
-	font-size: 0;
-	content: " ";
-	clear: both;
-	height: 0;
-}
-.clearfix { display: inline-table; }
-/* Hides from IE-mac \*/
-* html .clearfix { height: 1%; }
-.clearfix { display: block; }
-/* End hide from IE-mac */
-</style>
+      .clearfix:after {
+        visibility: hidden;
+        display: block;
+        font-size: 0;
+        content: " ";
+        clear: both;
+        height: 0;
+      }
+      .clearfix { display: inline-table; }
+      /* Hides from IE-mac \*/
+      * html .clearfix { height: 1%; }
+      .clearfix { display: block; }
+      /* End hide from IE-mac */
+    </style>
 </head>
 <body class="<%= controller.class.to_s == "SitesController" ? "main_body" : "internal_body" %>">
 <div id="general_center">
@@ -73,32 +72,42 @@
             </div>
           </div>
         </div>
-      <div class="top_menu">
-        <ul id="nav">
-          <% @categories.each do |category| %>
-                <li class="top">
-                  <%= link_to content_tag(:span, category.name, {:class => "down"}), first_level_category_path(category), :class => "top_link", :id => "Ecuador_Tours" %>
-                  <ul class="sub">
+       
+        <div id="menu">
+          <ul class="menu">
+            <% @categories.each do |category| %>
+              <li <% if @category.present? && category.cached_slug == @category.cached_slug %> class="active" <% end %>>
+                <%= link_to content_tag(:span, category.name), first_level_category_path(category), :class => "prent" %>
+                <div>
+                  <ul>
                     <% for sub_category in category.children %>
-                      <li><%= link_to sub_category.name, nested_categories_path(category, sub_category), :class => "fly" %>
-                        <ul>
-                          <% sub_category.tours.each do |tour| %>
-                            <li><%= link_to tour.name, tours_path(category, sub_category, tour) %></li>
-                          <% end %>
-                        </ul>
+                      <li><%= link_to content_tag(:span, sub_category.name), nested_categories_path(category, sub_category), :class => "parent" %>
+                        <div>
+                          <ul>
+                            <% sub_category.tours.each do |tour| %>
+                              <li>
+                                <%= link_to content_tag(:span, tour.name), tours_path(category, sub_category, tour) %>
+                              </li>
+                            <% end %>
+                          </ul>
+                        </div>
                       </li>
+                   
                     <% end %>
+                    
                   </ul>
-                </li>
-              <% end %>
-          
-          
-          <!--<li class="top"><a href="#" id="Photo_Gallery" class="top_link"><span>Photo Gallery</span></a></li>-->
-        </ul>
-      </div>
+                </div>
+              
+              </li>
+              
+            <% end %>
+          </ul>
+        </div>
+     
+    
+        	
     </div>
-      <%= yield %>           	
-    </div>
+    <%= yield %>         
   </div>      
 </div>               
 
@@ -172,11 +181,14 @@
           <%#*<li><a href="#">Contact Us</a></li>%>
         </ul>
       </div>
-    <div class="credits">Andes Conexion. All Rights Reserved  ©  2012<br />
-      Web Design: <a href="http://www.seowebsdesign.com/" target="_blank">SEOWEBSDESIGN.COM </a>
+    <div class="credits">Andes Conexion. All Rights Reserved  ©  2014<br />
+      Web Design: <a href="http://www.seowebsdesign.com/" target="_blank">SEOWEBSDESIGN.COM && FABIAN AGUIRRE</a>
+      Web Development <a href="http://www.visualdyc.com/" target="_blank">FABIAN AGUIRRE</a>
     </div>
     </div>
   </div>
 </div>
+<%= javascript_include_tag "application" %>
+<%= content_for :page_specific_javascript %> 
 </body>
 </html>

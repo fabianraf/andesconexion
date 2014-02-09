@@ -40,7 +40,7 @@
                  <td><input type="checkbox" class="checkbox" /></td>
                   <td><h3><%= link_to tour.name, admin_tour_path(tour) %></td>
                   <td><h3><%= link_to tour.category.name, show_tours_admin_category_path(tour.category) %></td>
-                  <td><h3>(<%= tour.impressionist_count %>)</td>
+                  <td><h3>(<%#= tour.impressionist_count %>)</td>
                   <td>
                     <%= link_to 'Delete', admin_tour_path(tour.category, tour), :confirm => 'Are you sure?', :method => :delete, :class => 'ico del', :title => 'Delete tour'%>
                     <%= link_to 'Edit', edit_admin_tour_path(tour), :class => 'ico edit', :title => 'Edit tour' %>

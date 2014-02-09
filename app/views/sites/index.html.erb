@@ -8,9 +8,9 @@
         <%= link_to first_level_category_path(category) do %>
           <%= image_tag(category.category_image.attachment.url(:original), :width => '227px', :height => "129px", :border => 0) unless category.category_image.nil? %>
         <% end %>
-          <p><%= category.description.html_safe[0, 180] %>...</p>
+          <p><%= category.description[0, 150] %>...</p>
         <ul>
-          <% category.children.each do |sub_category| %>
+          <% category.children.limit(4).each do |sub_category| %>
             <li><%= link_to sub_category.name, nested_categories_path(sub_category.parent, sub_category) %></li>
           <% end %>
         </ul>
@@ -41,7 +41,7 @@
       <div class="galapagos_tours_end"></div>
       </div>
     <% end %>
-    <div class="galapagos_last_minutes">
+    <div class="galapagos_tours">
       <%= render :template => "last_minute_offers/show_some_last_minute_offers", :last_minute_offers => @last_minute_offers %>
     </div>
 	  <%= render :template => "last_minute_offers/individual_banner", :banners => @banners %>	

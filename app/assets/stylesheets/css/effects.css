@@ -11,7 +11,7 @@
     background: url("../images/icon_arrow_right.png") no-repeat scroll 0 -31px transparent;
     height: 31px;
     position: absolute;
-    right: -40px;
+    right: 0px;
     text-indent: -999999px;
     top: 78px;
     width: 31px;
@@ -19,7 +19,7 @@
 .bx-wrapper .bx-prev {
     background: url("../images/icon_arrow_left.png") no-repeat scroll 0 -31px transparent;
     height: 31px;
-    left: -55px;
+    left: 0px;
     position: absolute;
     text-indent: -999999px;
     top: 78px;
