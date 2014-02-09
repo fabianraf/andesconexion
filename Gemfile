@@ -17,7 +17,7 @@ end
 
 gem 'jquery-rails'
 gem "therubyracer", :require => 'v8'
-gem 'pg'
+gem 'pg', "0.12.2"
 #gem 'authlogic', :branch => 'rails3'
 gem 'devise'
 gem 'rolify'
