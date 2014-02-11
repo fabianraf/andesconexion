@@ -1,7 +1,7 @@
 class Category < ActiveRecord::Base
   include SortOrder
   acts_as_nested_set
-  is_sluggable :name
+#  is_sluggable :name
   has_many :tours
   has_one :middle_homepage_image
   has_one :category_image

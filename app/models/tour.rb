@@ -1,5 +1,5 @@
 class Tour < ActiveRecord::Base
-  is_sluggable :name
+#  is_sluggable :name
   has_one :main_tour_image
   has_many :tour_images
   belongs_to :category
