@@ -17,6 +17,9 @@ class Category < ActiveRecord::Base
   validates :name, :description, :category_image, :presence => true
   #after_validation :check_if_middle_homepage_is_selected, :check_if_lower_homepage_is_selected
   accepts_nested_attributes_for :middle_homepage_image, :category_image
+  before_create :set_cached_slug
+  before_update :set_cached_slug
+  
   def to_param  # overridden in order to show the name in the url
      ("#{cached_slug}").parameterize
   end
@@ -36,6 +39,24 @@ class Category < ActiveRecord::Base
       end
     else
       return true
+    end
+  end
+  
+  private
+  
+  def set_cached_slug 
+    new_cached_slug = self.name.downcase.gsub(/(\W|\d)/, "-")
+    number = 0
+    if self.name_changed?
+      while Category.find_by_cached_slug(new_cached_slug).present?
+        unless number == 0
+          new_cached_slug = "#{cached_slug}-#{number}" 
+        else
+          new_cached_slug = cached_slug
+        end
+        number = number + 1
+      end 
+      self.cached_slug = new_cached_slug
     end
   end
   

@@ -2,5 +2,5 @@ development:
   host: "localhost:3000"
   email_from: "fabianraf@gmail.com" 
 preview:
-    host: "andesconexion-preview.fabianraf.com"
+    host: "andesconexion-preview.visualdyc.com"
     email_from: "info@andesconexion.com"

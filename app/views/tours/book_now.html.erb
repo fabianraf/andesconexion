@@ -1,11 +1,7 @@
-<%= content_for :page_specific_javascript do %>
-<%= javascript_include_tag "jquery-ui-timepicker-addon.js" %>
-  <script>
-    $(document).ready(function() {
-      $("#tabs").tabs();
-    });
-  </script>
-<% end %>
+<% content_for :page_specific_javascript do %>
+  <%= javascript_include_tag "tours" %>  
+ <% end %>
+
 <div id="main_information">
   <div id="information_content">
   <table width="956" border="0" align="center" cellpadding="0" cellspacing="0">
@@ -18,22 +14,23 @@
           </ul>
         </div>
         <div class="main_text">
-          <h1>Contact Us</h1>
+					<h1><%= @tour.name %></h1>
           <!-- Message Error -->
-          <% if @contact_us.errors.any? %>
+          <% if @book.errors.any? %>
             <div class="msg msg-error">
-               <% @contact_us.errors.full_messages.each do |msg| %>
+               <% @book.errors.full_messages.each do |msg| %>
                  <p><strong><%= msg %></strong></p>
                <% end %>
             </div>
           <% end %>
           <!-- End Message Error -->
-          <%= form_for([@contact_us], :url => contact_us_path) do |f| %>
+          <%= form_for([@book], :url => create_book_tours_path) do |f| %>
             <%= render :partial => "form", :object => f %>
-            <div class="buttons">
-                <%= f.submit "Save" %>
-                <%= link_to "Cancel", "" %>
-            </div>
+    		    <div class="book_now">
+      		    <%= link_to "BOOK NOW!", "#", :id => "submit_book_now" %>
+      		  </div>
+						
+            
           <% end %>
         </div>
       </div>
@@ -46,9 +43,9 @@
               </div>
             <div class="section_menu_middle">
               <ul>
-                <%# @category.tours.each do |tour| %>
-                  <li><%#= link_to tour.name, tours_path(tour.category.parent.name, tour.category, tour) %></li>
-                <%# end %> 		    
+                <% @tour.category.tours.each do |tour| %>
+                  <li><%= link_to tour.name, tours_path(tour.category.parent.name, tour.category, tour) %></li>
+                <% end %> 		    
               </ul>
             </div>
               <div class="section_menu_end"></div>

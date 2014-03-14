@@ -1,0 +1,38 @@
+<p>
+Dear AndesConexion,
+</p>    
+<p>
+  <%= @book.fullname %> wants to book the tour <%= @book.tour.name %>
+</p>
+<p>
+  <table>
+    <tr>
+      <td>Name:</td>    
+      <td><%= @book.fullname %></td>
+    </tr>
+    <tr>
+      <td>
+        E-mail address: 
+      </td>                               
+      <td><%= @book.email %></td>
+    </tr>
+    <tr>
+      <td>
+        Number of Passengers:
+      </td>                    
+      <td><%= @book.number_of_passengers %></td>
+    </tr>                   
+    <tr>
+      <td>
+        Approx. Date of Travel:
+      </td>                   
+      <td><%= @book.aprox_date_of_travel %></td>
+    </tr>
+    <tr>
+      <td>
+        Comments:
+      </td>                                  
+      <td><%= @book.comments %></td> 
+    </tr>                                        
+  </table>          
+</p>

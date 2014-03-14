@@ -48,6 +48,12 @@
     <%= form.text_field :name, :class => "field size1" %>
   </p>	
   <p>
+    <span class="req">max 255 symbols</span>
+    <label>Brief Description <span>(Required Field)</span></label>
+    <%= form.text_field :brief_description, :class => "field size1" %>
+  </p>	
+	
+  <p>
     <label>Belongs to</label>
     <% unless params[:parent_cat].blank? %>
       <%= form.select :parent_id, nested_set_options(Category, @category) {|i| "#{'-' * i.level} #{i.name}" }, {:include_blank => true, :selected => params[:parent_cat]} %>
@@ -57,6 +63,6 @@
   </p>
   <p>
     <label>Description</label>
-    <%= form.cktext_area :description, :class => "field size4" %>
+    <%= form.text_area :description, :class => "field size4"%>
   </p>
 </div>

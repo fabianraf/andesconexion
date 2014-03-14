@@ -1,0 +1,29 @@
+<div class="form">     
+	<%= form.hidden_field :tour_id, :value => @tour.id %>
+  <table width="460" cellspacing="0" cellpadding="0" border="0" align="center" class="boat_statistics">
+     <tbody><tr>
+       <td width="148"><p><strong>First Name:</strong></p></td>
+       <td width="292"><p><%= form.text_field :first_name, :class => "field size1" %>*</p></td>
+     </tr>
+     <tr>
+       <td><p><strong>Last Name: </strong></p></td>
+       <td><p><%= form.text_field :last_name, :class => "field size1" %>*</p></td>
+     </tr>
+     <tr>
+       <td><p><strong>E-mail address:</strong></p></td>
+       <td><p><%= form.text_field :email, :class => "field size1" %>   *</p></td>
+     </tr>
+     <tr>
+       <td><p><strong>Number of passengers:</strong></p></td>
+       <td><p><%= form.text_field :number_of_passengers, :class => "field size1"  %></p></td>
+     </tr>      
+     <tr>
+       <td><p><strong>Approx. Date of travel:</strong></p></td>
+       <td><p><%= form.text_field :aprox_date_of_travel, :value => "#{Time.now.try(:strftime, "%m/%d/%Y")}", :readonly => true %></p></td>
+     </tr>   
+     <tr>
+        <td><p><strong>Let us know your thoughts:</strong></p></td>
+        <td><p><%= form.text_area :comments %></p></td>
+      </tr>
+   </tbody></table>
+</div>

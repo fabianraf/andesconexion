@@ -8,7 +8,7 @@
         <%= link_to first_level_category_path(category) do %>
           <%= image_tag(category.category_image.attachment.url(:original), :width => '227px', :height => "129px", :border => 0) unless category.category_image.nil? %>
         <% end %>
-          <p><%= category.description[0, 150] %>...</p>
+          <p><%= category.brief_description %></p>
         <ul>
           <% category.children.limit(4).each do |sub_category| %>
             <li><%= link_to sub_category.name, nested_categories_path(sub_category.parent, sub_category) %></li>
@@ -32,7 +32,7 @@
             <div class="galapagos_tours_text">
               <h2><%= link_to sub_category.name, nested_categories_path(sub_category.parent, sub_category) %></h2>
               <%= link_to image_tag(sub_category.category_image.attachment.url(:original), :width => "132px", :height => "70px", :border => 0), nested_categories_path(sub_category.parent, sub_category) unless sub_category.category_image.nil? %>
-              <p><%= sub_category.description.html_safe[0, 217] %>...</p>
+              <p><%= sub_category.brief_description %></p>
               <p><%= link_to "More Info ++", nested_categories_path(sub_category.parent, sub_category) %></p>                                    
             </div>
           <% end %>

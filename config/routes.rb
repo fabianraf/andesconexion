@@ -49,6 +49,12 @@ Andesconexion::Application.routes.draw do
       end
     end  
   end
+  
+  
+  resources :categories do 
+    
+  end
+  
   resources :last_minute_offers
   resources :contact_us
   
@@ -58,6 +64,17 @@ Andesconexion::Application.routes.draw do
   
   resources :standalone_pages, :only => [:show]
   
+  resources :tours do
+    member do
+      get :book_now
+    end
+    collection do
+      post :create_book
+    end
+  end
+  
+  resources :book do
+  end
   
   match ":main_category/:sub_category", :controller => 'categories', :action => "show_info_sub_category", :as => "nested_categories"
   match ":main_category/:sub_category/:tour", :controller => 'tours', :action => "show", :as => "tours"

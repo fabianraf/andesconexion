@@ -17,4 +17,20 @@ class Notifier < ActionMailer::Base
     end
     
   end
+  
+  def send_tour_book_information(book)    
+    if Rails.env.production?
+      
+    else
+      @emails = TEST_RECIPIENT
+    end    
+    @book = book                   
+    if Rails.env.production?                                       
+      mail(:to => @emails, :subject => "Book Now" )
+    else
+      mail(:to => @emails, :subject => "#{Rails.env} - Book Now" )
+    end
+    
+  end
+  
 end
