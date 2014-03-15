@@ -73,6 +73,10 @@ Andesconexion::Application.routes.draw do
     end
   end
   
+  resources :hotels do
+    
+  end
+  
   resources :book do
   end
   

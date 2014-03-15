@@ -34,40 +34,41 @@
             <!-- End Box Head -->
             <div>
               <h2>Overview</h2>
-              <p><%= @tour.overview %></p>
+              <p><%= @tour.overview.html_safe %></p>
             </div><br/>
-            <div id="tabs">
-              <ul>
-                <li><a href="#tabs-1">ITINERARY</a></li>
-                <li><a href="#tabs-2">INCLUDED</a></li>
-                <li><a href="#tabs-3">NOT INCLUDED</a></li>
-                <li><a href="#tabs-4">PRICES</a></li>
-                <li><a href="#tabs-5">PHOTOS</a></li>
-              </ul>
-              <div id="tabs-1">
-                <%= @tour.itinerary.html_safe %>
-              </div>
-              <div id="tabs-2">
-                <%= @tour.included.html_safe %>
-              </div>
-              <div id="tabs-3">
-                <%= @tour.not_included.html_safe %>
-              </div>
-              <div id="tabs-4">
-                <%= @tour.prices.html_safe %>
-              </div>
-              <div id="tabs-5">
-                <div id="tour_images_photos" class="col eight leftmargin">
-                  <% @tour.tour_images.each do |tour_image| %>
-                    <div class="simple-photo">
-                      <div class="photo-wrapper">
-                        <%= image_tag(tour_image.attachment.url(:original), :width => "138px", :height => "121px") %>
-                      </div>
+						
+						
+							<% @tour.tour_days.each do |tour_day| %>
+								<div class="col nine tour-day">
+									<label><%= tour_day.day_name %></label>
+									<p><%= tour_day.description %></p>
+								</div>
+							<% end %>
+
+						
+						<div class="col nine">
+							<label>Included:</label> <%= @tour.included.html_safe %>
+						</div>
+						
+						<div class="col nine">
+							<label>Not Included:</label> <%= @tour.not_included.html_safe %>
+						</div>
+						
+						<div class="col nine">
+							<label>Prices:</label> <%= @tour.prices.html_safe %>
+						</div>
+						
+            <div id="tour_images_photos" class="col eight leftmargin">
+              <% @tour.tour_images.each do |tour_image| %>
+                <div class="simple-photo">
+                  <div class="photo-wrapper">
+                    <%= image_tag(tour_image.attachment.url(:original), :width => "138px", :height => "121px") %>
                   </div>
-                  <% end %>
-                </div>
               </div>
-            </div>     
+              <% end %>
+            </div>
+						
+            
           </div>
           <!-- End Box -->
         </div>

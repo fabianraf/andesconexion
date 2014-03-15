@@ -16,6 +16,7 @@ class Admin::ToursController < Admin::BaseController
     end
     @tour.build_main_tour_image
     @tour.tour_images.build
+    @tour.tour_days.build
   end
   def show
     @tour = Tour.find_by_cached_slug(params[:id])
@@ -45,6 +46,7 @@ class Admin::ToursController < Admin::BaseController
   def edit                      
     @tour = Tour.find_by_cached_slug(params[:id])
     @tour.tour_images.build
+    @tour.tour_days.build if @tour.tour_days.empty?
   end
   
   def update

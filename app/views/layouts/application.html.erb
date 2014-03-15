@@ -6,7 +6,7 @@
     Created by Artisteer v3.0.0.32906
     Base template (without user's data) checked by http://validator.w3.org : "This page is valid XHTML 1.0 Transitional"
     -->
-    <title><%= @page_title if @page_title %></title>
+    <title>AndesConexion <%= " | #{@page_title}" if @page_title %></title>
     <meta name="description" content="<%= @meta_content if @meta_content %>" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     
@@ -64,10 +64,10 @@
             </div>
             <div class="top_links">
               <ul>
-                <li><a href="#">About us</a></li>
+								<% @standalone_pages.each do |standalone_page| %>
+			            <li><%= link_to standalone_page.name, standalone_page_path(standalone_page)%> </li>
+			          <% end %>
                 <li><%= link_to "Contact us", contact_us_path %></li>
-                <li><a href="#">FAQ's</a></li>
-                <li><a href="#">Site map</a></li>
               </ul>
             </div>
           </div>
@@ -127,7 +127,7 @@
       <h1>Useful Links</h1>
       <ul>
         <li><a href="#">Airlines</a></li>
-        <li><a href="#">Hotels</a></li>
+        <li><%= link_to "Hotels", hotels_path%></li>
         <li><a href="#">Lorem ipsum</a></li>
         <li><a href="#">Aenean suscipit</a></li>
         <li><a href="#">Praesent</a></li>
@@ -138,9 +138,9 @@
         <h1>Contact Information</h1>
         <ul>
           <li>
-          <strong>Ecuador Phone:</strong> +(593 2) 2900-853 <strong>E-mail:</strong> <a href="#" target="_blank">info@andesconexion.com</a>
+          <strong>Ecuador Phone:</strong> +(593 2) 2900-853 <strong>E-mail:</strong> <a href="mailto:info@andesconexion.com" target="_blank">info@andesconexion.com</a>
           </li>
-          <li> <strong>Mobile Phone: </strong>+(593 9) 3525015 US </li>
+          <li> <strong>Mobile Phone: </strong>+(593 9) 93525015 US </li>
           <li><strong>Phone:</strong> +(1)3059385455</li>
         </ul>
       </div>

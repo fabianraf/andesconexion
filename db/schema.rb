@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140313041852) do
+ActiveRecord::Schema.define(:version => 20140314035945) do
 
   create_table "assets", :force => true do |t|
     t.string   "attachment_content_type"
@@ -189,6 +189,14 @@ ActiveRecord::Schema.define(:version => 20140313041852) do
     t.integer  "sort_order"
     t.integer  "created_by_id"
     t.integer  "last_updated_by_id"
+  end
+
+  create_table "tour_days", :force => true do |t|
+    t.string   "day_name"
+    t.text     "description"
+    t.integer  "tour_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "tours", :force => true do |t|

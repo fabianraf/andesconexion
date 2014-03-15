@@ -393,6 +393,7 @@ li .selected{
 .col {
   margin-right: 24px;
   float: left;
+	padding-bottom: 10px;
 }
 .one {
   width: 58px;
@@ -459,7 +460,19 @@ li .selected{
 			height: 18px;
 			margin: 0;
 		}
-	
+
+#add-button{
+	padding: 10px;
+}
+
+#add-button input#btnAddNew{
+    background:url(images/add.png) no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 0 none;
+    cursor: pointer;
+    height: 15px;
+    text-indent: -1000em;
+    width: 15px;
+}	
 
 .simple-photo {
 	float: left; 
@@ -481,4 +494,7 @@ li .selected{
 
 }
 
+.col label{
+	font-weight: bold;
+}
 

@@ -1,0 +1,53 @@
+<%= content_for :page_specific_javascript do %>
+  <script>
+    $(document).ready(function() {
+      $("#tabs").tabs();
+    });
+  </script>
+<% end %>
+<div id="main_information">
+	<div id="information_content">
+		<table width="956" border="0" align="center" cellpadding="0" cellspacing="0">
+		  <tr>                     
+   	     <td align="left" valign="top">
+    		  <div class="left">
+      		  <div class="path_navigation">
+              <ul>
+                <li><a href="/">Home</a></li>
+                <li><%#= link_to @tour.category.name, nested_categories_path(@tour.category.parent, @tour.category) %></li>
+                <li><%#= link_to @tour.name, "#" %></li>
+              </ul>
+            </div>
+      		  <div class="main_text">
+        		  <h1><%= @hotel.name %></h1>
+        		  <h2>Overview</h2>
+        		  <p><%= @hotel.description.html_safe %></p>
+        		  
+      		    <div class="book_now">
+        		    <%#= link_to "BOOK NOW!", book_now_tour_path(@tour) %>
+        		  </div>
+      		  </div>
+          </div>
+    		</td>
+		    <td align="left" valign="top">
+          <div class="right">
+            <div class="section_menu">
+              <div class="section_menu_up">
+              <h1>IN THIS SECTION</h1>
+              </div>
+            <div class="section_menu_middle">
+              <ul>
+                <%# @tour.category.tours.each do |tour| %>
+                  <li><%#= link_to tour.name, tours_path(tour.category.parent, tour.category, tour) %></li>
+                <%# end %> 		    
+              </ul>
+            </div>
+              <div class="section_menu_end"></div>
+            </div>
+            <%= render :template => "last_minute_offers/multiple_banners", :banners => @banners %>
+          </div>
+        </td>
+      </tr>
+		</table>
+	</div>
+</div>
