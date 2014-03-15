@@ -4,3 +4,6 @@ development:
 preview:
     host: "andesconexion-preview.visualdyc.com"
     email_from: "info@andesconexion.com"
+production:
+    host: "www.andesconexion.com"
+    email_from: "info@andesconexion.com"

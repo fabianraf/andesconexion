@@ -35,6 +35,20 @@ task :preview do
   set :apache_config, "/etc/apache2/sites-available"
 end
 
+task :production do
+  set :rails_env, "production"
+  set :ruby_path, "/usr/local/ruby/bin"
+  server "50.116.60.170", :app, :web, :db, :primary => true
+  defaults
+  set :default_environment, {'PATH'=> "/usr/local/ruby/bin:$PATH"}
+  set :deploy_via, :remote_cache  
+  set :apache_user, "www-data"
+  set :apache_group, "dev"
+  set :apache_dir, "/etc/apache2"
+  set :apache_logs, "/var/log/apache2/#{application}-#{rails_env}"  
+  set :apache_config, "/etc/apache2/sites-available"
+end
+
 namespace :deploy do
   task :start do ; end
   task :stop do ; end
