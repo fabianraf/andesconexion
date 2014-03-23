@@ -11,7 +11,7 @@
   <!-- <meta name="revisit-after" content="1 day" /> -->
   <!-- <meta name="robots" content="index,follow" /> -->
   <!-- <meta http-equiv="pragma" content="no-cache" /> -->
-
+	
   <title>
     <%- if @title -%>
     <%= @title + " - AndesConexion Site Admin" %>
@@ -23,6 +23,7 @@
   <%= stylesheet_link_tag 'admin/style.css' -%>
   <%= stylesheet_link_tag 'admin/pro_dropdown_2.css' -%>
   <%= stylesheet_link_tag "css/jquery-ui-1.8.18.custom.css" %>
+	<%= content_for :page_specific_css %>
   <%= javascript_include_tag "application" %>
   <%= content_for :page_specific_javascript %>
   <%= csrf_meta_tags %>

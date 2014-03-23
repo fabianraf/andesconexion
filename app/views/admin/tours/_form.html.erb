@@ -49,22 +49,25 @@
     <%= form.cktext_area :overview, :class => "field size1" %>
   </p>
   <p>
-    <label>Itinerary <span>(Enter Each Day's Itinerary)</span></label>
-		<% day = 0%>
-		<%= form.fields_for :tour_days do |tour_day|%>
-			<div id="day-<%= day %>" class="cloned-day-tours">
-				<%= tour_day.label :day_name, "Day" %>
-				<%= tour_day.text_field :day_name, :class => "field size1" %>
-				<%= tour_day.label :description, "Description" %>
-				<%= tour_day.text_area :description, :class => "field size1" %>
+		<label>Itinerary </label>
+		<%= form.cktext_area :itinerary, :class => "field size1" %>
+    <!-- UNCOMMENT THIS WHEN READY FOR USING TOUR DAYS
+			<label>Itinerary <span>(Enter Each Day's Itinerary)</span></label>
+		<%# day = 0%>
+		<%#= form.fields_for :tour_days do |tour_day|%>
+			<div id="day-<%#= day %>" class="cloned-day-tours">
+				<%#= tour_day.label :day_name, "Day" %>
+				<%#= tour_day.text_field :day_name, :class => "field size1" %>
+				<%#= tour_day.label :description, "Description" %>
+				<%#= tour_day.text_area :description, :class => "field size1" %>
 			</div>
-			<% day = day + 1%>
-		<% end %>
+			<%# day = day + 1%>
+		<%# end %>
     <div id="add-button">
       <input type="button" id="btnAddNew" value="Add another program" />  Add a Day
     </div>
-      
-    <%#= form.cktext_area :itinerary, :class => "field size1" %>
+       -->
+
   </p>
   <p>
     <label>Included <span>(Required Field)</span></label>

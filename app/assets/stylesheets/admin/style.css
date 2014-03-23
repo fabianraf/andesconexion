@@ -498,3 +498,10 @@ li .selected{
 	font-weight: bold;
 }
 
+.hidden-field{
+	display: none;
+}
+
+.visible-field{
+
+}
