@@ -15,7 +15,7 @@ class Tour < ActiveRecord::Base
   before_update :set_cached_slug
   
   def to_param  # overridden in order to show the name in the url
-     ("#{cached_slug}").parameterize
+     ("#{cached_slug}")
   end
   
   private
